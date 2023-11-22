@@ -18,14 +18,15 @@ classifiers = [
 include = ["sphinxcontrib/autodoc_pydantic/css/autodoc_pydantic.css"]
 
 [tool.poetry.dependencies]
-python = ">=3.7.1,<4.0.0"
-Sphinx = ">=4.0"
+python = ">=3.8,<4.0.0"
+sphinx = {version=">=6.2.1,<7"}
 pydantic = ">=2.0,<3.0.0"
 pydantic-settings = ">=2.0,<3.0.0"
 
 importlib-metadata = { version = ">1", markers = "python_version <= '3.8'" }
 
-sphinx-rtd-theme = { version = "^1.0", optional = true }
+sphinx-book-theme = {version = ">=1.0.1", optional = false}
+pydata-sphinx-theme = {version = ">=0.13.3", optional= false}
 sphinx-tabs = { version = "^3", optional = true }
 sphinx-copybutton = { version = "^0.4", optional = true }
 sphinxcontrib-mermaid = { version = "^0.7", optional = true }
