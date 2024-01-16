@@ -9,7 +9,7 @@ import pydoc
 import warnings
 from collections import defaultdict
 from typing import NamedTuple, List, Dict, Any, Set, TypeVar, Type, Callable, \
-    Optional
+    Optional, Iterable
 
 from pydantic import BaseModel, create_model, ConfigDict, \
     PydanticInvalidForJsonSchema
@@ -479,6 +479,48 @@ class StaticInspector:
         return False
 
 
+class NonPydanticInspector(BaseInspectionComposite):
+    """Inspects for methods that are class methods and not validators.
+
+    """
+
+    def __init__(self, parent: 'ModelInspector'):
+        super().__init__(parent)
+        # json schema can reliably be created only at model level
+        self.class_methods = self.get_non_validator_methods(self.model)
+
+    @staticmethod
+    def get_non_validator_methods(model) -> List[Callable]:
+        """
+        This method extracts all staticmethods and classmethods from the given class,
+        including those inherited from parent classes.
+        """
+
+        def filter_out_parent_methods(methods_list: Iterable,
+                                      ignore_parent_list: Iterable[str] = ("BaseModel", "BaseSettings")):
+            """
+            Filters out methods that are defined in the specified parent classes.
+            """
+            filtered_methods = []
+            for name, method in methods_list:
+                if name.startswith('__') and name.endswith('__'):
+                    continue
+
+                # Check if the method is defined in any of the parent classes
+                if not any(f'{parent}.' in getattr(method, '__qualname__', '') for parent in ignore_parent_list):
+                    filtered_methods.append((name, method))
+            return filtered_methods
+
+        methods = []
+        for cls in inspect.getmro(model):
+            for name, method in cls.__dict__.items():
+                if isinstance(method, (staticmethod, classmethod)):
+                    # Optionally, you might want to skip certain methods based on your criteria
+                    methods.append((name, method))
+        methods = filter_out_parent_methods(methods)
+        return methods
+
+
 class ModelInspector:
     """Provides inspection functionality for pydantic models.
 
@@ -495,6 +537,7 @@ class ModelInspector:
         self.fields = FieldInspector(self)
         self.validators = ValidatorInspector(self)
         self.references = ReferenceInspector(self)
+        self.nonpydantic = NonPydanticInspector(self)
 
     def get_field_validator_mapping(self) -> Dict[str, List[ValidatorAdapter]]:
         """Collect all available validators keyed by their corresponding

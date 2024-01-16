@@ -179,3 +179,29 @@ def test_is_pydantic_model_edge_case():
         EdgeCase = Dict[str, str]
 
     assert not StaticInspector.is_pydantic_model(EdgeCase)
+
+def serializable_beyond_pydantic():
+    class BeyondPydanticSerializable(BaseModel):
+        field_one: str
+
+        @classmethod
+        def some_non_pydantic_method(cls):
+            return True
+
+    print("hey")
+    return ModelInspector(BeyondPydanticSerializable)
+
+some_class = serializable_beyond_pydantic()
+print(some_class)
+print(dir(some_class))
+print(dir(some_class.model))
+print(str(some_class.nonpydantic.class_methods))
+# print(dir(some_class.class_methods))
+# print(some_class.get_non_validator_methods())
+# print(some_class.fields.names)
+# print(some_class.references)
+# print(dir(some_class.references))
+# print(some_class.model)
+# print(dir(some_class.model))
+# print(some_class.model.model_fields)
+# print(some_class.model)
