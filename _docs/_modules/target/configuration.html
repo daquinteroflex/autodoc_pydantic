@@ -1,0 +1,880 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>target.configuration &#8212; autodoc_pydantic 2.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/autodoc_pydantic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/target/configuration';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo_white.svg" class="logo__image only-light" alt="autodoc_pydantic 2.1.0 documentation - Home"/>
+    <script>document.write(`<img src="../../_static/logo_white.svg" class="logo__image only-dark" alt="autodoc_pydantic 2.1.0 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Users</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../users/installation.html">Installation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../users/usage.html">Usage</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../users/_autosummary/target.usage_autosummary.AutoSummaryModel.html">target.usage_autosummary.AutoSummaryModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../users/_autosummary/target.usage_autosummary.AutoSummarySettings.html">target.usage_autosummary.AutoSummarySettings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../users/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../users/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../users/faq.html">FAQ</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../developers/setup.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developers/design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developers/guides.html">Guides</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../reference/api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/changelog.html">Changelog</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for target.configuration</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+<span class="kn">from</span> <span class="nn">uuid</span> <span class="kn">import</span> <span class="n">UUID</span>
+
+<span class="kn">import</span> <span class="nn">annotated_types</span>
+<span class="kn">from</span> <span class="nn">pydantic.types</span> <span class="kn">import</span> <span class="n">UuidVersion</span><span class="p">,</span> <span class="n">PathType</span><span class="p">,</span> <span class="n">condate</span><span class="p">,</span> <span class="n">condecimal</span><span class="p">,</span> <span class="n">conlist</span><span class="p">,</span> \
+    <span class="n">conset</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Annotated</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">typing_extensions</span> <span class="kn">import</span> <span class="n">Annotated</span>
+
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">field_validator</span><span class="p">,</span> <span class="n">Field</span><span class="p">,</span> <span class="n">model_validator</span><span class="p">,</span> \
+    <span class="n">ConfigDict</span><span class="p">,</span> <span class="n">conint</span><span class="p">,</span> <span class="n">constr</span><span class="p">,</span> <span class="n">Strict</span><span class="p">,</span> <span class="n">AllowInfNan</span>
+<span class="kn">from</span> <span class="nn">pydantic_settings</span> <span class="kn">import</span> <span class="n">BaseSettings</span><span class="p">,</span> <span class="n">SettingsConfigDict</span>
+
+
+<div class="viewcode-block" id="ModelShowJson"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ModelShowJson">[docs]</a><span class="k">class</span> <span class="nc">ModelShowJson</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ModelShowJson.&quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="ModelShowConfigSummary"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ModelShowConfigSummary">[docs]</a><span class="k">class</span> <span class="nc">ModelShowConfigSummary</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ModelShowConfigSummary.&quot;&quot;&quot;</span>
+
+    <span class="n">model_config</span> <span class="o">=</span> <span class="n">ConfigDict</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;FooBar&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ModelShowValidatorsSummary"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ModelShowValidatorsSummary">[docs]</a><span class="k">class</span> <span class="nc">ModelShowValidatorsSummary</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ModelShowValidatorsSummary.&quot;&quot;&quot;</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">v</span></div>
+
+
+<span class="k">class</span> <span class="nc">ModelShowValidatorsSummaryInherited</span><span class="p">(</span><span class="n">ModelShowValidatorsSummary</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ModelShowValidatorsSummaryInherited.&quot;&quot;&quot;</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">check_inherited</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">v</span>
+
+
+<span class="k">class</span> <span class="nc">ModelShowValidatorsSummaryMultipleFields</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ModelShowValidatorsSummaryMultipleFields.&quot;&quot;&quot;</span>
+
+    <span class="n">field1</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="n">field2</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field1&quot;</span><span class="p">,</span> <span class="s2">&quot;field2&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">v</span>
+
+
+<div class="viewcode-block" id="ModelShowFieldSummary"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ModelShowFieldSummary">[docs]</a><span class="k">class</span> <span class="nc">ModelShowFieldSummary</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ModelShowFieldSummary.&quot;&quot;&quot;</span>
+
+    <span class="n">field1</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">field2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;FooBar&quot;</span></div>
+
+
+<span class="k">class</span> <span class="nc">ModelShowFieldSummaryInherited</span><span class="p">(</span><span class="n">ModelShowFieldSummary</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ModelShowFieldSummaryInherited.&quot;&quot;&quot;</span>
+
+    <span class="n">field3</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
+
+
+<div class="viewcode-block" id="ModelSummaryListOrder"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ModelSummaryListOrder">[docs]</a><span class="k">class</span> <span class="nc">ModelSummaryListOrder</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ModelSummaryListOrder.&quot;&quot;&quot;</span>
+
+    <span class="n">field_b</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">field_a</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field_b&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">validate_b</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">v</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field_a&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">validate_a</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">v</span></div>
+
+
+<div class="viewcode-block" id="ModelHideParamList"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ModelHideParamList">[docs]</a><span class="k">class</span> <span class="nc">ModelHideParamList</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ModelHideParamList.&quot;&quot;&quot;</span>
+
+    <span class="n">field1</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">field2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;FooBar&quot;</span></div>
+
+
+<div class="viewcode-block" id="ModelUndocMembers"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ModelUndocMembers">[docs]</a><span class="k">class</span> <span class="nc">ModelUndocMembers</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ModelUndocMembers.&quot;&quot;&quot;</span>
+
+    <span class="n">field1</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">field2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;FooBar&quot;</span></div>
+
+
+<div class="viewcode-block" id="ModelMembers"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ModelMembers">[docs]</a><span class="k">class</span> <span class="nc">ModelMembers</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ModelMembers.&quot;&quot;&quot;</span>
+
+    <span class="n">field1</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Doc field 1&quot;&quot;&quot;</span>
+
+    <span class="n">field2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;FooBar&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Doc field 2&quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="ModelMemberOrder"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ModelMemberOrder">[docs]</a><span class="k">class</span> <span class="nc">ModelMemberOrder</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ModelMemberOrder.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="ModelMemberOrder.dummy"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ModelMemberOrder.dummy">[docs]</a>    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">dummy</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">v</span></div>
+
+    <span class="n">model_config</span> <span class="o">=</span> <span class="n">ConfigDict</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Field.&quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="ModelShowValidatorMembers"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ModelShowValidatorMembers">[docs]</a><span class="k">class</span> <span class="nc">ModelShowValidatorMembers</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ModelShowValidatorMembers.&quot;&quot;&quot;</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Field.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="ModelShowValidatorMembers.dummy"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ModelShowValidatorMembers.dummy">[docs]</a>    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">dummy</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">v</span></div></div>
+
+
+<span class="k">class</span> <span class="nc">ModelShowConfigMember</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ModelShowConfigMember.&quot;&quot;&quot;</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Field.&quot;&quot;&quot;</span>
+
+    <span class="n">model_config</span> <span class="o">=</span> <span class="n">ConfigDict</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="ModelSignaturePrefix"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ModelSignaturePrefix">[docs]</a><span class="k">class</span> <span class="nc">ModelSignaturePrefix</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ModelSignaturePrefix.&quot;&quot;&quot;</span></div>
+
+
+<span class="k">class</span> <span class="nc">ModelWithFieldSwapNameAndAlias</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ModelWithFieldSwapNameAndAlias.&quot;&quot;&quot;</span>
+
+    <span class="n">field1</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;field1 alias&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Field1&quot;&quot;&quot;</span>
+    <span class="n">field2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="s2">&quot;FooBar&quot;</span><span class="p">,</span> <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;field2 alias&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Field2&quot;&quot;&quot;</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field1&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">v</span>
+
+
+<div class="viewcode-block" id="SettingsShowJson"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.SettingsShowJson">[docs]</a><span class="k">class</span> <span class="nc">SettingsShowJson</span><span class="p">(</span><span class="n">BaseSettings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SettingsShowJson.&quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="SettingsShowConfigSummary"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.SettingsShowConfigSummary">[docs]</a><span class="k">class</span> <span class="nc">SettingsShowConfigSummary</span><span class="p">(</span><span class="n">BaseSettings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SettingsShowConfigSummary.&quot;&quot;&quot;</span>
+
+    <span class="n">model_config</span> <span class="o">=</span> <span class="n">SettingsConfigDict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;FooBar&quot;</span><span class="p">,</span> <span class="n">frozen</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
+
+
+<span class="k">class</span> <span class="nc">SettingsShowConfigSummaryEmpty</span><span class="p">(</span><span class="n">BaseSettings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SettingsShowConfigSummaryEmpty.&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="SettingsShowValidatorsSummary"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.SettingsShowValidatorsSummary">[docs]</a><span class="k">class</span> <span class="nc">SettingsShowValidatorsSummary</span><span class="p">(</span><span class="n">BaseSettings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SettingsShowValidatorsSummary.&quot;&quot;&quot;</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">v</span></div>
+
+
+<div class="viewcode-block" id="SettingsShowFieldSummary"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.SettingsShowFieldSummary">[docs]</a><span class="k">class</span> <span class="nc">SettingsShowFieldSummary</span><span class="p">(</span><span class="n">BaseSettings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SettingsShowFieldSummary.&quot;&quot;&quot;</span>
+
+    <span class="n">field1</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Field1.&quot;&quot;&quot;</span>
+    <span class="n">field2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;FooBar&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Field2.&quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="SettingsSummaryListOrder"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.SettingsSummaryListOrder">[docs]</a><span class="k">class</span> <span class="nc">SettingsSummaryListOrder</span><span class="p">(</span><span class="n">BaseSettings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SettingsSummaryListOrder.&quot;&quot;&quot;</span>
+
+    <span class="n">field_b</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">field_a</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field_b&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">validate_b</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">v</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field_a&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">validate_a</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">v</span></div>
+
+
+<div class="viewcode-block" id="SettingsHideParamList"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.SettingsHideParamList">[docs]</a><span class="k">class</span> <span class="nc">SettingsHideParamList</span><span class="p">(</span><span class="n">BaseSettings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SettingsHideParamList.&quot;&quot;&quot;</span>
+
+    <span class="n">field1</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">field2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;FooBar&quot;</span></div>
+
+
+<div class="viewcode-block" id="SettingsUndocMembers"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.SettingsUndocMembers">[docs]</a><span class="k">class</span> <span class="nc">SettingsUndocMembers</span><span class="p">(</span><span class="n">BaseSettings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SettingsUndocMembers.&quot;&quot;&quot;</span>
+
+    <span class="n">field1</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">field2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;FooBar&quot;</span></div>
+
+
+<div class="viewcode-block" id="SettingsMembers"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.SettingsMembers">[docs]</a><span class="k">class</span> <span class="nc">SettingsMembers</span><span class="p">(</span><span class="n">BaseSettings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SettingsMembers.&quot;&quot;&quot;</span>
+
+    <span class="n">field1</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Doc field 1&quot;&quot;&quot;</span>
+
+    <span class="n">field2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;FooBar&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Doc field 2&quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="SettingsMemberOrder"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.SettingsMemberOrder">[docs]</a><span class="k">class</span> <span class="nc">SettingsMemberOrder</span><span class="p">(</span><span class="n">BaseSettings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SettingsMemberOrder.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="SettingsMemberOrder.dummy"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.SettingsMemberOrder.dummy">[docs]</a>    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">dummy</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">v</span></div>
+
+    <span class="n">model_config</span> <span class="o">=</span> <span class="n">SettingsConfigDict</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Field.&quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="SettingsShowValidatorMembers"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.SettingsShowValidatorMembers">[docs]</a><span class="k">class</span> <span class="nc">SettingsShowValidatorMembers</span><span class="p">(</span><span class="n">BaseSettings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SettingsShowValidatorMembers.&quot;&quot;&quot;</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Field.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="SettingsShowValidatorMembers.dummy"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.SettingsShowValidatorMembers.dummy">[docs]</a>    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">dummy</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">v</span></div></div>
+
+
+<span class="k">class</span> <span class="nc">SettingsShowConfigMember</span><span class="p">(</span><span class="n">BaseSettings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SettingsShowConfigMember.&quot;&quot;&quot;</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Field.&quot;&quot;&quot;</span>
+
+    <span class="n">model_config</span> <span class="o">=</span> <span class="n">SettingsConfigDict</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="SettingsSignaturePrefix"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.SettingsSignaturePrefix">[docs]</a><span class="k">class</span> <span class="nc">SettingsSignaturePrefix</span><span class="p">(</span><span class="n">BaseSettings</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;SettingsSignaturePrefix.&quot;&quot;&quot;</span></div>
+
+
+<span class="k">class</span> <span class="nc">ConfigMembers</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ConfigUndocMembers.&quot;&quot;&quot;</span>
+
+    <span class="k">class</span> <span class="nc">Config</span><span class="p">:</span>
+        <span class="n">frozen</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;FooBar&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">ConfigSignaturePrefix</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ConfigSignaturePrefix.&quot;&quot;&quot;</span>
+
+    <span class="n">model_config</span> <span class="o">=</span> <span class="n">ConfigDict</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="ValidatorReplaceSignature"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ValidatorReplaceSignature">[docs]</a><span class="k">class</span> <span class="nc">ValidatorReplaceSignature</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ValidatorReplaceSignature.&quot;&quot;&quot;</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+
+<div class="viewcode-block" id="ValidatorReplaceSignature.check"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ValidatorReplaceSignature.check">[docs]</a>    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">v</span></div></div>
+
+
+<span class="k">class</span> <span class="nc">ValidatorReplaceSignatureWithSwapNameAndAlias</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ValidatorReplaceSignatureWithSwapNameAndAlias.&quot;&quot;&quot;</span>
+
+    <span class="n">field1</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;field1 alias&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Field1&quot;&quot;&quot;</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field1&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">v</span>
+
+
+<div class="viewcode-block" id="ValidatorListFields"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ValidatorListFields">[docs]</a><span class="k">class</span> <span class="nc">ValidatorListFields</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ValidatorListFields.&quot;&quot;&quot;</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+
+<div class="viewcode-block" id="ValidatorListFields.check"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ValidatorListFields.check">[docs]</a>    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">v</span></div></div>
+
+
+<span class="k">class</span> <span class="nc">ValidatorListFieldsWithFieldSwapNameAndAlias</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ValidatorListFieldsWithFieldSwapNameAndAlias.&quot;&quot;&quot;</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;field_alias&quot;</span><span class="p">)</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">v</span>
+
+
+<div class="viewcode-block" id="ValidatorSignaturePrefix"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ValidatorSignaturePrefix">[docs]</a><span class="k">class</span> <span class="nc">ValidatorSignaturePrefix</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ValidatorSignaturePrefix.&quot;&quot;&quot;</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+
+<div class="viewcode-block" id="ValidatorSignaturePrefix.check"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ValidatorSignaturePrefix.check">[docs]</a>    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">v</span></div></div>
+
+
+<span class="k">class</span> <span class="nc">ValidatorAsteriskRootValidator</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ValidatorAsteriskRootValidator&quot;&quot;&quot;</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">v</span>
+
+    <span class="nd">@model_validator</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;after&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">check_root</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check root.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">values</span>
+
+    <span class="nd">@model_validator</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;before&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">check_root_pre</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check root pre.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">values</span>
+
+
+<div class="viewcode-block" id="FieldListValidators"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.FieldListValidators">[docs]</a><span class="k">class</span> <span class="nc">FieldListValidators</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;FieldListValidators.&quot;&quot;&quot;</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Field.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="FieldListValidators.check"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.FieldListValidators.check">[docs]</a>    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">v</span></div></div>
+
+
+<span class="k">class</span> <span class="nc">FieldListValidatorsInherited</span><span class="p">(</span><span class="n">FieldListValidators</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;FieldListValidatorsInherited.&quot;&quot;&quot;</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">check_inherited</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check inherited.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">v</span>
+
+
+<div class="viewcode-block" id="FieldDocPolicy"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.FieldDocPolicy">[docs]</a><span class="k">class</span> <span class="nc">FieldDocPolicy</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;FieldDocPolicy.&quot;&quot;&quot;</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Custom Desc.&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Field.&quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="FieldShowConstraints"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.FieldShowConstraints">[docs]</a><span class="k">class</span> <span class="nc">FieldShowConstraints</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;FieldShowConstraints.&quot;&quot;&quot;</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Field.&quot;&quot;&quot;</span></div>
+
+
+<span class="k">class</span> <span class="nc">FieldShowConstraintsNativeConstraintTypes</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;FieldShowConstraints.&quot;&quot;&quot;</span>
+
+    <span class="n">field_conint</span><span class="p">:</span> <span class="n">conint</span><span class="p">(</span><span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field_conint&quot;&quot;&quot;</span>
+
+    <span class="n">field_constr</span><span class="p">:</span> <span class="n">constr</span><span class="p">(</span><span class="n">min_length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="s2">&quot;[a-z]+&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field_constr&quot;&quot;&quot;</span>
+
+    <span class="n">field_condate</span><span class="p">:</span> <span class="n">condate</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                           <span class="n">gt</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2023</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field_condate&quot;&quot;&quot;</span>
+
+    <span class="n">field_condecimal</span><span class="p">:</span> <span class="n">condecimal</span><span class="p">(</span><span class="n">max_digits</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">decimal_places</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field_condecimal&quot;&quot;&quot;</span>
+
+    <span class="n">field_conset</span><span class="p">:</span> <span class="n">conset</span><span class="p">(</span><span class="n">item_type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">min_length</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field_conset&quot;&quot;&quot;</span>
+
+    <span class="n">field_conlist</span><span class="p">:</span> <span class="n">conlist</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">item_type</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field_conlist&quot;&quot;&quot;</span>
+
+    <span class="n">field_strict_float</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">Strict</span><span class="p">()]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field_strict_float&quot;&quot;&quot;</span>
+
+    <span class="n">field_strict_bool</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Strict</span><span class="p">()]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field_strict_bool&quot;&quot;&quot;</span>
+
+    <span class="n">field_positive_int</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">annotated_types</span><span class="o">.</span><span class="n">Gt</span><span class="p">(</span><span class="mi">0</span><span class="p">)]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field_positive_int&quot;&quot;&quot;</span>
+
+    <span class="n">uuid4</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">UUID</span><span class="p">,</span> <span class="n">UuidVersion</span><span class="p">(</span><span class="mi">4</span><span class="p">)]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;uuid4&quot;&quot;&quot;</span>
+
+    <span class="n">file_path</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="n">PathType</span><span class="p">(</span><span class="s1">&#39;file&#39;</span><span class="p">)]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;file_path&quot;&quot;&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">FieldShowConstraintsIgnoreExtraKwargs</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;FieldShowConstraints.&quot;&quot;&quot;</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">non_existing_kwarg</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Field.&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="FieldShowAlias"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.FieldShowAlias">[docs]</a><span class="k">class</span> <span class="nc">FieldShowAlias</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;FieldShowAlias.&quot;&quot;&quot;</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;field2&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Field.&quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="FieldShowDefault"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.FieldShowDefault">[docs]</a><span class="k">class</span> <span class="nc">FieldShowDefault</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;FieldShowDefault.&quot;&quot;&quot;</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Field.&quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="FieldSignaturePrefix"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.FieldSignaturePrefix">[docs]</a><span class="k">class</span> <span class="nc">FieldSignaturePrefix</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;FieldSignaturePrefix.&quot;&quot;&quot;</span>
+
+    <span class="n">field</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Field.&quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="FieldShowRequired"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.FieldShowRequired">[docs]</a><span class="k">class</span> <span class="nc">FieldShowRequired</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;FieldShowRequired.&quot;&quot;&quot;</span>
+
+    <span class="n">field1</span><span class="p">:</span> <span class="nb">int</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field1&quot;&quot;&quot;</span>
+    <span class="n">field2</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="o">...</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field2&quot;&quot;&quot;</span>
+    <span class="n">field3</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=...</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field3&quot;&quot;&quot;</span>
+    <span class="n">field4</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field4&quot;&quot;&quot;</span></div>
+
+
+<span class="k">class</span> <span class="nc">FieldShowRequiredNot</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;FieldShowRequiredNot&quot;&quot;&quot;</span>
+
+    <span class="n">field1</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field1&quot;&quot;&quot;</span>
+
+    <span class="n">field2</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field2&quot;&quot;&quot;</span>
+
+    <span class="n">field3</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field3&quot;&quot;&quot;</span>
+
+    <span class="n">field4</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field4&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="FieldShowOptional"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.FieldShowOptional">[docs]</a><span class="k">class</span> <span class="nc">FieldShowOptional</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;FieldShowOptional&quot;&quot;&quot;</span>
+
+    <span class="n">field1</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field1&quot;&quot;&quot;</span>
+
+    <span class="n">field2</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field2&quot;&quot;&quot;</span></div>
+
+
+<span class="k">class</span> <span class="nc">FieldShowOptionalNot</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;FieldShowOptionalNot&quot;&quot;&quot;</span>
+
+    <span class="n">field1</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field1&quot;&quot;&quot;</span>
+
+    <span class="n">field2</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field2&quot;&quot;&quot;</span>
+
+    <span class="n">field3</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field3&quot;&quot;&quot;</span>
+
+    <span class="n">field4</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;field4&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="FieldSwapNameAndAlias"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.FieldSwapNameAndAlias">[docs]</a><span class="k">class</span> <span class="nc">FieldSwapNameAndAlias</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;FieldSwapNameAndAlias&quot;&quot;&quot;</span>
+
+    <span class="n">field1</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;field 1 alias&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Field1&quot;&quot;&quot;</span></div>
+
+
+<span class="k">class</span> <span class="nc">ModelErdanticFigureRelated</span><span class="p">(</span><span class="n">ModelShowFieldSummary</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ModelErdanticFigureRelated.&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="ModelErdanticFigure"><a class="viewcode-back" href="../../users/configuration.html#target.configuration.ModelErdanticFigure">[docs]</a><span class="k">class</span> <span class="nc">ModelErdanticFigure</span><span class="p">(</span><span class="n">ModelShowFieldSummary</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ModelErdanticFigure.&quot;&quot;&quot;</span>
+    <span class="n">related</span><span class="p">:</span> <span class="n">ModelErdanticFigureRelated</span></div>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Franz Wöllert
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023, Franz Wöllert.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

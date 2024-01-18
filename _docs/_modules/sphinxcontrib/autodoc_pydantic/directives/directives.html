@@ -1,0 +1,612 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sphinxcontrib.autodoc_pydantic.directives.directives &#8212; autodoc_pydantic 2.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/autodoc_pydantic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/tabs.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/sphinxcontrib/autodoc_pydantic/directives/directives';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/logo_white.svg" class="logo__image only-light" alt="autodoc_pydantic 2.1.0 documentation - Home"/>
+    <script>document.write(`<img src="../../../../_static/logo_white.svg" class="logo__image only-dark" alt="autodoc_pydantic 2.1.0 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Users</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../users/installation.html">Installation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../users/usage.html">Usage</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../users/_autosummary/target.usage_autosummary.AutoSummaryModel.html">target.usage_autosummary.AutoSummaryModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../users/_autosummary/target.usage_autosummary.AutoSummarySettings.html">target.usage_autosummary.AutoSummarySettings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../users/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../users/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../users/faq.html">FAQ</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../developers/setup.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developers/design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developers/guides.html">Guides</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../reference/api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../reference/changelog.html">Changelog</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for sphinxcontrib.autodoc_pydantic.directives.directives</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;This module contains **autodoc_pydantic**&#39;s directives.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">List</span>
+
+<span class="kn">import</span> <span class="nn">sphinx</span>
+<span class="kn">from</span> <span class="nn">docutils.nodes</span> <span class="kn">import</span> <span class="n">Text</span>
+<span class="kn">from</span> <span class="nn">docutils.parsers.rst.directives</span> <span class="kn">import</span> <span class="n">unchanged</span>
+<span class="kn">from</span> <span class="nn">sphinx.addnodes</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">desc_signature</span><span class="p">,</span>
+    <span class="n">desc_annotation</span><span class="p">,</span> <span class="n">desc_name</span><span class="p">,</span> <span class="n">pending_xref</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">sphinx.domains.python</span> <span class="kn">import</span> <span class="n">PyMethod</span><span class="p">,</span> <span class="n">PyAttribute</span><span class="p">,</span> <span class="n">PyClasslike</span><span class="p">,</span> <span class="n">py_sig_re</span>
+<span class="kn">from</span> <span class="nn">sphinxcontrib.autodoc_pydantic.inspection</span> <span class="kn">import</span> <span class="n">ModelInspector</span><span class="p">,</span> \
+    <span class="n">ValidatorFieldMap</span>
+<span class="kn">from</span> <span class="nn">sphinxcontrib.autodoc_pydantic.directives.options.composites</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">DirectiveOptions</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">sphinxcontrib.autodoc_pydantic.directives.utility</span> <span class="kn">import</span> \
+    <span class="n">create_field_href</span><span class="p">,</span> <span class="n">remove_node_by_tagname</span>
+<span class="kn">from</span> <span class="nn">sphinxcontrib.autodoc_pydantic.directives.options.validators</span> <span class="kn">import</span> \
+    <span class="n">option_default_true</span><span class="p">,</span> <span class="n">option_list_like</span>
+
+<span class="n">TUPLE_STR</span> <span class="o">=</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
+
+
+<div class="viewcode-block" id="PydanticDirectiveBase"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.directives.PydanticDirectiveBase">[docs]</a><span class="k">class</span> <span class="nc">PydanticDirectiveBase</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Base class for pydantic directive providing common functionality.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">config_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">default_prefix</span><span class="p">:</span> <span class="nb">str</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pyautodoc</span> <span class="o">=</span> <span class="n">DirectiveOptions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+<div class="viewcode-block" id="PydanticDirectiveBase.get_signature_prefix"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.directives.PydanticDirectiveBase.get_signature_prefix">[docs]</a>    <span class="k">def</span> <span class="nf">get_signature_prefix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sig</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Text</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Overwrite original signature prefix with custom pydantic ones.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">config_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">config_name</span><span class="si">}</span><span class="s2">-signature-prefix&quot;</span>
+        <span class="n">prefix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pyautodoc</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">config_name</span><span class="p">)</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">prefix</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_prefix</span>
+
+        <span class="c1"># account for changed signature in sphinx 4.3, see #62</span>
+        <span class="k">if</span> <span class="n">sphinx</span><span class="o">.</span><span class="n">version_info</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+            <span class="kn">from</span> <span class="nn">sphinx.addnodes</span> <span class="kn">import</span> <span class="n">desc_sig_space</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">Text</span><span class="p">(</span><span class="n">value</span><span class="p">),</span> <span class="n">desc_sig_space</span><span class="p">()]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2"> &quot;</span></div></div>
+
+
+<div class="viewcode-block" id="PydanticModel"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.directives.PydanticModel">[docs]</a><span class="k">class</span> <span class="nc">PydanticModel</span><span class="p">(</span><span class="n">PydanticDirectiveBase</span><span class="p">,</span> <span class="n">PyClasslike</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Specialized directive for pydantic models.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">option_spec</span> <span class="o">=</span> <span class="n">PyClasslike</span><span class="o">.</span><span class="n">option_spec</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">option_spec</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;__doc_disable_except__&quot;</span><span class="p">:</span> <span class="n">option_list_like</span><span class="p">,</span>
+                        <span class="s2">&quot;model-signature-prefix&quot;</span><span class="p">:</span> <span class="n">unchanged</span><span class="p">})</span>
+
+    <span class="n">config_name</span> <span class="o">=</span> <span class="s2">&quot;model&quot;</span>
+    <span class="n">default_prefix</span> <span class="o">=</span> <span class="s2">&quot;class&quot;</span></div>
+
+
+<div class="viewcode-block" id="PydanticSettings"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.directives.PydanticSettings">[docs]</a><span class="k">class</span> <span class="nc">PydanticSettings</span><span class="p">(</span><span class="n">PydanticDirectiveBase</span><span class="p">,</span> <span class="n">PyClasslike</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Specialized directive for pydantic settings.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">option_spec</span> <span class="o">=</span> <span class="n">PyClasslike</span><span class="o">.</span><span class="n">option_spec</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">option_spec</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;__doc_disable_except__&quot;</span><span class="p">:</span> <span class="n">option_list_like</span><span class="p">,</span>
+                        <span class="s2">&quot;settings-signature-prefix&quot;</span><span class="p">:</span> <span class="n">unchanged</span><span class="p">})</span>
+
+    <span class="n">config_name</span> <span class="o">=</span> <span class="s2">&quot;settings&quot;</span>
+    <span class="n">default_prefix</span> <span class="o">=</span> <span class="s2">&quot;class&quot;</span></div>
+
+
+<div class="viewcode-block" id="PydanticField"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.directives.PydanticField">[docs]</a><span class="k">class</span> <span class="nc">PydanticField</span><span class="p">(</span><span class="n">PydanticDirectiveBase</span><span class="p">,</span> <span class="n">PyAttribute</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Specialized directive for pydantic fields.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">option_spec</span> <span class="o">=</span> <span class="n">PyAttribute</span><span class="o">.</span><span class="n">option_spec</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">option_spec</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;alias&quot;</span><span class="p">:</span> <span class="n">unchanged</span><span class="p">,</span>
+                        <span class="s2">&quot;field-show-alias&quot;</span><span class="p">:</span> <span class="n">option_default_true</span><span class="p">,</span>
+                        <span class="s2">&quot;field-swap-name-and-alias&quot;</span><span class="p">:</span> <span class="n">option_default_true</span><span class="p">,</span>
+                        <span class="s2">&quot;required&quot;</span><span class="p">:</span> <span class="n">option_default_true</span><span class="p">,</span>
+                        <span class="s2">&quot;optional&quot;</span><span class="p">:</span> <span class="n">option_default_true</span><span class="p">,</span>
+                        <span class="s2">&quot;__doc_disable_except__&quot;</span><span class="p">:</span> <span class="n">option_list_like</span><span class="p">,</span>
+                        <span class="s2">&quot;field-signature-prefix&quot;</span><span class="p">:</span> <span class="n">unchanged</span><span class="p">})</span>
+
+    <span class="n">config_name</span> <span class="o">=</span> <span class="s2">&quot;field&quot;</span>
+    <span class="n">default_prefix</span> <span class="o">=</span> <span class="s2">&quot;attribute&quot;</span>
+
+<div class="viewcode-block" id="PydanticField.get_field_name"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.directives.PydanticField.get_field_name">[docs]</a>    <span class="k">def</span> <span class="nf">get_field_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sig</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get field name from signature. Borrows implementation from</span>
+<span class="sd">        `PyObject.handle_signature`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="n">py_sig_re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">sig</span><span class="p">)</span><span class="o">.</span><span class="n">groups</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="PydanticField.add_required"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.directives.PydanticField.add_required">[docs]</a>    <span class="k">def</span> <span class="nf">add_required</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">signode</span><span class="p">:</span> <span class="n">desc_signature</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add `[Required]` if directive option `required` is set.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;required&quot;</span><span class="p">):</span>
+            <span class="n">signode</span> <span class="o">+=</span> <span class="n">desc_annotation</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot; [Required]&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PydanticField.add_optional"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.directives.PydanticField.add_optional">[docs]</a>    <span class="k">def</span> <span class="nf">add_optional</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">signode</span><span class="p">:</span> <span class="n">desc_signature</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add `[Optional]` if directive option `optional` is set.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;optional&quot;</span><span class="p">):</span>
+            <span class="n">signode</span> <span class="o">+=</span> <span class="n">desc_annotation</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot; [Optional]&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PydanticField.add_alias_or_name"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.directives.PydanticField.add_alias_or_name">[docs]</a>    <span class="k">def</span> <span class="nf">add_alias_or_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sig</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">signode</span><span class="p">:</span> <span class="n">desc_signature</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add alias or name to signature.</span>
+
+<span class="sd">         Alias is added if `show-alias` is enabled. Name is added if both</span>
+<span class="sd">         `show-alias` and `swap-name-and-alias` is enabled.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">pyautodoc</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s2">&quot;field-show-alias&quot;</span><span class="p">):</span>
+            <span class="k">return</span>
+
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">pyautodoc</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;field-swap-name-and-alias&quot;</span><span class="p">):</span>
+            <span class="n">prefix</span> <span class="o">=</span> <span class="s2">&quot;name&quot;</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_field_name</span><span class="p">(</span><span class="n">sig</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">prefix</span> <span class="o">=</span> <span class="s2">&quot;alias&quot;</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;alias&quot;</span><span class="p">)</span>
+
+        <span class="n">signode</span> <span class="o">+=</span> <span class="n">desc_annotation</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot; (</span><span class="si">{</span><span class="n">prefix</span><span class="si">}</span><span class="s2"> &#39;</span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&#39;)&quot;</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_find_desc_name_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                             <span class="n">sig</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                             <span class="n">signode</span><span class="p">:</span> <span class="n">desc_signature</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">desc_name</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return `desc_name` node  from `signode` that contains the field</span>
+<span class="sd">        name. This is used to replace the name with the alias.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_field_name</span><span class="p">(</span><span class="n">sig</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">signode</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+            <span class="n">has_correct_text</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">astext</span><span class="p">()</span> <span class="o">==</span> <span class="n">name</span>
+            <span class="n">is_desc_name</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">desc_name</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">has_correct_text</span> <span class="ow">and</span> <span class="n">is_desc_name</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">node</span>
+
+<div class="viewcode-block" id="PydanticField.swap_name_and_alias"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.directives.PydanticField.swap_name_and_alias">[docs]</a>    <span class="k">def</span> <span class="nf">swap_name_and_alias</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sig</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">signode</span><span class="p">:</span> <span class="n">desc_signature</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Replaces name with alias if `swap-name-and-alias` is enabled.</span>
+
+<span class="sd">        Requires to replace existing `addnodes.desc_name` because name node is</span>
+<span class="sd">        added within `handle_signature` and this can&#39;t be intercepted or</span>
+<span class="sd">        overwritten otherwise.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">pyautodoc</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s2">&quot;field-swap-name-and-alias&quot;</span><span class="p">):</span>
+            <span class="k">return</span>
+
+        <span class="n">name_node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_find_desc_name_node</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">signode</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">name_node</span><span class="p">:</span>
+            <span class="n">logger</span> <span class="o">=</span> <span class="n">sphinx</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Field&#39;s `desc_name` node can&#39;t be located to &quot;</span>
+                           <span class="s2">&quot;swap name with alias.&quot;</span><span class="p">,</span>
+                           <span class="n">location</span><span class="o">=</span><span class="s2">&quot;autodoc_pydantic&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">text_node</span> <span class="o">=</span> <span class="n">Text</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;alias&quot;</span><span class="p">))</span>
+            <span class="n">text_node</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="n">name_node</span>
+            <span class="n">name_node</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">text_node</span></div>
+
+<div class="viewcode-block" id="PydanticField.handle_signature"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.directives.PydanticField.handle_signature">[docs]</a>    <span class="k">def</span> <span class="nf">handle_signature</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sig</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">signode</span><span class="p">:</span> <span class="n">desc_signature</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TUPLE_STR</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Optionally call add alias method.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">fullname</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">handle_signature</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">signode</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_required</span><span class="p">(</span><span class="n">signode</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_optional</span><span class="p">(</span><span class="n">signode</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;alias&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_alias_or_name</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">signode</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">swap_name_and_alias</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">signode</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">fullname</span><span class="p">,</span> <span class="n">prefix</span></div></div>
+
+
+<div class="viewcode-block" id="PydanticValidator"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.directives.PydanticValidator">[docs]</a><span class="k">class</span> <span class="nc">PydanticValidator</span><span class="p">(</span><span class="n">PydanticDirectiveBase</span><span class="p">,</span> <span class="n">PyMethod</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Specialized directive for pydantic validators.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">option_spec</span> <span class="o">=</span> <span class="n">PyMethod</span><span class="o">.</span><span class="n">option_spec</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">option_spec</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;validator-replace-signature&quot;</span><span class="p">:</span> <span class="n">option_default_true</span><span class="p">,</span>
+                        <span class="s2">&quot;__doc_disable_except__&quot;</span><span class="p">:</span> <span class="n">option_list_like</span><span class="p">,</span>
+                        <span class="s2">&quot;validator-signature-prefix&quot;</span><span class="p">:</span> <span class="n">unchanged</span><span class="p">,</span>
+                        <span class="s2">&quot;field-swap-name-and-alias&quot;</span><span class="p">:</span> <span class="n">option_default_true</span><span class="p">})</span>
+
+    <span class="n">config_name</span> <span class="o">=</span> <span class="s2">&quot;validator&quot;</span>
+    <span class="n">default_prefix</span> <span class="o">=</span> <span class="s2">&quot;classmethod&quot;</span>
+
+<div class="viewcode-block" id="PydanticValidator.get_field_href_from_mapping"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.directives.PydanticValidator.get_field_href_from_mapping">[docs]</a>    <span class="k">def</span> <span class="nf">get_field_href_from_mapping</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="n">inspector</span><span class="p">:</span> <span class="n">ModelInspector</span><span class="p">,</span>
+            <span class="n">mapping</span><span class="p">:</span> <span class="n">ValidatorFieldMap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pending_xref</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Generate the field reference node aka `pending_xref` from given</span>
+<span class="sd">        validator-field `mapping` while respecting field name/alias swap</span>
+<span class="sd">        possibility.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">name</span> <span class="o">=</span> <span class="n">mapping</span><span class="o">.</span><span class="n">field_name</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pyautodoc</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;field-swap-name-and-alias&quot;</span><span class="p">):</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">inspector</span><span class="o">.</span><span class="n">fields</span><span class="o">.</span><span class="n">get_alias_or_name</span><span class="p">(</span><span class="n">mapping</span><span class="o">.</span><span class="n">field_name</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">create_field_href</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+                                 <span class="n">ref</span><span class="o">=</span><span class="n">mapping</span><span class="o">.</span><span class="n">field_ref</span><span class="p">,</span>
+                                 <span class="n">env</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PydanticValidator.replace_return_node"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.directives.PydanticValidator.replace_return_node">[docs]</a>    <span class="k">def</span> <span class="nf">replace_return_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">signode</span><span class="p">:</span> <span class="n">desc_signature</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Replaces the return node with references to validated fields.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">remove_node_by_tagname</span><span class="p">(</span><span class="n">signode</span><span class="o">.</span><span class="n">children</span><span class="p">,</span> <span class="s2">&quot;desc_parameterlist&quot;</span><span class="p">)</span>
+
+        <span class="c1"># replace nodes</span>
+        <span class="n">class_name</span> <span class="o">=</span> <span class="s2">&quot;autodoc_pydantic_validator_arrow&quot;</span>
+        <span class="n">signode</span> <span class="o">+=</span> <span class="n">desc_annotation</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;  »  &quot;</span><span class="p">,</span> <span class="n">classes</span><span class="o">=</span><span class="p">[</span><span class="n">class_name</span><span class="p">])</span>
+
+        <span class="c1"># get imports, names and fields of validator</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">signode</span><span class="p">[</span><span class="s2">&quot;fullname&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">inspector</span> <span class="o">=</span> <span class="n">ModelInspector</span><span class="o">.</span><span class="n">from_child_signode</span><span class="p">(</span><span class="n">signode</span><span class="p">)</span>
+        <span class="n">mappings</span> <span class="o">=</span> <span class="n">inspector</span><span class="o">.</span><span class="n">references</span><span class="o">.</span><span class="n">filter_by_validator_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+        <span class="c1"># add field reference nodes</span>
+        <span class="n">signode</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_field_href_from_mapping</span><span class="p">(</span><span class="n">inspector</span><span class="o">=</span><span class="n">inspector</span><span class="p">,</span>
+                                                    <span class="n">mapping</span><span class="o">=</span><span class="n">mappings</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">mapping</span> <span class="ow">in</span> <span class="n">mappings</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+            <span class="n">signode</span> <span class="o">+=</span> <span class="n">desc_annotation</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;, &quot;</span><span class="p">)</span>
+            <span class="n">signode</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_field_href_from_mapping</span><span class="p">(</span><span class="n">inspector</span><span class="o">=</span><span class="n">inspector</span><span class="p">,</span>
+                                                        <span class="n">mapping</span><span class="o">=</span><span class="n">mapping</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PydanticValidator.handle_signature"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.directives.PydanticValidator.handle_signature">[docs]</a>    <span class="k">def</span> <span class="nf">handle_signature</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sig</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">signode</span><span class="p">:</span> <span class="n">desc_signature</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TUPLE_STR</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Optionally call replace return node method.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">fullname</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">handle_signature</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">signode</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pyautodoc</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s2">&quot;validator-replace-signature&quot;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">replace_return_node</span><span class="p">(</span><span class="n">signode</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">fullname</span><span class="p">,</span> <span class="n">prefix</span></div></div>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Franz Wöllert
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023, Franz Wöllert.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

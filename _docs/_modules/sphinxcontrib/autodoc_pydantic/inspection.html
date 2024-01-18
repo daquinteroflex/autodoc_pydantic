@@ -1,0 +1,927 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sphinxcontrib.autodoc_pydantic.inspection &#8212; autodoc_pydantic 2.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/autodoc_pydantic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/tabs.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/sphinxcontrib/autodoc_pydantic/inspection';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo_white.svg" class="logo__image only-light" alt="autodoc_pydantic 2.1.0 documentation - Home"/>
+    <script>document.write(`<img src="../../../_static/logo_white.svg" class="logo__image only-dark" alt="autodoc_pydantic 2.1.0 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Users</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../users/installation.html">Installation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../users/usage.html">Usage</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../users/_autosummary/target.usage_autosummary.AutoSummaryModel.html">target.usage_autosummary.AutoSummaryModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../users/_autosummary/target.usage_autosummary.AutoSummarySettings.html">target.usage_autosummary.AutoSummarySettings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../users/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../users/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../users/faq.html">FAQ</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../developers/setup.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../developers/design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../developers/guides.html">Guides</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/changelog.html">Changelog</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for sphinxcontrib.autodoc_pydantic.inspection</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;This module contains the inspection functionality for pydantic models. It</span>
+<span class="sd">is used to retrieve relevant information about fields, validators, config and</span>
+<span class="sd">schema of pydantical models.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">inspect</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">pydoc</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">NamedTuple</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Set</span><span class="p">,</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> \
+    <span class="n">Optional</span><span class="p">,</span> <span class="n">Iterable</span>
+
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">create_model</span><span class="p">,</span> <span class="n">ConfigDict</span><span class="p">,</span> \
+    <span class="n">PydanticInvalidForJsonSchema</span>
+<span class="kn">from</span> <span class="nn">pydantic.fields</span> <span class="kn">import</span> <span class="n">FieldInfo</span>
+<span class="kn">from</span> <span class="nn">pydantic_settings</span> <span class="kn">import</span> <span class="n">BaseSettings</span>
+<span class="kn">from</span> <span class="nn">sphinx.addnodes</span> <span class="kn">import</span> <span class="n">desc_signature</span>
+
+<span class="n">ASTERISK_FIELD_NAME</span> <span class="o">=</span> <span class="s2">&quot;all fields&quot;</span>
+
+
+<div class="viewcode-block" id="ValidatorAdapter"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.ValidatorAdapter">[docs]</a><span class="k">class</span> <span class="nc">ValidatorAdapter</span><span class="p">(</span><span class="n">NamedTuple</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Provide standardized interface to pydantic&#39;s validator objects with</span>
+<span class="sd">    additional metadata (e.g. root validator) for internal usage in</span>
+<span class="sd">    autodoc_pydantic.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">func</span><span class="p">:</span> <span class="n">Callable</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the validators function name.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">class_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the validators class name. It might be None if validator</span>
+<span class="sd">        is not bound to a class.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">qualname</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="vm">__qualname__</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">qualname</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">qualname</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">module</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the validators module name.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="vm">__module__</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">object_path</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the fully qualified object path of the validators function.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="vm">__module__</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="o">.</span><span class="vm">__qualname__</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">id</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ValidatorFieldMap"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.ValidatorFieldMap">[docs]</a><span class="k">class</span> <span class="nc">ValidatorFieldMap</span><span class="p">(</span><span class="n">NamedTuple</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Contains single mapping of a pydantic validator and field.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">field_name</span><span class="p">:</span> <span class="nb">str</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Name of the field.&quot;&quot;&quot;</span>
+
+    <span class="n">validator_name</span><span class="p">:</span> <span class="nb">str</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Name of the validator.&quot;&quot;&quot;</span>
+
+    <span class="n">field_ref</span><span class="p">:</span> <span class="nb">str</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Reference to field.&quot;&quot;&quot;</span>
+
+    <span class="n">validator_ref</span><span class="p">:</span> <span class="nb">str</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Reference to validataor.&quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="BaseInspectionComposite"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.BaseInspectionComposite">[docs]</a><span class="k">class</span> <span class="nc">BaseInspectionComposite</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Serves as base class for inspector composites which are coupled to</span>
+<span class="sd">    `ModelInspector` instances. Each composite provides a separate namespace to</span>
+<span class="sd">    handle different areas of pydantic models (e.g. fields and validators).</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="s1">&#39;ModelInspector&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="p">:</span> <span class="s1">&#39;ModelInspector&#39;</span> <span class="o">=</span> <span class="n">parent</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">model</span></div>
+
+
+<div class="viewcode-block" id="FieldInspector"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.FieldInspector">[docs]</a><span class="k">class</span> <span class="nc">FieldInspector</span><span class="p">(</span><span class="n">BaseInspectionComposite</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Provide namespace for inspection methods for fields of pydantic models.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="s1">&#39;ModelInspector&#39;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+        <span class="c1"># json schema can reliably be created only at model level</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attribute</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">model_fields</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return field names while keeping ordering.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+<div class="viewcode-block" id="FieldInspector.get"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.FieldInspector.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FieldInfo</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the instance of `FieldInfo` for given field `name`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">attribute</span><span class="p">[</span><span class="n">name</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="FieldInspector.get_alias_or_name"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.FieldInspector.get_alias_or_name">[docs]</a>    <span class="k">def</span> <span class="nf">get_alias_or_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the alias of a pydantic field if given. Otherwise, return the</span>
+<span class="sd">        field name.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">field_name</span> <span class="o">==</span> <span class="n">ASTERISK_FIELD_NAME</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">field_name</span>
+
+        <span class="n">alias</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">field_name</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span>
+        <span class="k">if</span> <span class="n">alias</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">alias</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">field_name</span></div>
+
+<div class="viewcode-block" id="FieldInspector.get_property_from_field_info"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.FieldInspector.get_property_from_field_info">[docs]</a>    <span class="k">def</span> <span class="nf">get_property_from_field_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                                     <span class="n">field_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                                     <span class="n">property_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get specific property value from pydantic&#39;s field info.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">field</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">field_name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">property_name</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_get_meta_items</span><span class="p">(</span><span class="n">meta_class</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Helper method to extract constraint names and values from different</span>
+<span class="sd">        pydantic Metadata objects such as `pydantic.types.Strict`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">meta_class</span><span class="o">.</span><span class="n">__dataclass_fields__</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">meta_class</span><span class="o">.</span><span class="vm">__dict__</span>
+
+<div class="viewcode-block" id="FieldInspector.get_constraints"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.FieldInspector.get_constraints">[docs]</a>    <span class="k">def</span> <span class="nf">get_constraints</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get constraints for given `field_name`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">metadata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">model_fields</span><span class="p">[</span><span class="n">field_name</span><span class="p">]</span><span class="o">.</span><span class="n">metadata</span>
+        <span class="n">available</span> <span class="o">=</span> <span class="p">[</span><span class="n">meta</span> <span class="k">for</span> <span class="n">meta</span> <span class="ow">in</span> <span class="n">metadata</span> <span class="k">if</span> <span class="n">meta</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">meta</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">meta</span> <span class="ow">in</span> <span class="n">available</span>
+                <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_meta_items</span><span class="p">(</span><span class="n">meta</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">meta</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">}</span></div>
+
+<div class="viewcode-block" id="FieldInspector.is_required"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.FieldInspector.is_required">[docs]</a>    <span class="k">def</span> <span class="nf">is_required</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if a given pydantic field is required/mandatory. Returns True,</span>
+<span class="sd">        if a value for this field needs to provided upon model creation.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">field_name</span><span class="p">)</span><span class="o">.</span><span class="n">is_required</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="FieldInspector.has_default_factory"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.FieldInspector.has_default_factory">[docs]</a>    <span class="k">def</span> <span class="nf">has_default_factory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if field has a `default_factory` being set. This information</span>
+<span class="sd">        is used to determine if a pydantic field is optional or not.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">field_name</span><span class="p">)</span><span class="o">.</span><span class="n">default_factory</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="FieldInspector.is_json_serializable"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.FieldInspector.is_json_serializable">[docs]</a>    <span class="k">def</span> <span class="nf">is_json_serializable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if given pydantic field is JSON serializable by calling</span>
+<span class="sd">        pydantic&#39;s `model.schema()` method. Custom objects might not be</span>
+<span class="sd">        serializable and hence would break JSON schema generation.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">field</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">field_name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_json_serializable</span><span class="p">(</span><span class="n">field</span><span class="p">)</span></div>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_is_json_serializable</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="n">FieldInfo</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Ensure JSON serializability for given pydantic `FieldInfo`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># hide user warnings in sphinx output</span>
+        <span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_test_field_serializabiltiy</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_test_field_serializabiltiy</span><span class="p">(</span><span class="n">field</span><span class="p">:</span> <span class="n">FieldInfo</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Test JSON serializability for given pydantic `FieldInfo`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">model_config</span> <span class="o">=</span> <span class="n">ConfigDict</span><span class="p">(</span><span class="n">arbitrary_types_allowed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">field_args</span> <span class="o">=</span> <span class="p">(</span><span class="n">field</span><span class="o">.</span><span class="n">annotation</span><span class="p">,</span> <span class="n">field</span><span class="o">.</span><span class="n">default</span><span class="p">)</span>
+            <span class="n">model</span> <span class="o">=</span> <span class="n">create_model</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span>
+                                 <span class="n">__config__</span><span class="o">=</span><span class="n">model_config</span><span class="p">,</span>
+                                 <span class="n">test_field</span><span class="o">=</span><span class="n">field_args</span><span class="p">)</span>
+            <span class="n">model</span><span class="o">.</span><span class="n">model_json_schema</span><span class="p">()</span>
+            <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">non_json_serializable</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get all fields that can&#39;t be safely JSON serialized.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">names</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_json_serializable</span><span class="p">(</span><span class="n">name</span><span class="p">)]</span>
+
+    <span class="k">def</span> <span class="fm">__bool__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Equals to False if no fields are present.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ValidatorInspector"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.ValidatorInspector">[docs]</a><span class="k">class</span> <span class="nc">ValidatorInspector</span><span class="p">(</span><span class="n">BaseInspectionComposite</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Provide namespace for inspection methods for validators of pydantic</span>
+<span class="sd">    models.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="s1">&#39;ModelInspector&#39;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">values</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="n">ValidatorAdapter</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns set of all available validators.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">all_validators</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">field_validator_mappings</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+        <span class="n">flattened</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span><span class="n">all_validators</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">set</span><span class="p">(</span><span class="n">flattened</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ValidatorInspector.get_reused_validators_names"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.ValidatorInspector.get_reused_validators_names">[docs]</a>    <span class="k">def</span> <span class="nf">get_reused_validators_names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Identify all reused validators. This is done implicitly by relying</span>
+<span class="sd">        on the fact the reused validators are registered as unbound functions</span>
+<span class="sd">        instead of bound methods.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">validators</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">__pydantic_decorators__</span><span class="o">.</span><span class="n">field_validators</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">cls_var_name</span>
+                <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">validators</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">inspect</span><span class="o">.</span><span class="n">isfunction</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">func</span><span class="p">)]</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return names of all validators of pydantic model.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="nb">set</span><span class="p">([</span><span class="n">validator</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">validator</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="fm">__bool__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Equals to False if no validators are present.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ConfigInspector"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.ConfigInspector">[docs]</a><span class="k">class</span> <span class="nc">ConfigInspector</span><span class="p">(</span><span class="n">BaseInspectionComposite</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Provide namespace for inspection methods for config class of pydantic</span>
+<span class="sd">    models.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="s1">&#39;ModelInspector&#39;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">items</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_values_per_type</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_get_values_per_type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the configuration values from any pydantic model.</span>
+
+<span class="sd">        Behavior of configuration values varies between `BaseModel` and</span>
+<span class="sd">        BaseSettings`. For `BaseModel`, if no configs are provided, then</span>
+<span class="sd">        model_config` is empty. However, for `BaseSettings`, `model_config`</span>
+<span class="sd">        contains a predefined set of values. This needs to be handled properly</span>
+<span class="sd">        otherwise the `BaseSettings` always show up a lot of irrelevant default</span>
+<span class="sd">        values. Hence, the default values are removed.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">model_config</span>
+
+        <span class="k">if</span> <span class="nb">issubclass</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">BaseSettings</span><span class="p">):</span>
+            <span class="n">default</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">BaseSettings</span><span class="o">.</span><span class="n">model_config</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+            <span class="n">available</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">values</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+
+            <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">given</span> <span class="k">for</span> <span class="n">given</span> <span class="ow">in</span> <span class="n">available</span> <span class="k">if</span> <span class="n">given</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">default</span><span class="p">]</span>
+            <span class="n">values</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">values</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_configured</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if pydantic model config was explicitly configured.&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ReferenceInspector"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.ReferenceInspector">[docs]</a><span class="k">class</span> <span class="nc">ReferenceInspector</span><span class="p">(</span><span class="n">BaseInspectionComposite</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Provide namespace for inspection methods for creating references</span>
+<span class="sd">    mainly between pydantic fields and validators.</span>
+
+<span class="sd">    Importantly, `mappings` provides the set of all `ValidatorFieldMap`</span>
+<span class="sd">    instances which contain all references between fields and validators.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mappings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_mappings</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">model_path</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieve the full path of the model.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="vm">__module__</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<div class="viewcode-block" id="ReferenceInspector.create_model_reference"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.ReferenceInspector.create_model_reference">[docs]</a>    <span class="k">def</span> <span class="nf">create_model_reference</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create reference for given attribute `name` returning full path</span>
+<span class="sd">        including the model path.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">model_path</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span></div>
+
+    <span class="k">def</span> <span class="nf">_create_mappings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="n">ValidatorFieldMap</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Generate reference mappings between validators and corresponding</span>
+<span class="sd">        fields.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">mappings</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">field</span><span class="p">,</span> <span class="n">validators</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">field_validator_mappings</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">field</span> <span class="o">==</span> <span class="s2">&quot;*&quot;</span><span class="p">:</span>
+                <span class="n">field_name</span> <span class="o">=</span> <span class="n">ASTERISK_FIELD_NAME</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">field_name</span> <span class="o">=</span> <span class="n">field</span>
+
+            <span class="k">for</span> <span class="n">validator</span> <span class="ow">in</span> <span class="n">validators</span><span class="p">:</span>
+                <span class="n">mapping</span> <span class="o">=</span> <span class="n">ValidatorFieldMap</span><span class="p">(</span>
+                    <span class="n">field_name</span><span class="o">=</span><span class="n">field_name</span><span class="p">,</span>
+                    <span class="n">field_ref</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">model_path</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">field_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                    <span class="n">validator_name</span><span class="o">=</span><span class="n">validator</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                    <span class="n">validator_ref</span><span class="o">=</span><span class="n">validator</span><span class="o">.</span><span class="n">object_path</span>
+                <span class="p">)</span>
+                <span class="n">mappings</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">mapping</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">mappings</span>
+
+<div class="viewcode-block" id="ReferenceInspector.filter_by_validator_name"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.ReferenceInspector.filter_by_validator_name">[docs]</a>    <span class="k">def</span> <span class="nf">filter_by_validator_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">ValidatorFieldMap</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return mappings for given validator `name`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="n">mapping</span> <span class="k">for</span> <span class="n">mapping</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">mappings</span>
+                <span class="k">if</span> <span class="n">mapping</span><span class="o">.</span><span class="n">validator_name</span> <span class="o">==</span> <span class="n">name</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="ReferenceInspector.filter_by_field_name"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.ReferenceInspector.filter_by_field_name">[docs]</a>    <span class="k">def</span> <span class="nf">filter_by_field_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">ValidatorFieldMap</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return mappings for given field `name`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="n">mapping</span> <span class="k">for</span> <span class="n">mapping</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">mappings</span>
+                <span class="k">if</span> <span class="n">mapping</span><span class="o">.</span><span class="n">field_name</span> <span class="ow">in</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">ASTERISK_FIELD_NAME</span><span class="p">)]</span></div></div>
+
+
+<div class="viewcode-block" id="SchemaInspector"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.SchemaInspector">[docs]</a><span class="k">class</span> <span class="nc">SchemaInspector</span><span class="p">(</span><span class="n">BaseInspectionComposite</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Provide namespace for inspection methods for general properties of</span>
+<span class="sd">    pydantic models.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">sanitized</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get model&#39;s `schema` while handling non serializable fields. Such</span>
+<span class="sd">        fields will be replaced by TypeVars.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+                <span class="n">schema</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">model_json_schema</span><span class="p">()</span>
+
+        <span class="k">except</span> <span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">,</span> <span class="n">PydanticInvalidForJsonSchema</span><span class="p">):</span>
+            <span class="n">new_model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_sanitized_model</span><span class="p">()</span>
+            <span class="n">schema</span> <span class="o">=</span> <span class="n">new_model</span><span class="o">.</span><span class="n">model_json_schema</span><span class="p">()</span>
+
+        <span class="n">keys_order</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;properties&quot;</span><span class="p">]</span>
+        <span class="n">reordered_schema</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">schema</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">keys_order</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">schema</span><span class="p">}</span>
+        <span class="n">reordered_schema</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">schema</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">reordered_schema</span>
+
+<div class="viewcode-block" id="SchemaInspector.create_sanitized_model"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.SchemaInspector.create_sanitized_model">[docs]</a>    <span class="k">def</span> <span class="nf">create_sanitized_model</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BaseModel</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Generates a new pydantic model from the original one while</span>
+<span class="sd">        substituting invalid fields with typevars.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">invalid_fields</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">fields</span><span class="o">.</span><span class="n">non_json_serializable</span>
+        <span class="n">new</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="p">(</span><span class="n">TypeVar</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">invalid_fields</span><span class="p">}</span>
+        <span class="k">return</span> <span class="n">create_model</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">__base__</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="o">**</span><span class="n">new</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="StaticInspector"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.StaticInspector">[docs]</a><span class="k">class</span> <span class="nc">StaticInspector</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Namespace under `ModelInspector` for static methods.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="StaticInspector.is_pydantic_model"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.StaticInspector.is_pydantic_model">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">is_pydantic_model</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Determine if object is a valid pydantic model.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">BaseModel</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span></div>
+
+<div class="viewcode-block" id="StaticInspector.is_pydantic_field"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.StaticInspector.is_pydantic_field">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">is_pydantic_field</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">field_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Determine if given `field` is a pydantic field.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">cls</span><span class="o">.</span><span class="n">is_pydantic_model</span><span class="p">(</span><span class="n">parent</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="n">field_name</span> <span class="ow">in</span> <span class="n">parent</span><span class="o">.</span><span class="n">model_fields</span></div>
+
+<div class="viewcode-block" id="StaticInspector.is_validator_by_name"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.StaticInspector.is_validator_by_name">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">is_validator_by_name</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Determine if a validator is present under provided `name` for given</span>
+<span class="sd">        `model`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">cls</span><span class="o">.</span><span class="n">is_pydantic_model</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+            <span class="n">inspector</span> <span class="o">=</span> <span class="n">ModelInspector</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">inspector</span><span class="o">.</span><span class="n">validators</span><span class="o">.</span><span class="n">names</span>
+        <span class="k">return</span> <span class="kc">False</span></div></div>
+
+
+<div class="viewcode-block" id="NonPydanticInspector"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.NonPydanticInspector">[docs]</a><span class="k">class</span> <span class="nc">NonPydanticInspector</span><span class="p">(</span><span class="n">BaseInspectionComposite</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Inspects for methods that are class methods and not validators.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="s1">&#39;ModelInspector&#39;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+        <span class="c1"># json schema can reliably be created only at model level</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">methods</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_non_validator_methods</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>
+
+<div class="viewcode-block" id="NonPydanticInspector.get_non_validator_methods"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.NonPydanticInspector.get_non_validator_methods">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">get_non_validator_methods</span><span class="p">(</span><span class="n">model</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Callable</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This method extracts all staticmethods and classmethods from the given class,</span>
+<span class="sd">        including those inherited from parent classes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="nf">filter_out_parent_methods</span><span class="p">(</span><span class="n">methods_list</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">,</span>
+                                      <span class="n">ignore_parent_list</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;BaseModel&quot;</span><span class="p">,</span> <span class="s2">&quot;BaseSettings&quot;</span><span class="p">)):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Filters out methods that are defined in the specified parent classes.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">filtered_methods</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">method</span> <span class="ow">in</span> <span class="n">methods_list</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;__&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;__&#39;</span><span class="p">):</span>
+                    <span class="k">continue</span>
+
+                <span class="c1"># Check if the method is defined in any of the parent classes</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">parent</span><span class="si">}</span><span class="s1">.&#39;</span> <span class="ow">in</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="s1">&#39;__qualname__&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="n">ignore_parent_list</span><span class="p">):</span>
+                    <span class="n">filtered_methods</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">name</span><span class="p">,</span> <span class="n">method</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">filtered_methods</span>
+
+        <span class="n">methods</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="bp">cls</span> <span class="ow">in</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getmro</span><span class="p">(</span><span class="n">model</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">method</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="p">(</span><span class="nb">staticmethod</span><span class="p">,</span> <span class="nb">classmethod</span><span class="p">)):</span>
+                    <span class="c1"># Optionally, you might want to skip certain methods based on your criteria</span>
+                    <span class="n">methods</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">name</span><span class="p">,</span> <span class="n">method</span><span class="p">))</span>
+        <span class="n">methods</span> <span class="o">=</span> <span class="n">filter_out_parent_methods</span><span class="p">(</span><span class="n">methods</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">methods</span></div></div>
+
+
+<div class="viewcode-block" id="ModelInspector"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.ModelInspector">[docs]</a><span class="k">class</span> <span class="nc">ModelInspector</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Provides inspection functionality for pydantic models.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">static</span> <span class="o">=</span> <span class="n">StaticInspector</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">]):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">field_validator_mappings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_field_validator_mapping</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">ConfigInspector</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">schema</span> <span class="o">=</span> <span class="n">SchemaInspector</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fields</span> <span class="o">=</span> <span class="n">FieldInspector</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">validators</span> <span class="o">=</span> <span class="n">ValidatorInspector</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">references</span> <span class="o">=</span> <span class="n">ReferenceInspector</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nonpydantic</span> <span class="o">=</span> <span class="n">NonPydanticInspector</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ModelInspector.get_field_validator_mapping"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.ModelInspector.get_field_validator_mapping">[docs]</a>    <span class="k">def</span> <span class="nf">get_field_validator_mapping</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">ValidatorAdapter</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Collect all available validators keyed by their corresponding</span>
+<span class="sd">        fields including post/pre root validators.</span>
+
+<span class="sd">        Validators are wrapped into `ValidatorAdapters` to provide uniform</span>
+<span class="sd">        interface within autodoc_pydantic.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">mapping</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+        <span class="n">decorators</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">__pydantic_decorators__</span>
+
+
+        <span class="c1"># field validators</span>
+        <span class="k">for</span> <span class="n">validator</span> <span class="ow">in</span> <span class="n">decorators</span><span class="o">.</span><span class="n">field_validators</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">validator</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">fields</span><span class="p">:</span>
+                <span class="n">mapping</span><span class="p">[</span><span class="n">field</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ValidatorAdapter</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">validator</span><span class="o">.</span><span class="n">func</span><span class="p">))</span>
+
+        <span class="c1"># model validators</span>
+        <span class="k">for</span> <span class="n">validator</span> <span class="ow">in</span> <span class="n">decorators</span><span class="o">.</span><span class="n">model_validators</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">mapping</span><span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ValidatorAdapter</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">validator</span><span class="o">.</span><span class="n">func</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">mapping</span></div>
+
+<div class="viewcode-block" id="ModelInspector.from_child_signode"><a class="viewcode-back" href="../../../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.ModelInspector.from_child_signode">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_child_signode</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">signode</span><span class="p">:</span> <span class="n">desc_signature</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;ModelInspector&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create instance from a child `signode` as used within sphinx</span>
+<span class="sd">        directives.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">model_path_parts</span> <span class="o">=</span> <span class="n">signode</span><span class="p">[</span><span class="s2">&quot;fullname&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">model_path</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">model_path_parts</span><span class="p">)</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">pydoc</span><span class="o">.</span><span class="n">locate</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">signode</span><span class="p">[</span><span class="s1">&#39;module&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">model_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">cls</span><span class="o">.</span><span class="n">static</span><span class="o">.</span><span class="n">is_pydantic_model</span><span class="p">(</span><span class="n">model</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Signode with full name </span><span class="si">{</span><span class="n">signode</span><span class="p">[</span><span class="s1">&#39;fullname&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> and extracted &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;model path does reference pydantic model. &quot;</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">model</span><span class="p">)</span></div></div>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Franz Wöllert
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023, Franz Wöllert.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

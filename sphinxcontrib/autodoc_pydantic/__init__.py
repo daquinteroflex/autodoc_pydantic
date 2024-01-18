@@ -99,6 +99,8 @@ def add_configuration_values(app: Sphinx):
     add(f'{stem}model_show_config_summary', True, True, bool)
     add(f'{stem}model_show_validator_members', True, True, bool)
     add(f'{stem}model_show_validator_summary', True, True, bool)
+    add(f'{stem}model_show_nonpydantic_members', False, False, bool)
+    add(f'{stem}model_show_nonpydantic_summary', False, False, bool)
     add(f'{stem}model_show_field_summary', True, True, bool)
     add(f'{stem}model_summary_list_order', summary_list_order, True, str)
     add(f'{stem}model_hide_paramlist', True, True, bool)

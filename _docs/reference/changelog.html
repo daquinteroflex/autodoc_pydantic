@@ -1,0 +1,2038 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Changelog &#8212; autodoc_pydantic 2.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/autodoc_pydantic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/changelog';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="API" href="api.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo_white.svg" class="logo__image only-light" alt="autodoc_pydantic 2.1.0 documentation - Home"/>
+    <script>document.write(`<img src="../_static/logo_white.svg" class="logo__image only-dark" alt="autodoc_pydantic 2.1.0 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Users</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../users/installation.html">Installation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../users/usage.html">Usage</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../users/_autosummary/target.usage_autosummary.AutoSummaryModel.html">target.usage_autosummary.AutoSummaryModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/_autosummary/target.usage_autosummary.AutoSummarySettings.html">target.usage_autosummary.AutoSummarySettings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../users/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/faq.html">FAQ</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../developers/setup.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developers/design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developers/guides.html">Guides</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Changelog</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/reference/changelog.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Changelog</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v2-1-0-2024-01-xx">v2.1.0 - 2024-01-XX</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bugfix">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internal">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributors">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v2-0-1-2023-08-01">v2.0.1 - 2023-08-01</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v2-0-0-2023-07-24">v2.0.0 - 2023-07-24</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changed-behavior">Changed Behavior</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-9-0-2023-06-08">v1.9.0 - 2023-06-08</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feature">Feature</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-8-0-2022-10-13">v1.8.0 - 2022-10-13</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Feature</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-7-2-2022-06-12">v1.7.2 - 2022-06-12</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Contributors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Internal</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-7-1-2022-05-30">v1.7.1 - 2022-05-30</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#packaging">Packaging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-7-0-2022-05-18">v1.7.0 - 2022-05-18</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-behavior">Changing behavior</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Feature</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internals">Internals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-6-2-2022-04-15">v1.6.2 - 2022-04-15</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-6-1-2022-01-28">v1.6.1 - 2022-01-28</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-6-0-2022-01-03">v1.6.0 - 2022-01-03</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">Changing behavior</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">Feature</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id42">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-5-1-2021-11-12">v1.5.1 - 2021-11-12</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id44">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id45">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id46">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id47">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-5-0-2021-10-10">v1.5.0 - 2021-10-10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#added">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id48">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id49">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id50">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id51">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id52">Packaging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id53">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-4-0-2021-08-20">v1.4.0 - 2021-08-20</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id54">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id55">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id56">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id57">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id58">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-3-1-2021-07-21">v1.3.1 - 2021-07-21</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id59">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id60">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id61">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id62">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id63">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-3-0-2021-05-10">v1.3.0 - 2021-05-10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id64">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id65">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id66">Packaging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id67">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id68">Added</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-2-0-2021-05-09">v1.2.0 - 2021-05-09</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id69">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id70">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id71">Internal</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-1-3-2021-05-08">v1.1.3 - 2021-05-08</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id72">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id73">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id74">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id75">Documentation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-1-2-2021-05-06">v1.1.2 - 2021-05-06</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id76">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id77">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id78">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id79">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id80">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-1-1-2021-04-26">v1.1.1 - 2021-04-26</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id81">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id82">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project">Project</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-1-0-2021-04-24">v1.1.0 - 2021-04-24</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id83">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id84">Documentation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-0-0-2021-04-23">v1.0.0 - 2021-04-23</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id85">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id86">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id87">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id88">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id89">Packaging</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v0-1-1-2021-04-04">v0.1.1 - 2021-04-04</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id90">Documentation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v0-1-0-2021-03-30">v0.1.0 - 2021-03-30</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id91">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id92">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id93">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id94">Packaging</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this heading">#</a></h1>
+<section id="v2-1-0-2024-01-xx">
+<h2>v2.1.0 - 2024-01-XX<a class="headerlink" href="#v2-1-0-2024-01-xx" title="Permalink to this heading">#</a></h2>
+<p>This is a maintenance and bugfix release extending support to pydantic v2.5,
+sphinx v7.2 and python 3.12 while dropping support for python 3.7 which has
+reached EOL.</p>
+<section id="testing">
+<h3>Testing<a class="headerlink" href="#testing" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add pydantic 2.2/2.3/2.4/2.5 to test matrix.</p></li>
+<li><p>Add sphinx 7.1/7.2 to test matrix.</p></li>
+<li><p>Add python 3.12 to test matrix.</p></li>
+<li><p>Remove python 3.7 from test matrix.</p></li>
+<li><p>Remove obsolete <cite>skip ci</cite> condition from github actions.</p></li>
+<li><p>Update <code class="docutils literal notranslate"><span class="pre">conftest</span></code> to use <code class="docutils literal notranslate"><span class="pre">pathlib</span></code> instead of older Sphinx
+<code class="docutils literal notranslate"><span class="pre">sphinx.testing.path</span></code> module that is being deprecated for
+forward-compatibility with newer Sphinx versions.</p></li>
+</ul>
+</section>
+<section id="bugfix">
+<h3>Bugfix<a class="headerlink" href="#bugfix" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fix incompatibity with sphinx 7.2 due to changed usage of path objects.
+For more, see <a class="reference external" href="https://github.com/sphinx-doc/sphinx/issues/11605">#11606</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/176">#176</a> -
+Remove <code class="docutils literal notranslate"><span class="pre">sphinxcontrib/__init__.py</span></code> causing <code class="docutils literal notranslate"><span class="pre">ModuleNotFoundError</span></code>
+exception in some environments.  This should be a namespace package per
+<a class="reference external" href="https://peps.python.org/pep-0420/">PEP 420</a> without <code class="docutils literal notranslate"><span class="pre">__init_.py</span></code> to
+match with other extensions.</p></li>
+</ul>
+</section>
+<section id="internal">
+<h3>Internal<a class="headerlink" href="#internal" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fix deprecation warning for tuple interface of <code class="docutils literal notranslate"><span class="pre">ObjectMember</span></code> in
+<code class="docutils literal notranslate"><span class="pre">directives/autodocumenters.py</span></code>.</p></li>
+</ul>
+</section>
+<section id="documentation">
+<h3>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add pydantic to PyPI classifiers to improve discoverability.</p></li>
+<li><p>Correct erdantic installation command in users coniguration section.</p></li>
+</ul>
+</section>
+<section id="contributors">
+<h3>Contributors<a class="headerlink" href="#contributors" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Thanks to <a class="reference external" href="https://github.com/devmonkey22">devmonkey22</a> for providing a PR
+to solve a nasty namespace package issue
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/176">#176</a> and
+<a class="reference external" href="https://github.com/daquinteroflex">daquinteroflex</a> for testing and
+providing feedback.</p></li>
+<li><p>Thanks to <a class="reference external" href="https://github.com/rafa-guedes">rafa-guedes</a> for providing a PR
+to fix a deprecation warning for tuple interface of <code class="docutils literal notranslate"><span class="pre">ObjectMember</span></code> in
+<code class="docutils literal notranslate"><span class="pre">directives/autodocumenters.py</span></code>
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/174">#174</a> and
+<a class="reference external" href="https://github.com/j-carson">j-carson</a> for reporting it.</p></li>
+<li><p>Thanks to <a class="reference external" href="https://github.com/caerulescens">caerulescens</a> for providing a
+PR to add pydantic to PyPI classifiers
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/pull/179">#179</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="v2-0-1-2023-08-01">
+<h2>v2.0.1 - 2023-08-01<a class="headerlink" href="#v2-0-1-2023-08-01" title="Permalink to this heading">#</a></h2>
+<p>This is a bugfix release handling an exception while documenting pydantic
+models using enums.</p>
+<section id="id1">
+<h3>Internal<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Simplify model field’s constraint extraction removing dependency on private
+methods.</p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>Bugfix<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Properly handle constraint extraction avoiding exceptions due to prior
+reliance on unpredictable behavior of private attributes.</p></li>
+<li><p>Fix incorrect type annotation string results for non-builtin types in
+<code class="docutils literal notranslate"><span class="pre">intercept_type_annotations_py_gt_39</span></code>.</p></li>
+</ul>
+</section>
+<section id="id3">
+<h3>Testing<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add pydantic 2.1 to test matrix.</p></li>
+<li><p>Add tests for various kinds of constrained types.</p></li>
+<li><p>Add “no exception” tests for specific pydantic models, such as containing
+enums.</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>Contributors<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Thanks to <a class="reference external" href="https://github.com/nagledb">nagledb</a> for reporting a bug
+related to enums
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/169">#169</a>.</p></li>
+<li><p>Thanks to <a class="reference external" href="https://github.com/jerryjiahaha">jerryjiahaha</a> for providing
+a pull request fixing the enums bug
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/pull/170">#170</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="v2-0-0-2023-07-24">
+<h2>v2.0.0 - 2023-07-24<a class="headerlink" href="#v2-0-0-2023-07-24" title="Permalink to this heading">#</a></h2>
+<p>This is a major release supporting pydantic v2. In June 2023, pydantic v2 was
+released while introducing backwards incompatible API and behavioral changes in
+comparison to pydantic v1. Supporting pydantic v2 required substantial
+adjustments to the codebase leading to a new major release of autodoc_pydantic
+(v1.9.0 -&gt; v2.0.0), too.</p>
+<p>In order to keep the codebase clean and concise, separate versions for v1 and
+v2 were created. The v2 branch will eventually become the new main branch
+while the code for v1 remains in the main-1.x branch.</p>
+<section id="changed-behavior">
+<h3>Changed Behavior<a class="headerlink" href="#changed-behavior" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Documenting pydantic model configurations in isolation or as a separate
+member of the pydantic model is no longer available. The following options
+have been removed:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">autodoc_pydantic_model_show_config_member</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autodoc_pydantic_settings_show_config_member</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autodoc_pydantic_config_members</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autodoc_pydantic_config_signature_prefix</span></code></p></li>
+</ul>
+</li>
+<li><p>All semantic changes from pydantic v1 to v2 take full effect.
+<strong>autodoc_pydantic</strong> does not modify the underlying behavior of pydantic in
+any way. Instead, it only documents whatever pydantic exposes. Hence, all
+behavioral changes such as the new default strict mode are preserved in v2.</p></li>
+<li><p>Sphinx <code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">4.0.0</span></code> is no longer supported.</p></li>
+</ul>
+</section>
+<section id="features">
+<h3>Features<a class="headerlink" href="#features" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Support for pydantic v2 💫.</p></li>
+<li><p>Support annotated type hints.</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3>Internal<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Adjust imports to refer to <code class="docutils literal notranslate"><span class="pre">pydantic-settings</span></code> (v2) instead of <code class="docutils literal notranslate"><span class="pre">pydantic</span></code> (v1).</p></li>
+<li><p>Adjust imports to refer to <code class="docutils literal notranslate"><span class="pre">field_validator</span></code> (v2) insteaf of <code class="docutils literal notranslate"><span class="pre">validator</span></code> (v1).</p></li>
+<li><p>Adjust imports to refer to <code class="docutils literal notranslate"><span class="pre">model_validator</span></code> (v2) insteaf of <code class="docutils literal notranslate"><span class="pre">root_validator</span></code> (v1).</p></li>
+<li><p>Replace <code class="docutils literal notranslate"><span class="pre">pydantic.generics.GenericModel</span></code> (v1) with <code class="docutils literal notranslate"><span class="pre">typing.Generic</span></code> (v2).</p></li>
+<li><p>Simplify <code class="docutils literal notranslate"><span class="pre">ValidatorAdapter</span></code> and <code class="docutils literal notranslate"><span class="pre">ValidatorInspector</span></code>.</p></li>
+<li><p>Simplify reused validators retrieval.</p></li>
+<li><p>Completely rewrite the model’s field constraint retrieval functionality in <code class="docutils literal notranslate"><span class="pre">inspection.FieldInspector</span></code>.</p></li>
+<li><p>Adjust model’s field serializability checks in <code class="docutils literal notranslate"><span class="pre">inspection.FieldInspector</span></code>.</p></li>
+<li><p>Replace <code class="docutils literal notranslate"><span class="pre">BaseModel</span></code> with <code class="docutils literal notranslate"><span class="pre">NamedTuple</span></code> for <code class="docutils literal notranslate"><span class="pre">ValidatorAdapter</span></code>.</p></li>
+<li><p>Remove obsolete pre/post validator attributes.</p></li>
+<li><p>Introduce <code class="docutils literal notranslate"><span class="pre">importlib-metadata</span></code> to fetch version number including support for python 3.7.</p></li>
+</ul>
+</section>
+<section id="id6">
+<h3>Testing<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Remove all obsolete pydantic versions from test matrix.</p></li>
+<li><p>Remove all tests for documenting config members.</p></li>
+<li><p>Remove compatibility helpers for older pydantic versions.</p></li>
+<li><p>Remove obsolete pydantic model example which was not used anywhere.</p></li>
+<li><p>Adjust serializability tests to account for changed behavior in v2.</p></li>
+<li><p>Adjust optional/required field marker tests to account for changed behavior in v2.</p></li>
+<li><p>Adjust field constraint tests to account for changed behavior in v2.</p></li>
+<li><p>Adjust erdantic tests to exclude the erdantic version number which caused tests to fail upon erdantic update.</p></li>
+</ul>
+</section>
+<section id="id7">
+<h3>Documentation<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add FAQ section regarding migration guide from v1 to v2.</p></li>
+<li><p>Remove <code class="docutils literal notranslate"><span class="pre">complete</span></code> showcase from user’s example.</p></li>
+<li><p>Update READMEs with newest features and version specifiers.</p></li>
+<li><p>Update developer’s setup section to address v1 to v2 changes.</p></li>
+<li><p>Updates user’s installation section to address v1 to v2 changes.</p></li>
+<li><p>Remove all obsolete documentation on removed config documenters.</p></li>
+<li><p>Rename all occurences to v2 <code class="docutils literal notranslate"><span class="pre">field_validator</span></code> and <code class="docutils literal notranslate"><span class="pre">model_validator</span></code>.</p></li>
+</ul>
+</section>
+<section id="id8">
+<h3>Contributors<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Special thanks to <a class="reference external" href="https://github.com/awoimbee">awoimbee</a> for providing
+a draft for the v1 to v2 migration which really initiated the work on
+supporting pydantic v2
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/pull/160">#160</a>.</p></li>
+<li><p>Many thanks to <a class="reference external" href="https://github.com/PriOliveira">PriOliveira</a> for reviewing
+changes required for the v1 to v2 release
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/pull/160">#160</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-9-0-2023-06-08">
+<h2>v1.9.0 - 2023-06-08<a class="headerlink" href="#v1-9-0-2023-06-08" title="Permalink to this heading">#</a></h2>
+<p>This is a feature release adding support for entity relationship diagrams
+while dropping python 3.6. Additionally, pydantic v2 is currently excluded
+until support will be added. Moreover, newest sphinx versions are
+added to test matrix.</p>
+<section id="feature">
+<h3>Feature<a class="headerlink" href="#feature" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Introduce <code class="docutils literal notranslate"><span class="pre">erdantic-figure</span></code> and <code class="docutils literal notranslate"><span class="pre">erdantic-figure-collapsed</span></code> configuration
+option for pydantic models to add entity relationship diagrams to models’
+documentation either in collapsed form or as an image included to the HTML.
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/pull/148">#148</a>.</p></li>
+</ul>
+</section>
+<section id="id9">
+<h3>Bugfix<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Run github actions on newest <code class="docutils literal notranslate"><span class="pre">ubuntu-22.04</span></code>.</p></li>
+<li><p>Fix pytest errors with <code class="docutils literal notranslate"><span class="pre">sphinx&gt;=6.1</span></code> where the type returned by
+<code class="docutils literal notranslate"><span class="pre">autodoc_typehints_format</span></code> changed.</p></li>
+<li><p>Provide upper version boundary for pydantic to exclude v2 which
+is not supported, yet.</p></li>
+</ul>
+</section>
+<section id="id10">
+<h3>Internal<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">to_collapsable</span></code> to <code class="docutils literal notranslate"><span class="pre">directives.templates</span></code> that provides a
+standardized interface to create a collapsable field.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">erdantic</span></code> to extras dependencies.</p></li>
+</ul>
+</section>
+<section id="id11">
+<h3>Documentation<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add descriptions for <code class="docutils literal notranslate"><span class="pre">erdantic-figure</span></code> and <code class="docutils literal notranslate"><span class="pre">erdantic-figure-collapsed</span></code>
+options in the configuration section.</p></li>
+<li><p>Add an example of ERD in the example section.</p></li>
+</ul>
+</section>
+<section id="id12">
+<h3>Testing<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Exclude <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">3.6</span></code> in test matrix.</p></li>
+<li><p>Include <code class="docutils literal notranslate"><span class="pre">sphinx</span></code> 6.0, 6.1, 6.2 and 7.0 in test matrix.</p></li>
+<li><p>Add tests for <code class="docutils literal notranslate"><span class="pre">erdantic-figure</span></code> and <code class="docutils literal notranslate"><span class="pre">erdantic-figure-collapsed</span></code>.</p></li>
+<li><p>Fix github actions CI pipeline due to unsupported ubuntu while upgrading to
+newest <code class="docutils literal notranslate"><span class="pre">ubuntu-22.04</span></code>.</p></li>
+</ul>
+</section>
+<section id="id13">
+<h3>Contributors<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Many thanks to <a class="reference external" href="https://github.com/yves-renier">yves-renier</a> for adding
+entity relationship diagrams and fixing the CI pipeline
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/pull/148">#148</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-8-0-2022-10-13">
+<h2>v1.8.0 - 2022-10-13<a class="headerlink" href="#v1-8-0-2022-10-13" title="Permalink to this heading">#</a></h2>
+<p>This is a feature and bugfix release with major internal refactorings and
+added support for pydantic <code class="docutils literal notranslate"><span class="pre">1.10</span></code> and sphinx <code class="docutils literal notranslate"><span class="pre">5.1</span></code> and <code class="docutils literal notranslate"><span class="pre">5.2</span></code>.</p>
+<section id="id14">
+<h3>Feature<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Introduce <code class="docutils literal notranslate"><span class="pre">hide-reused-validator</span></code> configuration option for pydantic models
+and settings to hide class methods that are created while declaring functions
+as reusable validators
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/122">#122</a>.</p></li>
+</ul>
+</section>
+<section id="id15">
+<h3>Bugfix<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fix incorrect reference of reused validators
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/122">#122</a>.</p></li>
+<li><p>Provide deterministic sort order for model’s validator summary and field’s
+validator list.</p></li>
+<li><p>Hide pydantic user warnings in sphinx output when testing for pydantic field
+serializability.</p></li>
+</ul>
+</section>
+<section id="id16">
+<h3>Internal<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">ValidatorAdapter</span></code> that provides a standardized interface to pydantic’s
+validator objects with additional metadata (e.g. root validator) for internal
+usage in autodoc_pydantic.</p></li>
+<li><p>Introduce <code class="docutils literal notranslate"><span class="pre">field_validator_mappings</span></code> to <code class="docutils literal notranslate"><span class="pre">inspection.ModelInspector</span></code> which
+holds all mappings between fields and validators. It makes many helper
+functions of <code class="docutils literal notranslate"><span class="pre">ValidatorInspector</span></code> and <code class="docutils literal notranslate"><span class="pre">FieldInspector</span></code> obsolete. Overall,
+this greatly simplifies the inspection codebase.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">PydanticAutoDoc.resolve_inherited_validator_reference</span></code> to allow
+proper reference resolution for inherited validators.</p></li>
+</ul>
+</section>
+<section id="id17">
+<h3>Documentation<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add description for <code class="docutils literal notranslate"><span class="pre">autodoc_pydantic_model_hide_reused_validator</span></code> and
+<code class="docutils literal notranslate"><span class="pre">autodoc_pydantic_settings_hide_reused_validator</span></code>.</p></li>
+<li><p>Add example section for reused validators with detailed explanation.</p></li>
+<li><p>Refactor sphinx extension helper for building <code class="docutils literal notranslate"><span class="pre">autodoc_pydantic</span></code> docs
+for better readability and maintainability.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">example_path</span></code> to sphinx extension helper <code class="docutils literal notranslate"><span class="pre">config_description</span></code>.</p></li>
+<li><p>Add FAQ question regarding interoperability with <code class="docutils literal notranslate"><span class="pre">autoapi</span></code>.</p></li>
+</ul>
+</section>
+<section id="id18">
+<h3>Testing<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Include pydantic <code class="docutils literal notranslate"><span class="pre">1.10</span></code> and sphinx <code class="docutils literal notranslate"><span class="pre">5.1</span></code> / <code class="docutils literal notranslate"><span class="pre">5.2</span></code> in test matrix.</p></li>
+<li><p>Provide compatibility for new pydantic and sphinx versions.</p></li>
+<li><p>Fix incorrect pydantic version comparison.</p></li>
+</ul>
+</section>
+<section id="id19">
+<h3>Contributors<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Thanks to <a class="reference external" href="https://github.com/GlenNicholls">GlenNicholls</a> for
+reporting a bug regarding incorrect references of reused validators
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/122">#122</a> .</p></li>
+<li><p>Thanks to <a class="reference external" href="https://github.com/csm10495">csm10495</a> for asking a question
+regarding <code class="docutils literal notranslate"><span class="pre">autoapi</span></code> interoperability
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/138">#138</a> .</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-7-2-2022-06-12">
+<h2>v1.7.2 - 2022-06-12<a class="headerlink" href="#v1-7-2-2022-06-12" title="Permalink to this heading">#</a></h2>
+<p>This is a bugfix release.</p>
+<section id="id20">
+<h3>Bugfix<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Adjust <code class="docutils literal notranslate"><span class="pre">PydanticFieldDocumenter.can_document_member</span></code> to ignore non
+pydantic fields
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/123">#123</a>,
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/128">#128</a>.</p></li>
+<li><p>Allow pydantic models to be documented as class attributes while adjusting
+<code class="docutils literal notranslate"><span class="pre">ModelInspector.from_child_signode</span></code> to support nested object paths
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/123">#124</a>,
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/128">#129</a>.</p></li>
+</ul>
+</section>
+<section id="id21">
+<h3>Contributors<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Thanks to <a class="reference external" href="https://github.com/sneakers-the-rat">sneakers-the-rat</a> and
+<a class="reference external" href="https://github.com/PipeKnight">PipeKnight</a> for
+reporting a bug when encountering attributes that are not pydantic fields
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/123">#123</a>,
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/128">#128</a>.</p></li>
+<li><p>Thanks to <a class="reference external" href="https://github.com/iwishiwasaneagle">iwishiwasaneagle</a> and
+<a class="reference external" href="https://github.com/nickeldan">nickeldan</a> for
+reporting a bug pydantic models were documented as class attributes or
+<code class="docutils literal notranslate"><span class="pre">ModelInspector.from_child_signode</span></code> returned the incorrect model reference
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/123">#124</a>,
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/128">#129</a>.</p></li>
+</ul>
+</section>
+<section id="id22">
+<h3>Internal<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Renamed <code class="docutils literal notranslate"><span class="pre">from_signode</span></code> to <code class="docutils literal notranslate"><span class="pre">from_child_signode</span></code> for better clarity.</p></li>
+<li><p>Added explicit check to raise an exception if loaded object in
+<code class="docutils literal notranslate"><span class="pre">ModelInspector.from_child_signode</span></code> is not a pydantic model.</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-7-1-2022-05-30">
+<h2>v1.7.1 - 2022-05-30<a class="headerlink" href="#v1-7-1-2022-05-30" title="Permalink to this heading">#</a></h2>
+<p>This is a bugfix release supporting sphinx 5.0.</p>
+<section id="id23">
+<h3>Bugfix<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Adjust modified function signature of
+<code class="docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.ClassDocumenter.add_content</span></code> in sphinx 5.0 which causes
+a type error otherwise
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/125">#125</a> .</p></li>
+</ul>
+</section>
+<section id="packaging">
+<h3>Packaging<a class="headerlink" href="#packaging" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Convert <code class="docutils literal notranslate"><span class="pre">sphinx-tabs</span></code> and <code class="docutils literal notranslate"><span class="pre">sphinxcontrib-mermaid</span></code> to optional deps and
+relax their version specification.</p></li>
+</ul>
+</section>
+<section id="id24">
+<h3>Testing<a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add sphinx 5.0 to test matrix.</p></li>
+<li><p>Adjust several tests for changed default behaviour of
+<code class="docutils literal notranslate"><span class="pre">autodoc_typehints_format</span></code>.</p></li>
+</ul>
+</section>
+<section id="id25">
+<h3>Contributors<a class="headerlink" href="#id25" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Thanks to <a class="reference external" href="https://github.com/lukehsiao">lukehsiao</a> for
+reporting breaking changes in sphinx 5.0
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/125">#125</a> .</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-7-0-2022-05-18">
+<h2>v1.7.0 - 2022-05-18<a class="headerlink" href="#v1-7-0-2022-05-18" title="Permalink to this heading">#</a></h2>
+<p>This is a feature release.</p>
+<section id="changing-behavior">
+<h3>Changing behavior<a class="headerlink" href="#changing-behavior" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Default values of pydantic fields such as <code class="docutils literal notranslate"><span class="pre">UndefinedPydantic</span></code> and
+<code class="docutils literal notranslate"><span class="pre">Ellipsis</span></code> will now be shown as <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+</ul>
+</section>
+<section id="id26">
+<h3>Bugfix<a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fix missing validator-field references in <code class="docutils literal notranslate"><span class="pre">model-show-validator-summary</span></code> in
+case a single validator method process multiple fields.</p></li>
+</ul>
+</section>
+<section id="id27">
+<h3>Feature<a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">autodoc_pydantic_field_show_optional</span></code> configuration which provides
+<code class="docutils literal notranslate"><span class="pre">[Optional]</span></code> marker for pydantic fields with <code class="docutils literal notranslate"><span class="pre">default_factory</span></code>. This
+configuration is activated by default. If deactivated, default values might
+be displayed incorrectly. For more, see
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/114">#114</a></p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">autodoc_pydantic_field_swap_name_and_alias</span></code> configuration which allows
+to use a field’s alias as a name instead of the original field name
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/99">#99</a> .</p></li>
+<li><p>Respect interaction between <code class="docutils literal notranslate"><span class="pre">autodoc_pydantic_field_swap_name_and_alias</span></code>
+with <code class="docutils literal notranslate"><span class="pre">model-show-validator-summary</span></code>, <code class="docutils literal notranslate"><span class="pre">model-show-field-summary</span></code>,
+<code class="docutils literal notranslate"><span class="pre">validator-replace-signature</span></code> and <code class="docutils literal notranslate"><span class="pre">validator-list-fields</span></code> by replacing
+the field name with field alias in rendered documentation.</p></li>
+</ul>
+</section>
+<section id="internals">
+<h3>Internals<a class="headerlink" href="#internals" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Determining default values of pydantic fields no longer use
+<code class="docutils literal notranslate"><span class="pre">Field.field_info.default</span></code> but <code class="docutils literal notranslate"><span class="pre">Field.default</span></code>. As a consequence,
+default values such as <code class="docutils literal notranslate"><span class="pre">UndefinedPydantic</span></code> and <code class="docutils literal notranslate"><span class="pre">Ellipsis</span></code> will now be
+shown as <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p>Autodocumenter <code class="docutils literal notranslate"><span class="pre">PydanticFieldDocumenter</span></code> now passes <code class="docutils literal notranslate"><span class="pre">field-show-alias</span></code>
+and <code class="docutils literal notranslate"><span class="pre">alias</span></code> to <code class="docutils literal notranslate"><span class="pre">PydanticField</span></code> directive. Before, only <code class="docutils literal notranslate"><span class="pre">alias</span></code> was
+passed with value to denote <code class="docutils literal notranslate"><span class="pre">field-show-alias</span></code>. However, since
+<code class="docutils literal notranslate"><span class="pre">field-swap-name-and-alias</span></code> was added, the value of the alias might be
+required even without <code class="docutils literal notranslate"><span class="pre">field-show-alias</span></code> being activated.</p></li>
+<li><p>Refactor and split <code class="docutils literal notranslate"><span class="pre">PydanticModelDocumenter.add_validators_summary</span></code> in
+multiple methods for better readability and maintainability.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">get_field_name_or_alias</span></code> to <code class="docutils literal notranslate"><span class="pre">PydanticAutoDoc</span></code> to centrally manage
+the determination of field name/alias for all auto-documenters.</p></li>
+<li><p>Rename <code class="docutils literal notranslate"><span class="pre">sanitize_configuration_option_name</span></code> into <code class="docutils literal notranslate"><span class="pre">determine_app_cfg_name</span></code>
+in <code class="docutils literal notranslate"><span class="pre">directives/options/composites.py</span></code> for better clarity.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">configuration_names</span></code> to <code class="docutils literal notranslate"><span class="pre">AutoDocOptions</span></code> to distinguish foreign
+directive options in <code class="docutils literal notranslate"><span class="pre">determine_app_cfg_name</span></code> which is required because
+<code class="docutils literal notranslate"><span class="pre">field-swap-name-and-alias</span></code> is also used by model/validator
+auto-documenters.</p></li>
+</ul>
+</section>
+<section id="id28">
+<h3>Documentation<a class="headerlink" href="#id28" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add example section for <code class="docutils literal notranslate"><span class="pre">field-swap-name-and-alias</span></code>.</p></li>
+<li><p>Add configuration description for <code class="docutils literal notranslate"><span class="pre">field-swap-name-and-alias</span></code>.</p></li>
+</ul>
+</section>
+<section id="id29">
+<h3>Contributors<a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Thanks to <a class="reference external" href="https://github.com/spacemanspiff2007">spacemanspiff2007</a> for
+providing and supporting a feature request to show <code class="docutils literal notranslate"><span class="pre">[Optional]</span></code> marker
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/114">#114</a> and
+a feature request to swap name and alias
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/99">#99</a> .</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-6-2-2022-04-15">
+<h2>v1.6.2 - 2022-04-15<a class="headerlink" href="#v1-6-2-2022-04-15" title="Permalink to this heading">#</a></h2>
+<p>This is a documentation and bugfix release supporting sphinx 4.5.</p>
+<section id="id30">
+<h3>Bugfix<a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fix incorrect source-to-doc hyperlink in users example section
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/96">#96</a>.</p></li>
+<li><p>Fix incorrect <code class="docutils literal notranslate"><span class="pre">[Required]</span></code> mark for optional fields like <code class="docutils literal notranslate"><span class="pre">Optional[int]</span></code>
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/97">#97</a>.</p></li>
+<li><p>Fix incorrect warning of JSON non-serializable field in case of composite
+types like <code class="docutils literal notranslate"><span class="pre">Union</span></code>.
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/98">#98</a>.</p></li>
+<li><p>Fix incorrect showing of additional keyword arguments passed to pydantic
+<cite>Field</cite> in the field’s constraint documentation section
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/110">#110</a>.</p></li>
+</ul>
+</section>
+<section id="id31">
+<h3>Documentation<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Separate example page into configuration and specifics.</p></li>
+<li><p>Add examples for required and optional values.</p></li>
+<li><p>Add examples for generic models.</p></li>
+<li><p>Use separate python modules for user’s usage and example sections to prevent
+ambiguous source-to-doc hyperlinks.</p></li>
+</ul>
+</section>
+<section id="id32">
+<h3>Testing<a class="headerlink" href="#id32" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add sphinx 4.5 to CI.</p></li>
+<li><p>Add test to ensure that optional fields do not have the <code class="docutils literal notranslate"><span class="pre">[Required]</span></code> mark.</p></li>
+<li><p>Add test to ensure that pydantic field with composite type like <code class="docutils literal notranslate"><span class="pre">Union</span></code> is
+correctly identified as JSON serializable.</p></li>
+<li><p>Add test to ensure that additional keyword arguments passed to pydantic
+<cite>Field</cite> are not shown in the field’s constraint documentation section.</p></li>
+<li><p>Pin <code class="docutils literal notranslate"><span class="pre">jinja2&lt;3.1.0</span></code> for <code class="docutils literal notranslate"><span class="pre">sphinx&lt;4</span></code> to fix broken CI.</p></li>
+</ul>
+</section>
+<section id="id33">
+<h3>Contributors<a class="headerlink" href="#id33" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Thanks to <a class="reference external" href="https://github.com/jgunstone">jgunstone</a> for reporting a bug
+regarding incorrect source-to-doc hyperlink in users example section.</p></li>
+<li><p>Thanks to <a class="reference external" href="https://github.com/Czaki">Czaki</a> for reporting a bug regarding
+incorrect warning of JSON non-serializable field in case of composite types
+like <code class="docutils literal notranslate"><span class="pre">Union</span></code>.</p></li>
+<li><p>Thanks to <a class="reference external" href="https://github.com/StigKorsnes">StigKorsnes</a> for reporting a
+bug regarding incorrect <code class="docutils literal notranslate"><span class="pre">[Required]</span></code> mark for optional fields like
+<code class="docutils literal notranslate"><span class="pre">Optional[int]</span></code></p></li>
+<li><p>Thanks to <a class="reference external" href="https://github.com/spacemanspiff2007">spacemanspiff2007</a> for
+reporting a bug regarding incorrect showing of additional keyword arguments
+passed to pydantic <cite>Field</cite> in the field’s constraint documentation section.</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-6-1-2022-01-28">
+<h2>v1.6.1 - 2022-01-28<a class="headerlink" href="#v1-6-1-2022-01-28" title="Permalink to this heading">#</a></h2>
+<p>This is a minor bugfix release including support for sphinx 4.4.</p>
+<section id="id34">
+<h3>Bugfix<a class="headerlink" href="#id34" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fix incorrect rendering of pydantic field’s <code class="docutils literal notranslate"><span class="pre">description</span></code> attribute which
+was not in line with default reST rendering of docstrings of classes or
+functions.
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/91">#91</a>.</p></li>
+</ul>
+</section>
+<section id="id35">
+<h3>Testing<a class="headerlink" href="#id35" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add test to ensure that pydantic field’s <code class="docutils literal notranslate"><span class="pre">description</span></code> attribute is
+correctly rendered.</p></li>
+<li><p>Add sphinx 4.4 to CI.</p></li>
+<li><p>Simplify <code class="docutils literal notranslate"><span class="pre">test_autodoc_pydantic_settings_hide_paramlist_false</span></code> replacing
+version specifics with generic assert function.</p></li>
+</ul>
+</section>
+<section id="id36">
+<h3>Contributors<a class="headerlink" href="#id36" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Thanks to <a class="reference external" href="https://github.com/iliakur">iliakur</a> for reporting the
+incorrect reST rendering of pydantic field’s <code class="docutils literal notranslate"><span class="pre">description</span></code> attribute.</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-6-0-2022-01-03">
+<h2>v1.6.0 - 2022-01-03<a class="headerlink" href="#v1-6-0-2022-01-03" title="Permalink to this heading">#</a></h2>
+<p>This is a feature and bug fix release including support for pydantic 1.9.</p>
+<section id="id37">
+<h3>Changing behavior<a class="headerlink" href="#id37" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Documented pydantic models/settings as class attributes will no longer show
+additional content
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/78">#78</a>.</p></li>
+<li><p>Generated docutils will now have additional fallback css classes
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/77">#77</a>.</p></li>
+</ul>
+</section>
+<section id="id38">
+<h3>Bugfix<a class="headerlink" href="#id38" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fix a bug which occurred while documenting a pydantic model as an attribute
+and using <cite>bysource</cite> for model summary list order
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/78">#78</a>.</p></li>
+</ul>
+</section>
+<section id="id39">
+<h3>Feature<a class="headerlink" href="#id39" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Remove any additional content generated by <strong>autodoc_pydantic</strong> for
+pydantic models/settings when documented as an attribute
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/78">#78</a>.</p></li>
+<li><p>By default add fallback css classes for all docutils generated by
+<strong>autodoc_pydantic</strong>. This can be deactivated via newly added config
+<code class="docutils literal notranslate"><span class="pre">autodoc_pydantic_add_fallback_css_class</span></code>
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/77">#77</a>.</p></li>
+</ul>
+</section>
+<section id="id40">
+<h3>Testing<a class="headerlink" href="#id40" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add tests to ensure that no additional content is provided if model/settings
+are documented as an attribute, see <cite>test_edgecases</cite>.</p></li>
+<li><p>Add tests to ensure that fallback css classes are added if required,
+see <cite>test_events</cite>.</p></li>
+<li><p>Streamline naming convention for tests regarding edge cases.</p></li>
+<li><p>Adjust tests to comply with pydantic 1.9.</p></li>
+<li><p>Add pydantic 1.9 to CI.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">prod_app</span></code> fixture to run production sphinx app based on cmd line entry
+point while returning captured sphinx app and doctrees.</p></li>
+<li><p>Provide important doc strings to existing <code class="docutils literal notranslate"><span class="pre">autodocument</span></code>, <code class="docutils literal notranslate"><span class="pre">parst_rst</span></code> and
+<code class="docutils literal notranslate"><span class="pre">test_app</span></code> fixtures for better understandability.</p></li>
+</ul>
+</section>
+<section id="id41">
+<h3>Documentation<a class="headerlink" href="#id41" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add FAQ section describing changed behaviour of models/settings when used
+as class attributes.</p></li>
+<li><p>Add FAQ section describing fallback css classes.</p></li>
+<li><p>Rename <code class="docutils literal notranslate"><span class="pre">BaseModel</span></code> to <code class="docutils literal notranslate"><span class="pre">Model</span></code> and <code class="docutils literal notranslate"><span class="pre">BaseSettings</span></code> to <code class="docutils literal notranslate"><span class="pre">Settings</span></code> in
+configuration section.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">autodoc_pydantic_add_fallback_css_class</span></code> setting to users
+configuration page.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">ShowVersions</span></code> directive to show relevant package versions of current
+documentation build environment in setup page of developer documentation.</p></li>
+</ul>
+</section>
+<section id="id42">
+<h3>Contributors<a class="headerlink" href="#id42" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Thanks to <a class="reference external" href="https://github.com/StigKorsnes">StigKorsnes</a> for reporting an
+unexpected behavior when using <strong>autodoc_pydantic</strong> with themes like
+Jupyter-Book that rely on setting css styles for default sphinx autdoc
+objtypes <code class="docutils literal notranslate"><span class="pre">class</span></code>, <code class="docutils literal notranslate"><span class="pre">attribute</span></code> and <code class="docutils literal notranslate"><span class="pre">method</span></code>
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/77">#77</a>.</p></li>
+<li><p>Thanks to <a class="reference external" href="https://github.com/nchaly">nchaly</a> for reporting a bug and
+raising the topic of how to document models/settings as an attribute
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/78">#78</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-5-1-2021-11-12">
+<h2>v1.5.1 - 2021-11-12<a class="headerlink" href="#v1-5-1-2021-11-12" title="Permalink to this heading">#</a></h2>
+<p>This is a minor bug fix release with testing and documentation improvements.
+Additionally, it adds support for sphinx 4.3.</p>
+<section id="id43">
+<h3>Bugfix<a class="headerlink" href="#id43" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fix a corner-case where a module that imported
+<code class="docutils literal notranslate"><span class="pre">numpy.typing.NDArray</span></code> caused autodoc_pydantic to experience
+an uncaught exception
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/57">#57</a>.</p></li>
+</ul>
+</section>
+<section id="id44">
+<h3>Internal<a class="headerlink" href="#id44" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Account for modified method signature in <code class="docutils literal notranslate"><span class="pre">get_signature_prefix</span></code> in sphinx
+4.3 <a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/62">#62</a>.</p></li>
+</ul>
+</section>
+<section id="id45">
+<h3>Testing<a class="headerlink" href="#id45" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fix broken CI for sphinx 3.4 due to unpinned versions of <code class="docutils literal notranslate"><span class="pre">docutils</span></code>. This
+generates new sphinx loggings which have not been present before that in turn
+cause tests to fail which are dependent on inspecting sphinx loggings
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/68">#68</a>.</p></li>
+<li><p>Add sphinx 4.3 to CI matrix.</p></li>
+<li><p>Add compatibility module to abstract away minor implementation differences
+between sphinx versions 4.3 and prior.</p></li>
+<li><p>Add tests for development versions while continuing on error.</p></li>
+<li><p>Replace codacy with codecov for code coverage reports.</p></li>
+<li><p>Add code coverage for all stable and latest version.</p></li>
+<li><p>Allow CI to be executed on pull requests from forks of new contributors.</p></li>
+</ul>
+</section>
+<section id="id46">
+<h3>Documentation<a class="headerlink" href="#id46" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">Exclude</span> <span class="pre">__init__</span> <span class="pre">docstring</span></code> section to FAQ of the user guide
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/58">#58</a>.</p></li>
+<li><p>Add github issue links to topics of FAQ of the user guide.</p></li>
+</ul>
+</section>
+<section id="id47">
+<h3>Contributors<a class="headerlink" href="#id47" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Thanks to <a class="reference external" href="https://github.com/j-carson">j-carson</a> for reporting a bug
+and providing a PR related to autodoc_pydantic’s inspection module
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/57">#57</a>.</p></li>
+<li><p>Thanks to <a class="reference external" href="https://github.com/Yoshanuikabundi">Yoshanuikabundi</a>  and
+<a class="reference external" href="https://github.com/jakobandersen">jakobandersen</a> for reporting and
+mitigating a compatibility issue with sphinx 4.3
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/62">#62</a>.</p></li>
+<li><p>Thanks to <a class="reference external" href="https://github.com/lilyminium">lilyminium</a> for adding the
+<code class="docutils literal notranslate"><span class="pre">Exclude</span> <span class="pre">__init__</span> <span class="pre">docstring</span></code> section to FAQ of the user guide
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/58">#58</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-5-0-2021-10-10">
+<h2>v1.5.0 - 2021-10-10<a class="headerlink" href="#v1-5-0-2021-10-10" title="Permalink to this heading">#</a></h2>
+<p>This release includes major internal refactorings, new documentation sections,
+a new feature, a bug fix and tests for new sphinx and python versions.</p>
+<section id="added">
+<h3>Added<a class="headerlink" href="#added" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Provide <code class="docutils literal notranslate"><span class="pre">summary-list-order</span></code> configuration property which allows to sort
+summary list items in alphabetical order or by source.</p></li>
+</ul>
+</section>
+<section id="id48">
+<h3>Bugfix<a class="headerlink" href="#id48" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">&#64;root_validator(pre=True)</span></code> caused the sphinx build process to fail
+due to an incorrect implementation. This has been fixed.
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/55">#55</a>.</p></li>
+</ul>
+</section>
+<section id="id49">
+<h3>Testing<a class="headerlink" href="#id49" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Refactor all configuration test modules removing repeated function arguments
+to increase readability and maintainability.</p></li>
+<li><p>Add specific test to ensure that using <code class="docutils literal notranslate"><span class="pre">&#64;root_validator(pre=True)</span></code> does not
+break the sphinx build process.</p></li>
+<li><p>Add sphinx versions <code class="docutils literal notranslate"><span class="pre">4.1.0</span></code> and <code class="docutils literal notranslate"><span class="pre">4.2.0</span></code> to CI matrix.</p></li>
+<li><p>Add python version <code class="docutils literal notranslate"><span class="pre">3.10</span></code> to CI matrix.</p></li>
+</ul>
+</section>
+<section id="id50">
+<h3>Documentation<a class="headerlink" href="#id50" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add section in configuration page describing <code class="docutils literal notranslate"><span class="pre">summary-list-order</span></code>.</p></li>
+<li><p>Add developer design section providing gentle introduction to code base.</p></li>
+<li><p>Add developer guides focusing on concrete implementation details.</p></li>
+<li><p>Add class diagrams via mermaid.js.</p></li>
+<li><p>Streamline naming convention for <code class="docutils literal notranslate"><span class="pre">TabDocDirective</span></code> for better clarity.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">version</span></code> parameter to <code class="docutils literal notranslate"><span class="pre">TabDocDirective</span></code> to show the version in which
+a configuration property was added.</p></li>
+<li><p>Add API documentation for selected modules including directory tree with
+references.</p></li>
+<li><p>Activate <code class="docutils literal notranslate"><span class="pre">sphinxcontrib.mermaid</span></code> and <code class="docutils literal notranslate"><span class="pre">sphinx.ext.viewcode</span></code> extensions.</p></li>
+</ul>
+</section>
+<section id="id51">
+<h3>Internal<a class="headerlink" href="#id51" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Completely remove the <code class="docutils literal notranslate"><span class="pre">ModelWrapper</span></code> with the <code class="docutils literal notranslate"><span class="pre">ModelInspector</span></code> with all
+its composite classes.</p></li>
+<li><p>Moving inspection logic from auto-documenters to <code class="docutils literal notranslate"><span class="pre">ModelInspector</span></code>.</p></li>
+<li><p>Streamline naming conventions for composite classes.</p></li>
+<li><p>Create separate sub directory for directive options including individual
+modules for composites, definitions, enums and validators.</p></li>
+<li><p>Move reST templates to separate module.</p></li>
+</ul>
+</section>
+<section id="id52">
+<h3>Packaging<a class="headerlink" href="#id52" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Update to newest versions of <code class="docutils literal notranslate"><span class="pre">sphinx-rtd-theme</span></code> and <code class="docutils literal notranslate"><span class="pre">sphinx-tabs</span></code>.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">sphinxcontrib-mermaid</span></code> under dev and doc dependencies.</p></li>
+</ul>
+</section>
+<section id="id53">
+<h3>Contributors<a class="headerlink" href="#id53" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Thanks to <a class="reference external" href="https://github.com/goroderickgo">goroderickgo</a> for reporting a bug
+related to pre root validators breaking the sphinx build process
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/55">#55</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-4-0-2021-08-20">
+<h2>v1.4.0 - 2021-08-20<a class="headerlink" href="#v1-4-0-2021-08-20" title="Permalink to this heading">#</a></h2>
+<p>This is a feature and bug release.</p>
+<section id="id54">
+<h3>Added<a class="headerlink" href="#id54" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Provide <code class="docutils literal notranslate"><span class="pre">field-show-required</span></code> configuration property. If activated, it adds
+a <code class="docutils literal notranslate"><span class="pre">[Required]</span></code> marker for pydantic fields which do not have a default value.
+Otherwise, misleading default values like <em>Ellipsis</em> or <em>PydanticUndefined</em>
+are shown.
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/34">#34</a>.</p></li>
+<li><p>Include <code class="docutils literal notranslate"><span class="pre">show-json-error-strategy</span></code> for pydantic models and settings to define
+error handling in case a pydantic field breaks the JSON schema generation
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/8">#8</a>.</p></li>
+</ul>
+</section>
+<section id="id55">
+<h3>Bugfix<a class="headerlink" href="#id55" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Respect <code class="docutils literal notranslate"><span class="pre">inherited-members</span></code> for field and validator summaries to prevent
+different members being displayed between header and body <a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/32">#32</a>.</p></li>
+<li><p>Improve handling of non serializable pydantic fields for JSON model generation.
+Using <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> as a type annotation raised an exception instead of being
+handled appropriately <a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/28">#28</a>.</p></li>
+<li><p>Allow typed fields within doc strings to successfully reference pydantic models
+and settings <a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/27">#27</a>.</p></li>
+<li><p>Remove <code class="docutils literal notranslate"><span class="pre">env</span></code> key from field constraints.</p></li>
+</ul>
+</section>
+<section id="id56">
+<h3>Testing<a class="headerlink" href="#id56" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add explicit tests for references originating from typed fields.</p></li>
+<li><p>Add more diverse tests for handling non serializable fields breaking JSON model
+generation.</p></li>
+<li><p>Add tests for different error handling strategies regarding <code class="docutils literal notranslate"><span class="pre">show-json-error-strategy</span></code>.</p></li>
+<li><p>Add tests for <code class="docutils literal notranslate"><span class="pre">field-show-required</span></code>.</p></li>
+<li><p>Add tests for field and validator summaries respecting <code class="docutils literal notranslate"><span class="pre">inherited-members</span></code>.</p></li>
+</ul>
+</section>
+<section id="id57">
+<h3>Documentation<a class="headerlink" href="#id57" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add section in configuration page describing <code class="docutils literal notranslate"><span class="pre">show-json-error-strategy</span></code>.</p></li>
+<li><p>Add section in configuration page describing <code class="docutils literal notranslate"><span class="pre">field-show-required</span></code>.</p></li>
+<li><p>Add FAQ page with section about using <code class="docutils literal notranslate"><span class="pre">inherited-members</span></code>.</p></li>
+<li><p>Generally overhaul the documentation to improve readability and conciseness.</p></li>
+</ul>
+</section>
+<section id="id58">
+<h3>Contributors<a class="headerlink" href="#id58" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Thanks to <a class="reference external" href="https://github.com/davidchall">davidchall</a> for suggesting to add a
+<code class="docutils literal notranslate"><span class="pre">[Required]</span></code> marker for mandatory pydantic fields <a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/34">#34</a>.</p></li>
+<li><p>Thanks to <a class="reference external" href="https://github.com/matutter">matutter</a> for reporting a bug
+related to incorrect field and validator summaries not respecting <code class="docutils literal notranslate"><span class="pre">inherited-members</span></code>
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/32">#32</a>.</p></li>
+<li><p>Thanks to <a class="reference external" href="https://github.com/thomas-pedot">thomas-pedot</a> for reporting a bug related to
+error handling of pydantic fields breaking JSON schema generation <a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/28">#28</a>.</p></li>
+<li><p>Thanks to <a class="reference external" href="https://github.com/tahoward">tahoward</a> for reporting a bug related to
+missing references in typed fields <a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/27">#27</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-3-1-2021-07-21">
+<h2>v1.3.1 - 2021-07-21<a class="headerlink" href="#v1-3-1-2021-07-21" title="Permalink to this heading">#</a></h2>
+<p>This is a minor release including the following:</p>
+<ul class="simple">
+<li><p>Providing support for <code class="docutils literal notranslate"><span class="pre">root_validator</span></code> <a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/20">#20</a> .</p></li>
+<li><p>Fixing a bug concerning overwriting <code class="docutils literal notranslate"><span class="pre">member-order</span></code> <a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/21">#21</a> .</p></li>
+<li><p>Integrating flake8 for static code analysis.</p></li>
+</ul>
+<section id="id59">
+<h3>Bugfix<a class="headerlink" href="#id59" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fix <code class="docutils literal notranslate"><span class="pre">member-order</span></code> being overwritten by autodoc pydantic’s autodocumenters <a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/21">#21</a>.</p></li>
+</ul>
+</section>
+<section id="id60">
+<h3>Documentation<a class="headerlink" href="#id60" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add example showing representation of asterisk and root validators.</p></li>
+<li><p>Add <cite>sphinx-copybutton</cite> extension.</p></li>
+</ul>
+</section>
+<section id="id61">
+<h3>Testing<a class="headerlink" href="#id61" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add explicit tests for asterisk and root validators.</p></li>
+<li><p>Add test case ensuring that <code class="docutils literal notranslate"><span class="pre">member-order</span></code> is not affected by other auto-documenters.</p></li>
+<li><p>Fix several tests which in fact tested wrong behaviour.</p></li>
+</ul>
+</section>
+<section id="id62">
+<h3>Internal<a class="headerlink" href="#id62" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Refactor and simplify field validator mapping generation of <code class="docutils literal notranslate"><span class="pre">inspection.ModelWrapper</span></code>.</p></li>
+<li><p>Replace <code class="docutils literal notranslate"><span class="pre">set_default_option_with_value</span></code> with specific <code class="docutils literal notranslate"><span class="pre">set_members_all</span></code>.</p></li>
+<li><p>Create separate copy for every auto-documenters <code class="docutils literal notranslate"><span class="pre">option</span></code> object to prevent shared options.</p></li>
+</ul>
+</section>
+<section id="id63">
+<h3>Contributors<a class="headerlink" href="#id63" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Thanks to <a class="reference external" href="https://github.com/roguh">roguh</a> for submitting a feature request
+for <code class="docutils literal notranslate"><span class="pre">root_validators</span></code> <a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/20">#20</a>.</p></li>
+<li><p>Thanks to <a class="reference external" href="https://github.com/ybnd">ybnd</a> for submitting a bug report concerning
+incorrect behaviour for <code class="docutils literal notranslate"><span class="pre">member-order</span></code> <a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/21">#21</a></p></li>
+</ul>
+</section>
+</section>
+<section id="v1-3-0-2021-05-10">
+<h2>v1.3.0 - 2021-05-10<a class="headerlink" href="#v1-3-0-2021-05-10" title="Permalink to this heading">#</a></h2>
+<p>This is a release focusing on testing and packaging. It includes tests for
+sphinx 4.0 support. Additionally, it moves all test invocation specifications
+to <code class="docutils literal notranslate"><span class="pre">tox.ini</span></code>.</p>
+<section id="id64">
+<h3>Documentation<a class="headerlink" href="#id64" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add acknowledgements to index.</p></li>
+<li><p>Add detailed description for running tests with pytest and tox.</p></li>
+<li><p>Convert changelog page from markdown to reST.</p></li>
+</ul>
+</section>
+<section id="id65">
+<h3>Testing<a class="headerlink" href="#id65" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Use tox for defining different test environments (specific stable, latest
+stable and development). Remove test environment specifications from github
+ci and move it to <code class="docutils literal notranslate"><span class="pre">tox.ini</span></code> addressing #<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/7">7</a>.</p></li>
+<li><p>Add sphinx 4.0 to test environments addressing #<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/16">16</a>.</p></li>
+<li><p>Define specific test environments instead of testing all matrix combinations.</p></li>
+<li><p>Provide version information about <em>autdoc_pydantic</em> and relevant
+dependencies.</p></li>
+</ul>
+</section>
+<section id="id66">
+<h3>Packaging<a class="headerlink" href="#id66" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Replace <code class="docutils literal notranslate"><span class="pre">pytest-cov</span></code> with <code class="docutils literal notranslate"><span class="pre">coverage</span></code>.</p></li>
+<li><p>Remove <code class="docutils literal notranslate"><span class="pre">myst-parser</span></code> dependency addressing #<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/16">16</a>.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">tox</span></code> for executing tests in CI.</p></li>
+<li><p>Remove poetry development dependencies and replace it with explicit
+<code class="docutils literal notranslate"><span class="pre">extras</span></code> for <em>docs</em>, <em>test</em> and <em>dev</em>.</p></li>
+</ul>
+</section>
+<section id="id67">
+<h3>Internal<a class="headerlink" href="#id67" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Rename <code class="docutils literal notranslate"><span class="pre">util</span></code> module to <code class="docutils literal notranslate"><span class="pre">composites</span></code> to improve naming convention.</p></li>
+</ul>
+</section>
+<section id="id68">
+<h3>Added<a class="headerlink" href="#id68" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">show_versions</span></code> function to show important dependency information which are
+relevant for tracking down bugs as part of the new <code class="docutils literal notranslate"><span class="pre">utility</span></code> module.</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-2-0-2021-05-09">
+<h2>v1.2.0 - 2021-05-09<a class="headerlink" href="#v1-2-0-2021-05-09" title="Permalink to this heading">#</a></h2>
+<p>This is a feature release adding the field summary for pydantic
+models/settings.</p>
+<section id="id69">
+<h3>Documentation<a class="headerlink" href="#id69" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Refactor and simplify sphinx extension <code class="docutils literal notranslate"><span class="pre">helper</span></code> module for better
+maintainability and readability.</p></li>
+<li><p>Improve many of the available descriptions in the <code class="docutils literal notranslate"><span class="pre">configuration</span></code>
+section.</p></li>
+<li><p>Provide correct markers for the actual default values in the
+<code class="docutils literal notranslate"><span class="pre">configuration</span></code> section.</p></li>
+</ul>
+</section>
+<section id="id70">
+<h3>Added<a class="headerlink" href="#id70" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Introduce <code class="docutils literal notranslate"><span class="pre">model-show-field-summary</span></code> and
+<code class="docutils literal notranslate"><span class="pre">settings-show-field-summary</span></code> which partially addresses
+#<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/14">14</a>.</p></li>
+</ul>
+</section>
+<section id="id71">
+<h3>Internal<a class="headerlink" href="#id71" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">get_fields</span></code> to <code class="docutils literal notranslate"><span class="pre">inspection</span></code> module.</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-1-3-2021-05-08">
+<h2>v1.1.3 - 2021-05-08<a class="headerlink" href="#v1-1-3-2021-05-08" title="Permalink to this heading">#</a></h2>
+<p>This is a patch release addressing missing cross reference ability and
+minor refactorings.</p>
+<section id="id72">
+<h3>Internal<a class="headerlink" href="#id72" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">add_domain_object_types</span></code> to extension <code class="docutils literal notranslate"><span class="pre">setup</span></code>.</p></li>
+<li><p>Add version and extension meta data to <code class="docutils literal notranslate"><span class="pre">setup</span></code>.</p></li>
+<li><p>Refactor rather complex <code class="docutils literal notranslate"><span class="pre">setup</span></code> into separate functions.</p></li>
+</ul>
+</section>
+<section id="id73">
+<h3>Testing<a class="headerlink" href="#id73" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Rename test directory <code class="docutils literal notranslate"><span class="pre">test-ext-autodoc-pydantic</span></code> to <code class="docutils literal notranslate"><span class="pre">test-base</span></code>
+to streamline naming convention.</p></li>
+<li><p>Add test directory <code class="docutils literal notranslate"><span class="pre">test-edgecase-any-reference</span></code> to mock issue with
+failing <code class="docutils literal notranslate"><span class="pre">:any:</span></code> reference to pydantic objects including
+<code class="docutils literal notranslate"><span class="pre">test_any_reference</span></code> test.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">test_sphinx_build</span></code> test module to check that the sphinx docs
+build without error and warning which can be seen as an end to end
+test because <em>autodoc_pydantic</em>’s documentation is built with sphinx
+and contains an entire collection of usage examples for
+<em>autodoc_pydantic</em> itself.</p></li>
+</ul>
+</section>
+<section id="id74">
+<h3>Bugfix<a class="headerlink" href="#id74" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Enable cross referencing of pydantic objects which are documented
+with <em>autodoc_pydantic</em> directives and linked via <code class="docutils literal notranslate"><span class="pre">:any:</span></code> role
+#<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/3">3</a>.</p></li>
+</ul>
+</section>
+<section id="id75">
+<h3>Documentation<a class="headerlink" href="#id75" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add <em>complete configuration</em> and <em>fields only</em> example to
+documentation.</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-1-2-2021-05-06">
+<h2>v1.1.2 - 2021-05-06<a class="headerlink" href="#v1-1-2-2021-05-06" title="Permalink to this heading">#</a></h2>
+<p>This is a bugfix release on compatibility issues with sphinx
+autosummary.</p>
+<section id="id76">
+<h3>Internal<a class="headerlink" href="#id76" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Remove custom object import and use autodoc’s provided functionality.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">option_is_true</span></code> and <code class="docutils literal notranslate"><span class="pre">option_is_false</span></code> for
+<code class="docutils literal notranslate"><span class="pre">PydanticAutoDirective</span></code> respecting missing values via custom
+<code class="docutils literal notranslate"><span class="pre">NONE</span></code> object.</p></li>
+<li><p>Move member option processing from <code class="docutils literal notranslate"><span class="pre">__init__</span></code> to
+<code class="docutils literal notranslate"><span class="pre">document_members</span></code> for <code class="docutils literal notranslate"><span class="pre">PydanticModelDocumenter</span></code>.</p></li>
+<li><p>Introduce <code class="docutils literal notranslate"><span class="pre">PydanticDirectiveBase</span></code> base class for all pydantic
+directives to remove code redundancies.</p></li>
+</ul>
+</section>
+<section id="id77">
+<h3>Bugfix<a class="headerlink" href="#id77" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Respect <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">currentmodule::</span></code> directive for object imports
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/12">#12</a>.</p></li>
+<li><p>Make <code class="docutils literal notranslate"><span class="pre">autosummary</span></code>’s <code class="docutils literal notranslate"><span class="pre">FakeDirective</span></code> work with pydantic
+autodocumenters
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/11">#11</a>.</p></li>
+<li><p>Allow <code class="docutils literal notranslate"><span class="pre">AutoSummary.get_items</span></code> to successfully list pydantic
+autodocumenters which wrap objects imported to external modules
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/11">#11</a>.</p></li>
+</ul>
+</section>
+<section id="id78">
+<h3>Documentation<a class="headerlink" href="#id78" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">autosummary</span></code> explanation to usage section.</p></li>
+</ul>
+</section>
+<section id="id79">
+<h3>Testing<a class="headerlink" href="#id79" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add test module for ensuring <code class="docutils literal notranslate"><span class="pre">autosummary</span></code> interoperability.</p></li>
+</ul>
+</section>
+<section id="id80">
+<h3>Contributors<a class="headerlink" href="#id80" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Thanks to <a class="reference external" href="https://github.com/antvig">antvig</a> for reporting and
+testing an issue related to autosummary
+<a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic/issues/11">#11</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-1-1-2021-04-26">
+<h2>v1.1.1 - 2021-04-26<a class="headerlink" href="#v1-1-1-2021-04-26" title="Permalink to this heading">#</a></h2>
+<p>This is a minor release with focus on refactoring and doc strings.</p>
+<section id="id81">
+<h3>Internal<a class="headerlink" href="#id81" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Several minor readability refactorings.</p></li>
+</ul>
+</section>
+<section id="id82">
+<h3>Documentation<a class="headerlink" href="#id82" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add changelog and <code class="docutils literal notranslate"><span class="pre">myst_parser</span></code> for parsing markdown files.</p></li>
+</ul>
+</section>
+<section id="project">
+<h3>Project<a class="headerlink" href="#project" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add animated example to showcase difference between standard sphinx
+autodoc and pydantic autodoc.</p></li>
+<li><p>Add project logo.</p></li>
+<li><p>Add changelog.</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-1-0-2021-04-24">
+<h2>v1.1.0 - 2021-04-24<a class="headerlink" href="#v1-1-0-2021-04-24" title="Permalink to this heading">#</a></h2>
+<p>This is small feature release enabling <code class="docutils literal notranslate"><span class="pre">autodoc_pydantic</span></code> to handle
+non JSON serializable fields properly.</p>
+<section id="id83">
+<h3>Internal<a class="headerlink" href="#id83" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Replace inspection methods that use models JSON schema with methods
+that directly access relevant pydantic object attributes.</p></li>
+<li><p>Intercept non JSON serializable fields and overwrite types and
+default values indicating serialization error.</p></li>
+</ul>
+</section>
+<section id="id84">
+<h3>Documentation<a class="headerlink" href="#id84" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add explicit note about how non JSON serializable fields are handled
+for <code class="docutils literal notranslate"><span class="pre">model-show-json</span></code> and <code class="docutils literal notranslate"><span class="pre">settings-show-json</span></code>.</p></li>
+</ul>
+</section>
+</section>
+<section id="v1-0-0-2021-04-23">
+<h2>v1.0.0 - 2021-04-23<a class="headerlink" href="#v1-0-0-2021-04-23" title="Permalink to this heading">#</a></h2>
+<p>This is a major release providing API stability with main focus on
+extensive tests and documentation.</p>
+<section id="id85">
+<h3>Added<a class="headerlink" href="#id85" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add custom css for <code class="docutils literal notranslate"><span class="pre">autodoc_pydantic</span></code> extension.</p></li>
+</ul>
+</section>
+<section id="id86">
+<h3>Internal<a class="headerlink" href="#id86" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">PydanticAutoDirective</span></code> as composite class to mainly manage
+option/configuration management for directives.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">PydanticAutoDoc</span></code> as composite class to mainly manage
+option/configuration management for autodocumenters.</p></li>
+<li><p>Unify directive options and global configuration settings via
+composite classes.</p></li>
+<li><p>Add option validators <code class="docutils literal notranslate"><span class="pre">option_members</span></code>, <code class="docutils literal notranslate"><span class="pre">option_one_of_factory</span></code>,
+<code class="docutils literal notranslate"><span class="pre">option_default_true</span></code>, <code class="docutils literal notranslate"><span class="pre">option_list_like</span></code>.</p></li>
+</ul>
+</section>
+<section id="id87">
+<h3>Documentation<a class="headerlink" href="#id87" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add extensions to automate documentation generation:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ConfigurationToc</span></code> to generate options/conf toc mappings from usage
+to configuration section</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TabDocDirective</span></code> to generate rendered examples in configuration
+section</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AutoCodeBlock</span></code> to generate code block from object path</p></li>
+<li><p>Add user guide:</p></li>
+<li><p>Installation</p></li>
+<li><p>Usage</p></li>
+<li><p>Configuration</p></li>
+<li><p>Examples</p></li>
+<li><p>Add developer guide:</p></li>
+<li><p>Setting up development environment</p></li>
+<li><p>Running tests</p></li>
+<li><p>Building docs</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">.readthedocs.yaml</span></code>.</p></li>
+</ul>
+</section>
+<section id="id88">
+<h3>Testing<a class="headerlink" href="#id88" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add test python package with code examples for test execution (same
+structure as sphinx tests).</p></li>
+<li><p>Add fixture <code class="docutils literal notranslate"><span class="pre">test_app</span></code> to instantiate test app with settable
+configuration settings.</p></li>
+<li><p>Add fixture <code class="docutils literal notranslate"><span class="pre">autodocument</span></code> to handle restructured text generation
+tests (autodocumenter tests).</p></li>
+<li><p>Add fixture <code class="docutils literal notranslate"><span class="pre">parse_rst</span></code> to handle node generation tests from
+restructured text (directive tests).</p></li>
+<li><p>Add autodoc/directive tests for all available configuration settings</p></li>
+<li><p>Include sourcery in CI pipeline.</p></li>
+</ul>
+</section>
+<section id="id89">
+<h3>Packaging<a class="headerlink" href="#id89" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Modify package dependencies to <code class="docutils literal notranslate"><span class="pre">sphinx</span> <span class="pre">&gt;=3.4</span></code> and
+<code class="docutils literal notranslate"><span class="pre">pydantic</span> <span class="pre">&gt;=</span> <span class="pre">1.5</span></code>.</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-1-1-2021-04-04">
+<h2>v0.1.1 - 2021-04-04<a class="headerlink" href="#v0-1-1-2021-04-04" title="Permalink to this heading">#</a></h2>
+<p>This release adds the sphinx documentation skeleton.</p>
+<section id="id90">
+<h3>Documentation<a class="headerlink" href="#id90" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add initial sphinx documentation.</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-1-0-2021-03-30">
+<h2>v0.1.0 - 2021-03-30<a class="headerlink" href="#v0-1-0-2021-03-30" title="Permalink to this heading">#</a></h2>
+<p>This is the initial of autodoc_pydantic.</p>
+<section id="id91">
+<h3>Added<a class="headerlink" href="#id91" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Autodocumenter <code class="docutils literal notranslate"><span class="pre">PydanticModelDocumenter</span></code> with configurations:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model_show_json</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model_show_config_member</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model_show_config_summary</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model_show_validator_members</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model_show_validator_summary</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model_hide_paramlist</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model_undoc_members</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model_members</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model_member_order</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model_signature_prefix</span></code></p></li>
+<li><p>Autodocumenter <code class="docutils literal notranslate"><span class="pre">PydanticSettingsDocumenter</span></code> with configurations:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">settings_show_json</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">settings_show_config_member</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">settings_show_config_summary</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">settings_show_validator_members</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">settings_show_validator_summary</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">settings_hide_paramlist</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">settings_undoc_members</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">settings_members</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">settings_member_order</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">settings_signature_prefix</span></code></p></li>
+<li><p>Autodocumenter <code class="docutils literal notranslate"><span class="pre">PydanticFieldDocumenter</span></code> with configurations:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">field_list_validators</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">field_doc_policy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">field_show_constraints</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">field_show_alias</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">field_show_default</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">field_signature_prefix</span></code></p></li>
+<li><p>Autodocumenter <code class="docutils literal notranslate"><span class="pre">PydanticValidatorDocumenter</span></code> with configurations:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">validator_signature_prefix</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">validator_replace_signature</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">validator_list_fields</span></code></p></li>
+<li><p>Autodocumenter <code class="docutils literal notranslate"><span class="pre">PydanticConfigClassDocumenter</span></code> with configurations:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">config_signature_prefix</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">config_members</span></code></p></li>
+<li><p>Directives <code class="docutils literal notranslate"><span class="pre">PydanticModel</span></code>, <code class="docutils literal notranslate"><span class="pre">PydanticSettings</span></code>,
+<code class="docutils literal notranslate"><span class="pre">PydanticField</span></code>, <code class="docutils literal notranslate"><span class="pre">PydanticValidator</span></code></p></li>
+</ul>
+</section>
+<section id="id92">
+<h3>Internal<a class="headerlink" href="#id92" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">inspection</span></code> along with <code class="docutils literal notranslate"><span class="pre">ModelWrapper</span></code> module providing
+functionality to inspect pydantic objects to retrieve relevant
+informations for documentation.</p></li>
+</ul>
+</section>
+<section id="id93">
+<h3>Testing<a class="headerlink" href="#id93" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add end to end tests for autodocumenters and directives.</p></li>
+<li><p>Setup github actions for CI.</p></li>
+<li><p>Add codacy integration.</p></li>
+<li><p>Add code coverage.</p></li>
+</ul>
+</section>
+<section id="id94">
+<h3>Packaging<a class="headerlink" href="#id94" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Use poetry for package management.</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>.</p></li>
+<li><p>Add github action to upload to PyPI upon version tags on main branch.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="api.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">API</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v2-1-0-2024-01-xx">v2.1.0 - 2024-01-XX</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bugfix">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internal">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributors">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v2-0-1-2023-08-01">v2.0.1 - 2023-08-01</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v2-0-0-2023-07-24">v2.0.0 - 2023-07-24</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changed-behavior">Changed Behavior</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-9-0-2023-06-08">v1.9.0 - 2023-06-08</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feature">Feature</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-8-0-2022-10-13">v1.8.0 - 2022-10-13</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Feature</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-7-2-2022-06-12">v1.7.2 - 2022-06-12</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Contributors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Internal</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-7-1-2022-05-30">v1.7.1 - 2022-05-30</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#packaging">Packaging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-7-0-2022-05-18">v1.7.0 - 2022-05-18</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-behavior">Changing behavior</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Feature</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internals">Internals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-6-2-2022-04-15">v1.6.2 - 2022-04-15</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-6-1-2022-01-28">v1.6.1 - 2022-01-28</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-6-0-2022-01-03">v1.6.0 - 2022-01-03</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">Changing behavior</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">Feature</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id42">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-5-1-2021-11-12">v1.5.1 - 2021-11-12</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id44">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id45">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id46">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id47">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-5-0-2021-10-10">v1.5.0 - 2021-10-10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#added">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id48">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id49">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id50">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id51">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id52">Packaging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id53">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-4-0-2021-08-20">v1.4.0 - 2021-08-20</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id54">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id55">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id56">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id57">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id58">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-3-1-2021-07-21">v1.3.1 - 2021-07-21</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id59">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id60">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id61">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id62">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id63">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-3-0-2021-05-10">v1.3.0 - 2021-05-10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id64">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id65">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id66">Packaging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id67">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id68">Added</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-2-0-2021-05-09">v1.2.0 - 2021-05-09</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id69">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id70">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id71">Internal</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-1-3-2021-05-08">v1.1.3 - 2021-05-08</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id72">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id73">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id74">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id75">Documentation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-1-2-2021-05-06">v1.1.2 - 2021-05-06</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id76">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id77">Bugfix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id78">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id79">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id80">Contributors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-1-1-2021-04-26">v1.1.1 - 2021-04-26</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id81">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id82">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project">Project</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-1-0-2021-04-24">v1.1.0 - 2021-04-24</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id83">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id84">Documentation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-0-0-2021-04-23">v1.0.0 - 2021-04-23</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id85">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id86">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id87">Documentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id88">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id89">Packaging</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v0-1-1-2021-04-04">v0.1.1 - 2021-04-04</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id90">Documentation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v0-1-0-2021-03-30">v0.1.0 - 2021-03-30</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id91">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id92">Internal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id93">Testing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id94">Packaging</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Franz Wöllert
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023, Franz Wöllert.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,812 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Design &#8212; autodoc_pydantic 2.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/autodoc_pydantic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'developers/design';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Guides" href="guides.html" />
+    <link rel="prev" title="Setup" href="setup.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo_white.svg" class="logo__image only-light" alt="autodoc_pydantic 2.1.0 documentation - Home"/>
+    <script>document.write(`<img src="../_static/logo_white.svg" class="logo__image only-dark" alt="autodoc_pydantic 2.1.0 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Users</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../users/installation.html">Installation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../users/usage.html">Usage</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../users/_autosummary/target.usage_autosummary.AutoSummaryModel.html">target.usage_autosummary.AutoSummaryModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/_autosummary/target.usage_autosummary.AutoSummarySettings.html">target.usage_autosummary.AutoSummarySettings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../users/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/faq.html">FAQ</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guides.html">Guides</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../reference/api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/changelog.html">Changelog</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/developers/design.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Design</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objective">Objective</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-components">Core components</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inspection">Inspection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#auto-documenters">Auto-Documenters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration">Configuration</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#global">Global</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#local">Local</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation-details">Implementation details</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pydantic-composite">Pydantic Composite</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="design">
+<span id="expl-design"></span><h1>Design<a class="headerlink" href="#design" title="Permalink to this heading">#</a></h1>
+<p>The following sections are mainly intended for developers or interested users
+who want to contribute or who want to gain a deeper understanding about the
+inner workings of <strong>autodoc_pydantic</strong>.</p>
+<p>It aims to clarify the design of <strong>autodoc_pydantic</strong> and how it
+integrates with sphinx and pydantic. Additionally, it intends to provide a
+gentle introduction to the code base.</p>
+<section id="objective">
+<h2>Objective<a class="headerlink" href="#objective" title="Permalink to this heading">#</a></h2>
+<p>Before diving into any implementation details, let’s take a high level
+perspective first and focus on the issue that <strong>autodoc_pydantic</strong> solves.</p>
+<p>The default sphinx autodoc extension is not very well suited for automatically
+generated documentation of pydantic models because it has no domain knowledge
+about pydantic specific concepts like validators and fields. As a result, the
+default sphinx autodoc provides no information about field constraints, has
+no references between fields and validators, shows overloaded or meaningless
+signatures and does not even show default values for fields.</p>
+<p>Hence, the main purpose of <strong>autodoc_pydantic</strong> is to improve auto-documentation
+for pydantic models. It leverages the additional knowledge about pydantic to
+provide a more sophisticated documentation (e.g. see <a class="reference internal" href="../users/examples.html#showcase"><span class="std std-ref">this example</span></a>).
+Moreover, every modification to the default sphinx auto-documentation should be
+configurable to allow complete customization without enforcing any strict changes
+to the existing documentation.</p>
+</section>
+<section id="core-components">
+<h2>Core components<a class="headerlink" href="#core-components" title="Permalink to this heading">#</a></h2>
+<p>Guided by the objective to improve auto-documentation for pydantic models, three
+mandatory core components can be derived.</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#expl-inspection"><span class="std std-ref">Inspection</span></a> - extract relevant information from pydantic models.</p></li>
+<li><p><a class="reference internal" href="#expl-auto-documenters"><span class="std std-ref">Auto-documenters</span></a> - translate pydantic specific knowledge into documentation pages.</p></li>
+<li><p><a class="reference internal" href="#expl-configuration"><span class="std std-ref">Configuration</span></a> - provide complete configurability of all modifications.</p></li>
+</ol>
+<section id="inspection">
+<span id="expl-inspection"></span><h3>Inspection<a class="headerlink" href="#inspection" title="Permalink to this heading">#</a></h3>
+<p>Before extending sphinx with new directives and generating reST, we first need
+collect the relevant information to be documented for pydantic models.</p>
+<p>While <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html">sphinx.ext.autodoc</a>
+already provides great tooling to inspect python
+objects (e.g. class members, source name, imports), again it has no specific
+knowledge about pydantic models. The auto-documenters need to extract relevant
+information like pydantic fields and validators from pydantic models. This is
+accomplished by the <a class="reference internal" href="../reference/api.html#api-inspection"><span class="std std-ref">inspection</span></a> module which offers
+several inspector classes for different aspects of pydantic models:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.FieldInspector" title="sphinxcontrib.autodoc_pydantic.inspection.FieldInspector"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldInspector</span></code></a>
+-&gt; field names, properties, JSON serializability and more</p></li>
+<li><p><a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.ValidatorInspector" title="sphinxcontrib.autodoc_pydantic.inspection.ValidatorInspector"><code class="xref py py-class docutils literal notranslate"><span class="pre">ValidatorInspector</span></code></a>
+-&gt; validator names and types</p></li>
+<li><p><a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.ConfigInspector" title="sphinxcontrib.autodoc_pydantic.inspection.ConfigInspector"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigInspector</span></code></a>
+-&gt; config usage and values</p></li>
+<li><p><a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.ReferenceInspector" title="sphinxcontrib.autodoc_pydantic.inspection.ReferenceInspector"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReferenceInspector</span></code></a>
+-&gt; reference mappings between fields and validators</p></li>
+<li><p><a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.SchemaInspector" title="sphinxcontrib.autodoc_pydantic.inspection.SchemaInspector"><code class="xref py py-class docutils literal notranslate"><span class="pre">SchemaInspector</span></code></a>
+-&gt; schema sanitizer</p></li>
+<li><p><a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.StaticInspector" title="sphinxcontrib.autodoc_pydantic.inspection.StaticInspector"><code class="xref py py-class docutils literal notranslate"><span class="pre">StaticInspector</span></code></a>
+-&gt; static methods</p></li>
+</ul>
+<p>All of these are composite classes which are combined under the
+<a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.ModelInspector" title="sphinxcontrib.autodoc_pydantic.inspection.ModelInspector"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelInspector</span></code></a>
+class which serves as the main entry point to inspect pydantic models:</p>
+<div class="mermaid">
+            %%{init: {'theme': 'base', 'themeVariables': { 'primaryBorderColor': '#4e4a4a', 'primaryColor': '#FFFFFF', 'primaryTextColor': '#4e4a4a'}}}%%
+   classDiagram
+       direction BT
+
+    class FieldInspector {
+        + names
+        + is_required()
+    }
+
+    class ValidatorInspector {
+        + names
+        + is_asterisk()
+    }
+
+    class ConfigInspector {
+        + is_configured
+        + items
+    }
+
+    class ReferenceInspector {
+        + filter_by_validator_name()
+        + filter_by_field_name()
+    }
+
+    class SchemaInspector {
+        + sanitized
+        + create_sanitized_model()
+    }
+
+    class ModelInspector {
+        +fields
+        +validators
+        +config
+        +references
+        +schema
+    }
+
+    FieldInspector --* ModelInspector
+    ValidatorInspector --* ModelInspector
+    ConfigInspector --* ModelInspector
+    ReferenceInspector --* ModelInspector
+    SchemaInspector --* ModelInspector
+        </div><p>You may use the <a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.ModelInspector" title="sphinxcontrib.autodoc_pydantic.inspection.ModelInspector"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelInspector</span></code></a>
+programmatically to inspect pydantic models:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sphinxcontrib.autodoc_pydantic.inspection</span> <span class="kn">import</span> <span class="n">ModelInspector</span>
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">field_validator</span><span class="p">,</span> <span class="n">Field</span>
+
+
+<span class="k">class</span> <span class="nc">TestModel</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">field_a</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">field_b</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;FooBar&quot;</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field_a&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">validate_field_a</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">v</span>
+
+
+<span class="n">inspector</span> <span class="o">=</span> <span class="n">ModelInspector</span><span class="p">(</span><span class="n">TestModel</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Show field names:&quot;</span><span class="p">,</span> <span class="n">inspector</span><span class="o">.</span><span class="n">fields</span><span class="o">.</span><span class="n">names</span><span class="p">)</span>
+<span class="c1"># Show field names: [&#39;field_a&#39;, &#39;field_b&#39;]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Show field constraints:&quot;</span><span class="p">,</span> <span class="n">inspector</span><span class="o">.</span><span class="n">fields</span><span class="o">.</span><span class="n">get_constraints</span><span class="p">(</span><span class="s2">&quot;field_a&quot;</span><span class="p">))</span>
+<span class="c1"># Show field constraints: {&#39;min&#39;: 0, &#39;max&#39;: 10}</span>
+</pre></div>
+</div>
+</section>
+<section id="auto-documenters">
+<span id="expl-auto-documenters"></span><h3>Auto-Documenters<a class="headerlink" href="#auto-documenters" title="Permalink to this heading">#</a></h3>
+<p>Once the relevant information about pydantic models is accessible via the
+<a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.ModelInspector" title="sphinxcontrib.autodoc_pydantic.inspection.ModelInspector"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelInspector</span></code></a>,
+custom auto-documenters are necessary to translate the additional knowledge into
+concrete reST documentation. For example, constraints could
+be added to pydantic fields. Furthermore, the model <cite>Config</cite> class information
+could be summarized in the model documentation.</p>
+<p>From an implementation perspective, the sphinx documentation provides a great
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/development/tutorials/autodoc_ext.html">tutorial</a>
+as a starting point on how to write a custom auto-documenter. In fact, this was
+also the initial step going forward with the development of <strong>autodoc_pydantic</strong>.
+Please refer to this tutorial for a basic understanding on how to create your
+own auto-documenters.</p>
+<p>In a nutshell, an auto-documenter gets a python object as input, inspects it
+and generates reST as output.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to know more about why auto-documenters are no sphinx directives
+and how their generated reST is eventually converted into actual documentation
+pages, please read <a class="reference internal" href="guides.html#understanding-autodocumenters"><span class="std std-ref">understanding auto-documenters</span></a>.</p>
+</div>
+<p>The following auto-documenters exist in the <a class="reference internal" href="../reference/api.html#api-autodocumenters"><span class="std std-ref">autodocumenters</span></a> module:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticModelDocumenter" title="sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticModelDocumenter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PydanticModelDocumenter</span></code></a></p></li>
+<li><p><a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticSettingsDocumenter" title="sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticSettingsDocumenter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PydanticSettingsDocumenter</span></code></a></p></li>
+<li><p><a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticFieldDocumenter" title="sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticFieldDocumenter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PydanticFieldDocumenter</span></code></a></p></li>
+<li><p><a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticValidatorDocumenter" title="sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticValidatorDocumenter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PydanticValidatorDocumenter</span></code></a></p></li>
+</ul>
+<p>All auto-documenters are not written from scratch but inherit from
+the default auto-documenters to borrow most of the main functionality provided
+by <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html">sphinx.ext.autodoc</a>
+Moreover, new methods with separate logic are added and existing methods are
+overloaded to inject custom content.</p>
+</section>
+<section id="configuration">
+<span id="expl-configuration"></span><h3>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">#</a></h3>
+<p>Another important aspect is how <strong>autodoc_pydantic</strong> handles configuration settings.
+Since all features are completely configurable (globally via <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> and
+locally via directive options), they have to be represented in code.</p>
+<section id="global">
+<h4>Global<a class="headerlink" href="#global" title="Permalink to this heading">#</a></h4>
+<p>Global settings are defined in the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> module and are directly
+added when <strong>autodoc_pydantic</strong> is registered as an sphinx extension:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">sphinxcontrib/autodoc_pydantic/__init__.py</span><a class="headerlink" href="#id2" title="Permalink to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_configuration_values</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="n">Sphinx</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adds all configuration values to sphinx application.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">stem</span> <span class="o">=</span> <span class="s2">&quot;autodoc_pydantic_&quot;</span>
+    <span class="n">add</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">add_config_value</span>
+
+    <span class="n">add</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">stem</span><span class="si">}</span><span class="s1">field_list_validators&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span>
+    <span class="n">add</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">stem</span><span class="si">}</span><span class="s1">field_doc_policy&#39;</span><span class="p">,</span> <span class="n">OptionsFieldDocPolicy</span><span class="o">.</span><span class="n">BOTH</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+    <span class="n">add</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">stem</span><span class="si">}</span><span class="s1">field_show_constraints&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span>
+    <span class="n">add</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">stem</span><span class="si">}</span><span class="s1">field_show_alias&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span>
+    <span class="n">add</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">stem</span><span class="si">}</span><span class="s1">field_show_default&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span>
+    <span class="n">add</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">stem</span><span class="si">}</span><span class="s1">field_show_required&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span>
+    <span class="n">add</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">stem</span><span class="si">}</span><span class="s1">field_signature_prefix&#39;</span><span class="p">,</span> <span class="s2">&quot;field&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="n">Sphinx</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+    <span class="n">add_configuration_values</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="local">
+<h4>Local<a class="headerlink" href="#local" title="Permalink to this heading">#</a></h4>
+<p>Local settings are defined in the separate <a class="reference internal" href="../reference/api.html#api-definition"><span class="std std-ref">definition</span></a>
+module containing all directive options for auto-documenters, e.g:</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">sphinxcontrib/autodoc_pydantic/directives/options/definition.py</span><a class="headerlink" href="#id3" title="Permalink to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">OPTIONS_FIELD</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;field-show-default&quot;</span><span class="p">:</span> <span class="n">option_default_true</span><span class="p">,</span>
+    <span class="s2">&quot;field-show-required&quot;</span><span class="p">:</span> <span class="n">option_default_true</span><span class="p">,</span>
+    <span class="s2">&quot;field-signature-prefix&quot;</span><span class="p">:</span> <span class="n">unchanged</span><span class="p">,</span>
+    <span class="s2">&quot;field-show-alias&quot;</span><span class="p">:</span> <span class="n">option_default_true</span><span class="p">,</span>
+    <span class="s2">&quot;field-show-constraints&quot;</span><span class="p">:</span> <span class="n">option_default_true</span><span class="p">,</span>
+    <span class="s2">&quot;field-list-validators&quot;</span><span class="p">:</span> <span class="n">option_default_true</span><span class="p">,</span>
+    <span class="s2">&quot;field-doc-policy&quot;</span><span class="p">:</span> <span class="n">option_one_of_factory</span><span class="p">(</span><span class="n">OptionsFieldDocPolicy</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span>
+    <span class="s2">&quot;__doc_disable_except__&quot;</span><span class="p">:</span> <span class="n">option_list_like</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>These directive options are then registered by the corresponding
+auto-documenters:</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">directives/autodocumenters.py</span><a class="headerlink" href="#id4" title="Permalink to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ...</span>
+
+<span class="k">class</span> <span class="nc">PydanticFieldDocumenter</span><span class="p">(</span><span class="n">AttributeDocumenter</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents specialized Documenter subclass for pydantic fields.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">option_spec</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">AttributeDocumenter</span><span class="o">.</span><span class="n">option_spec</span><span class="p">)</span>
+    <span class="n">option_spec</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">OPTIONS_FIELD</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Local directive options overwrite global settings. Checking for both global and
+local settings while also handling precedence is abstracted away via
+<code class="xref py py-class docutils literal notranslate"><span class="pre">PydanticDocumenterOptions</span></code>
+which provides many convenience methods for interacting with options.</p>
+</section>
+</section>
+</section>
+<section id="implementation-details">
+<h2>Implementation details<a class="headerlink" href="#implementation-details" title="Permalink to this heading">#</a></h2>
+<p>This section is a continuation of the previous <a class="reference internal" href="#expl-design"><span class="std std-ref">design</span></a>
+section. It is highly recommended to start there first if you haven’t read it.</p>
+<p>Otherwise, feel free to explore more of the implementation details.</p>
+<section id="pydantic-composite">
+<h3>Pydantic Composite<a class="headerlink" href="#pydantic-composite" title="Permalink to this heading">#</a></h3>
+<p>Essentially, auto-documenters need to employ the
+<a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.inspection.ModelInspector" title="sphinxcontrib.autodoc_pydantic.inspection.ModelInspector"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelInspector</span></code></a>
+for retrieving the relevant information to be documented and
+<a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.options.composites.AutoDocOptions" title="sphinxcontrib.autodoc_pydantic.directives.options.composites.AutoDocOptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">AutoDocOptions</span></code></a>
+for accessing configuration settings.</p>
+<p>Both are combined in the
+<a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticAutoDoc" title="sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticAutoDoc"><code class="xref py py-class docutils literal notranslate"><span class="pre">PydanticAutoDoc</span></code></a>
+composite class via <code class="docutils literal notranslate"><span class="pre">inspect</span></code> and <code class="docutils literal notranslate"><span class="pre">options</span></code> attributes, respectively. This
+provides a single entry point for all mandatory functionality that is required
+to populate auto-documenter’s content.</p>
+<div class="mermaid">
+            %%{init: {'theme': 'base', 'themeVariables': { 'primaryBorderColor': '#4e4a4a', 'primaryColor': '#FFFFFF', 'primaryTextColor': '#4e4a4a'}}}%%
+classDiagram
+   direction LR
+
+   class PydanticModelDocumenter {
+       +pydantic
+   }
+
+   class PydanticFieldDocumenter {
+       +pydantic
+   }
+
+   class PydanticValidatorDocumenter {
+       +pydantic
+   }
+
+   class PydanticAutoDoc {
+       +inspect
+       +options
+   }
+
+   PydanticAutoDoc --* PydanticModelDocumenter
+   PydanticAutoDoc --* PydanticFieldDocumenter
+   PydanticAutoDoc --* PydanticValidatorDocumenter
+
+   class ModelInspector {
+       +fields
+       +validators
+   }
+
+   class AutoDocOptions {
+       +is_true()
+       +is_false()
+   }
+
+   ModelInspector --* PydanticAutoDoc
+   AutoDocOptions --* PydanticAutoDoc
+        </div><p>The <a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticAutoDoc" title="sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticAutoDoc"><code class="xref py py-class docutils literal notranslate"><span class="pre">PydanticAutoDoc</span></code></a>
+is added to every auto-documenter during it’s initialization as the <cite>pydantic</cite>
+attribute and is then used within methods as follows:</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">directives/autodocumenters.py</span><a class="headerlink" href="#id5" title="Permalink to this code">#</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PydanticFieldDocumenter</span><span class="p">(</span><span class="n">AttributeDocumenter</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents specialized Documenter subclass for pydantic fields.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span> <span class="o">=</span> <span class="n">PydanticAutoDoc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">is_child</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">add_default_value_or_required</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds default value or required marker.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">field_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic_field_name</span>
+        <span class="n">is_required</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">fields</span><span class="o">.</span><span class="n">is_required</span><span class="p">(</span><span class="n">field_name</span><span class="p">)</span>
+        <span class="n">show_default</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;field-show-default&quot;</span><span class="p">)</span>
+        <span class="n">show_required</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;field-show-required&quot;</span><span class="p">)</span>
+
+        <span class="c1"># ...</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="directives">
+<h3>Directives<a class="headerlink" href="#directives" title="Permalink to this heading">#</a></h3>
+<p>Using customized auto-documenters already allows for a great amount of
+modification regarding the content that can be represented by the default
+sphinx directives. For example, <strong>autodoc_pydantic</strong> could simply use the
+existing <code class="docutils literal notranslate"><span class="pre">py:method</span></code> directive to document pydantic validators. However,
+the default signature of pydantic validators does not convey valuable
+information because it most often just shows a single argument without letting
+the user know which pydantic field is validated. Instead, one might want to put
+references to the validated fields directly into the header since this more
+relevant. This is not possible while relying on the default directives.</p>
+<p>Therefore, <strong>autodoc_pydantic</strong> additionally provides the following
+directives in <a class="reference internal" href="../reference/api.html#api-directives"><span class="std std-ref">directives</span></a> module to allow more advanced
+customization:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.directives.PydanticModel" title="sphinxcontrib.autodoc_pydantic.directives.directives.PydanticModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">PydanticModel</span></code></a></p></li>
+<li><p><a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.directives.PydanticSettings" title="sphinxcontrib.autodoc_pydantic.directives.directives.PydanticSettings"><code class="xref py py-class docutils literal notranslate"><span class="pre">PydanticSettings</span></code></a></p></li>
+<li><p><a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.directives.PydanticField" title="sphinxcontrib.autodoc_pydantic.directives.directives.PydanticField"><code class="xref py py-class docutils literal notranslate"><span class="pre">PydanticField</span></code></a></p></li>
+<li><p><a class="reference internal" href="../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.directives.PydanticValidator" title="sphinxcontrib.autodoc_pydantic.directives.directives.PydanticValidator"><code class="xref py py-class docutils literal notranslate"><span class="pre">PydanticValidator</span></code></a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="setup.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Setup</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="guides.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Guides</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objective">Objective</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-components">Core components</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inspection">Inspection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#auto-documenters">Auto-Documenters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration">Configuration</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#global">Global</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#local">Local</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation-details">Implementation details</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pydantic-composite">Pydantic Composite</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Franz Wöllert
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023, Franz Wöllert.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

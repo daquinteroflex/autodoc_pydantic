@@ -1,0 +1,941 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Guides &#8212; autodoc_pydantic 2.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/autodoc_pydantic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'developers/guides';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="API" href="../reference/api.html" />
+    <link rel="prev" title="Design" href="design.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo_white.svg" class="logo__image only-light" alt="autodoc_pydantic 2.1.0 documentation - Home"/>
+    <script>document.write(`<img src="../_static/logo_white.svg" class="logo__image only-dark" alt="autodoc_pydantic 2.1.0 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Users</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../users/installation.html">Installation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../users/usage.html">Usage</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../users/_autosummary/target.usage_autosummary.AutoSummaryModel.html">target.usage_autosummary.AutoSummaryModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../users/_autosummary/target.usage_autosummary.AutoSummarySettings.html">target.usage_autosummary.AutoSummarySettings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../users/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/faq.html">FAQ</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Design</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Guides</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../reference/api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/changelog.html">Changelog</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/developers/guides.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Guides</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-auto-documenters">Understanding auto-documenters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-features">Adding new features</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#provide-rationale">1. Provide rationale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-the-feature">2. Specify the feature</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derive-tests">3. Derive tests</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-model">Example model</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#test-implementation">Test implementation</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-configuration-settings">4. Add configuration settings</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#global-configuration">1. Global configuration</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#local-configuration">2. Local configuration</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implement-required-behavior">5. Implement required behavior</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-documentation">6. Update documentation</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="guides">
+<h1>Guides<a class="headerlink" href="#guides" title="Permalink to this heading">#</a></h1>
+<p>This page provides guides for developers regarding explanations and hands on
+walkthroughs.</p>
+<p>It contains lots of implementation details and builds upon previous knowledge
+covered in the developers <a class="reference internal" href="design.html#expl-design"><span class="std std-ref">design</span></a> explanation. It is
+recommended to start there first before continuing here.</p>
+<section id="understanding-auto-documenters">
+<span id="understanding-autodocumenters"></span><h2>Understanding auto-documenters<a class="headerlink" href="#understanding-auto-documenters" title="Permalink to this heading">#</a></h2>
+<p>Auto-documenters typically inspect a python object and generate corresponding
+reStructuredText (reST). The reST contains calls to sphinx directives, roles
+and so on and is in turn converted docutils nodes. The docutil nodes are then
+consumed by different builders to create the corresponding output (e.g. PDF, HTML).</p>
+<p>An auto-documenter is not a sphinx directive in the first place because it does
+not generate docutil nodes. Instead as mentioned above, it creates reST
+(see auto-documenters <a class="reference external" href="https://github.com/sphinx-doc/sphinx/blob/37730d0f8ed250b019f78701056308b25535e3c9/sphinx/ext/autodoc/__init__.py#L299"><code class="docutils literal notranslate"><span class="pre">Documenter</span></code></a> base class and its <a class="reference external" href="https://github.com/sphinx-doc/sphinx/blob/37730d0f8ed250b019f78701056308b25535e3c9/sphinx/ext/autodoc/__init__.py#L893"><code class="docutils literal notranslate"><span class="pre">generate</span></code></a> method).
+But how is the reST finally converted into docutil nodes?</p>
+<p>When registering an auto-documenter to the sphinx application via
+<a class="reference external" href="https://github.com/sphinx-doc/sphinx/blob/37730d0f8ed250b019f78701056308b25535e3c9/sphinx/application.py#L1085"><code class="docutils literal notranslate"><span class="pre">app.add_autodocumenter</span></code></a>, it is wrapped with the generic <a class="reference external" href="https://github.com/sphinx-doc/sphinx/blob/37730d0f8ed250b019f78701056308b25535e3c9/sphinx/ext/autodoc/directive.py#L125"><code class="docutils literal notranslate"><span class="pre">AutodocDirective</span></code></a>.
+This directive executes the auto-documenter, retrieves its reST and then
+converts the reST into docutils via the magic <a class="reference external" href="https://github.com/sphinx-doc/sphinx/blob/37730d0f8ed250b019f78701056308b25535e3c9/sphinx/ext/autodoc/directive.py#L108"><code class="docutils literal notranslate"><span class="pre">parse_generated_content</span></code></a>.</p>
+<div class="mermaid">
+            %%{init: {'theme': 'base', 'themeVariables': { 'tertiaryColor': '#DDDDDD', 'primaryColor': '#2980b9', 'primaryTextColor': '#FFFFFF'}}}%%
+stateDiagram-v2
+   direction LR
+
+
+   [*] --&gt; AutoDocumenter: Python\n&amp;nbspobject
+
+   state AutodocDirective {
+        state &quot;parse_generated_content&quot; as pgc
+        state AutoDocumenter {
+           inspect --&gt; generate
+        }
+   AutoDocumenter --&gt; pgc: restructured\n&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbspText
+   }
+
+   pgc --&gt; Builder: DocUtil\n&amp;nbspNodes
+
+   Builder --&gt; HTML
+   Builder --&gt; LaTex
+   Builder --&gt; ...
+        </div><p>The interesting part is how a given reST is converted into docutils nodes
+because this turns out to be very useful for different use cases when writing
+custom directives.</p>
+<p>Writing your own directives outputting docutil nodes is rather low level and
+harder to learn in comparison to directives which can create arbitrary high
+level reST that then will be converted to docutil nodes generically.</p>
+<p>For example, part of <strong>autodoc_pydantic</strong>’s documentation is using this
+functionality to handle repetitive and error prone tasks (see <code class="docutils literal notranslate"><span class="pre">TabDocDirective</span></code>).</p>
+</section>
+<section id="adding-new-features">
+<h2>Adding new features<a class="headerlink" href="#adding-new-features" title="Permalink to this heading">#</a></h2>
+<p>This section describes how <strong>autodoc_pydantic</strong> can be extended to support new
+features. As an example, we will cover the process of implementing an explicit
+sort order for summary lists which was added in version 1.5.0.</p>
+<p>Adding a new feature requires several related steps which are divided in the following topics:</p>
+<ol class="arabic simple">
+<li><p><strong>Provide rationale</strong>: Shortly describe the feature. Reason why this feature
+should be added and what issue it solves. Compare the complexity and maintenance
+burden it adds in contrast to the value it provides.</p></li>
+<li><p><strong>Specify the feature</strong>: Depict the feature in very detail. Describe it’s
+exact behaviour. Provide configuration names.</p></li>
+<li><p><strong>Derive tests</strong>: Translate the feature’s specification into
+test cases to ensure that the implementation works as expected.</p></li>
+<li><p><strong>Add configuration settings</strong>: Register local and global configuration
+settings.</p></li>
+<li><p><strong>Implement required behavior</strong>: Finally add the actual implementation to the
+existing code base until tests pass.</p></li>
+<li><p><strong>Update documentation</strong>: Describe the new feature adding it to the
+<a class="reference internal" href="../users/configuration.html#id1"><span class="std std-ref">configuration</span></a> page.</p></li>
+</ol>
+<section id="provide-rationale">
+<h3>1. Provide rationale<a class="headerlink" href="#provide-rationale" title="Permalink to this heading">#</a></h3>
+<p>A summary list is an enumeration with references to all available fields or
+validators. If enabled, it is appended to the doc string of the model
+(see examples for <a class="reference internal" href="../users/configuration.html#autodoc-pydantic-model-show-validator-summary"><span class="std std-ref">model-show-validator-summary</span></a>
+and <a class="reference internal" href="../users/configuration.html#autodoc-pydantic-model-show-field-summary"><span class="std std-ref">model-show-field-summary</span></a>).</p>
+<p>Prior to version 1.5.0, summary lists for validators and fields were already
+supported. However, their sort order was not explicitly defined and could not be
+configured. Even worse, the sort order was arbitrary and may have varied between
+python versions (e.g. dicts being ordered vs. unordered).</p>
+<p>Depending on one’s requirement, sort order should be either alphabetically or
+given by source. This is analogous to how <code class="docutils literal notranslate"><span class="pre">member_order</span></code> can be configured in
+sphinx.</p>
+</section>
+<section id="specify-the-feature">
+<h3>2. Specify the feature<a class="headerlink" href="#specify-the-feature" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>Summary list order applies to pydantic models and pydantic settings.</p></li>
+<li><p>Two configurations are added accordingly:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">model-show-field-summary</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">settings-show-field-summary</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Configurations accept two possible values:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">alphabetical</span></code> - sort items alphabetically</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bysource</span></code> - use order given in source code</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>It affects both the sort order for field and validator summary lists.</p></li>
+</ul>
+</section>
+<section id="derive-tests">
+<h3>3. Derive tests<a class="headerlink" href="#derive-tests" title="Permalink to this heading">#</a></h3>
+<p>With the above specification, test cases can be formulated.</p>
+<section id="example-model">
+<h4>Example model<a class="headerlink" href="#example-model" title="Permalink to this heading">#</a></h4>
+<p>In order to test the feature, there needs to be a pydantic model to generate
+testable reST from in the first place. Therefore, let’s create an exemplary model
+which allows to check for the correct implementation of summary list orders.
+This requires at least two pydantic fields and validators to be sortable.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">tests/roots/test-base/target/configuration.py</span><a class="headerlink" href="#id1" title="Permalink to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ModelSummaryListOrder</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ModelSummaryListOrder.&quot;&quot;&quot;</span>
+
+    <span class="n">field_b</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">field_a</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field_b&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">validate_b</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">v</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s2">&quot;field_a&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">validate_a</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">v</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="test-implementation">
+<h4>Test implementation<a class="headerlink" href="#test-implementation" title="Permalink to this heading">#</a></h4>
+<p>Testing auto-documenters in sphinx comes with some complexity. An auto-documenter
+generates reST. Hence, the generated reST has to be tested. Manually creating the correct
+reST output is far from being easy and requires some practice. As an example, let’s
+assume we test for alphabetical order. The correct reST for the above exemplary
+model is as follows:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">tests/test_configuration_model.py</span><a class="headerlink" href="#id2" title="Permalink to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="p">[</span>
+<span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="s1">&#39;.. py:pydantic_model:: ModelSummaryListOrder&#39;</span><span class="p">,</span>
+<span class="s1">&#39;   :module: target.configuration&#39;</span><span class="p">,</span>
+<span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="s1">&#39;   ModelSummaryListOrder.&#39;</span><span class="p">,</span>
+<span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="s1">&#39;   :Fields:&#39;</span><span class="p">,</span>
+<span class="s1">&#39;      - :py:obj:`field_a (int) &lt;target.configuration.ModelSummaryListOrder.field_a&gt;`&#39;</span><span class="p">,</span>
+<span class="s1">&#39;      - :py:obj:`field_b (int) &lt;target.configuration.ModelSummaryListOrder.field_b&gt;`&#39;</span><span class="p">,</span>
+<span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="s1">&#39;   :Validators:&#39;</span><span class="p">,</span>
+<span class="s1">&#39;      - :py:obj:`validate_a &lt;target.configuration.ModelSummaryListOrder.validate_a&gt;` » :py:obj:`field_a &lt;target.configuration.ModelSummaryListOrder.field_a&gt;`&#39;</span><span class="p">,</span>
+<span class="s1">&#39;      - :py:obj:`validate_b &lt;target.configuration.ModelSummaryListOrder.validate_b&gt;` » :py:obj:`field_b &lt;target.configuration.ModelSummaryListOrder.field_b&gt;`&#39;</span><span class="p">,</span>
+<span class="s1">&#39;&#39;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In most cases it’s a reasonable approach to generate the reST with the
+<code class="docutils literal notranslate"><span class="pre">autodocument</span></code> fixture (as described below) in the first place and then
+confirm it’s validity manually afterwards.</p>
+</div>
+<p>Next, we need to instantiate and invoke the auto-documenter on the exemplary model
+to retrieve the generated reST from the auto-documenter. Unfortunately, this requires
+a sophisticated test setup. This includes running a sphinx test application
+while loading an exemplary sphinx source directory containing the
+examplary model. Luckily, sphinx’ test suite and its adoption in <strong>autodoc_pydantic</strong>
+provides a pytest fixture named <code class="docutils literal notranslate"><span class="pre">autodocument</span></code> to abstract away all of this
+complexity. Consider the following test invocation:</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">tests/test_configuration_model.py</span><a class="headerlink" href="#id3" title="Permalink to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_autodoc_pydantic_model_summary_list_order_alphabetical</span><span class="p">(</span><span class="n">autodocument</span><span class="p">):</span>
+
+    <span class="c1"># explict global</span>
+    <span class="n">actual</span> <span class="o">=</span> <span class="n">autodocument</span><span class="p">(</span>
+        <span class="n">documenter</span><span class="o">=</span><span class="s1">&#39;pydantic_model&#39;</span><span class="p">,</span>
+        <span class="n">object_path</span><span class="o">=</span><span class="s1">&#39;target.configuration.ModelSummaryListOrder&#39;</span><span class="p">,</span>
+        <span class="n">options_app</span><span class="o">=</span><span class="p">{</span>
+            <span class="s2">&quot;autodoc_pydantic_model_show_validator_summary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;autodoc_pydantic_model_show_field_summary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;autodoc_pydantic_model_summary_list_order&quot;</span><span class="p">:</span> <span class="s2">&quot;alphabetical&quot;</span><span class="p">},</span>
+        <span class="n">deactivate_all</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="n">actual</span>
+</pre></div>
+</div>
+</div>
+<p>Essentially, the <code class="docutils literal notranslate"><span class="pre">autodocument</span></code> fixture invokes the <code class="docutils literal notranslate"><span class="pre">pydantic_model</span></code>
+auto-documenter on the example model <code class="docutils literal notranslate"><span class="pre">target.configuration.ModelSummaryListOrder</span></code>
+while injecting global and local configuration settings. Finally, it returns the
+generated reST <code class="docutils literal notranslate"><span class="pre">actual</span></code> which is compared to the manually created <code class="docutils literal notranslate"><span class="pre">result</span></code> reST from
+above.</p>
+<p>Please notice how the <code class="docutils literal notranslate"><span class="pre">autodocument</span></code> fixture is used with its various parameters:</p>
+<dl class="field-list simple">
+<dt class="field-odd">documenter<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Identifies the auto-documenter used to generate reST.</p>
+</dd>
+<dt class="field-even">object_path<span class="colon">:</span></dt>
+<dd class="field-even"><p>Defines the path to the mocked model to be tested.</p>
+</dd>
+<dt class="field-odd">options_app<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Injects global configuration settings to <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+</dd>
+<dt class="field-even">options_doc<span class="colon">:</span></dt>
+<dd class="field-even"><p>Provides local configuration settings as directive options.</p>
+</dd>
+<dt class="field-odd">deactivate_all<span class="colon">:</span></dt>
+<dd class="field-odd"><p>If enabled, it deactivates all of <strong>autodoc_pydantic</strong>’s
+features to simplify the complexity of the resulting reST and to isolate
+the tested feature.</p>
+</dd>
+</dl>
+<p>Using the fixture allows to test for more scenarios within the same test case.
+For example, we want to check for providing local settings only or check for
+local settings to overwrite global settings:</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">tests/test_configuration_model.py</span><a class="headerlink" href="#id4" title="Permalink to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_autodoc_pydantic_model_summary_list_order_alphabetical</span><span class="p">(</span><span class="n">autodocument</span><span class="p">):</span>
+
+    <span class="c1"># explict local</span>
+    <span class="n">actual</span> <span class="o">=</span> <span class="n">autodocument</span><span class="p">(</span>
+        <span class="n">documenter</span><span class="o">=</span><span class="s1">&#39;pydantic_model&#39;</span><span class="p">,</span>
+        <span class="n">object_path</span><span class="o">=</span><span class="s1">&#39;target.configuration.ModelSummaryListOrder&#39;</span><span class="p">,</span>
+        <span class="n">options_app</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;autodoc_pydantic_model_show_validator_summary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                     <span class="s2">&quot;autodoc_pydantic_model_show_field_summary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="n">options_doc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;model-summary-list-order&quot;</span><span class="p">:</span> <span class="s2">&quot;alphabetical&quot;</span><span class="p">},</span>
+        <span class="n">deactivate_all</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="n">actual</span>
+
+    <span class="c1"># explicit local overwrite global</span>
+    <span class="n">actual</span> <span class="o">=</span> <span class="n">autodocument</span><span class="p">(</span>
+        <span class="n">documenter</span><span class="o">=</span><span class="s1">&#39;pydantic_model&#39;</span><span class="p">,</span>
+        <span class="n">object_path</span><span class="o">=</span><span class="s1">&#39;target.configuration.ModelSummaryListOrder&#39;</span><span class="p">,</span>
+        <span class="n">options_app</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;autodoc_pydantic_model_show_validator_summary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                     <span class="s2">&quot;autodoc_pydantic_model_show_field_summary&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                     <span class="s2">&quot;autodoc_pydantic_model_summary_list_order&quot;</span><span class="p">:</span> <span class="s2">&quot;bysource&quot;</span><span class="p">},</span>
+        <span class="n">options_doc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;model-summary-list-order&quot;</span><span class="p">:</span> <span class="s2">&quot;alphabetical&quot;</span><span class="p">},</span>
+        <span class="n">deactivate_all</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="n">actual</span>
+</pre></div>
+</div>
+</div>
+<p>Don’t worry if several things still remain unclear. It takes some time to get
+your head around. It’s best to test around with some dummy class and see how
+<code class="docutils literal notranslate"><span class="pre">autodocument</span></code> generates reST.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">options_app</span></code> parameter of the <code class="docutils literal notranslate"><span class="pre">autodocument</span></code> fixture activates the
+<code class="docutils literal notranslate"><span class="pre">autodoc_pydantic_model_show_validator_summary</span></code> and
+<code class="docutils literal notranslate"><span class="pre">autodoc_pydantic_model_show_field_summary</span></code> options. This is required
+because the summary lists would not show up otherwise which in turn would
+prevent testing the summary list order in the first place.</p>
+</div>
+</section>
+</section>
+<section id="add-configuration-settings">
+<h3>4. Add configuration settings<a class="headerlink" href="#add-configuration-settings" title="Permalink to this heading">#</a></h3>
+<p>One of <strong>autodoc_pydantic</strong> main strengths is its configurability. Each feature
+can be enabled/disabled on two levels:</p>
+<ul class="simple">
+<li><p><strong>globally</strong>: affecting all pydantic objects via <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></p></li>
+<li><p><strong>locally</strong>: affecting only a single directive via directive options</p></li>
+</ul>
+<p>Hence, new features that change the default appearance of standard sphinx
+autodoc should be configurable, too.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The developer’s explanation section contains more useful information on
+<a class="reference internal" href="design.html#expl-configuration"><span class="std std-ref">configuration</span></a>.</p>
+</div>
+<section id="global-configuration">
+<h4>1. Global configuration<a class="headerlink" href="#global-configuration" title="Permalink to this heading">#</a></h4>
+<p>First, let’s register the new global configuration options which will be
+configurable from sphinx’ <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>. Global settings are added in the
+<code class="docutils literal notranslate"><span class="pre">__init__</span></code> module via <code class="docutils literal notranslate"><span class="pre">add_configuration_values</span></code> function:</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">sphinxcontrib/autodoc_pydantic/__init__.py</span><a class="headerlink" href="#id5" title="Permalink to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_configuration_values</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="n">Sphinx</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adds all configuration values to sphinx application.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">stem</span> <span class="o">=</span> <span class="s2">&quot;autodoc_pydantic_&quot;</span>
+    <span class="n">add</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">add_config_value</span>
+
+    <span class="n">summary_list_order</span> <span class="o">=</span> <span class="n">OptionsSummaryListOrder</span><span class="o">.</span><span class="n">ALPHABETICAL</span>
+
+    <span class="c1"># ...</span>
+
+    <span class="n">add</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">stem</span><span class="si">}</span><span class="s1">settings_summary_list_order&#39;</span><span class="p">,</span> <span class="n">summary_list_order</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+    <span class="n">add</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">stem</span><span class="si">}</span><span class="s1">model_summary_list_order&#39;</span><span class="p">,</span> <span class="n">summary_list_order</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="local-configuration">
+<h4>2. Local configuration<a class="headerlink" href="#local-configuration" title="Permalink to this heading">#</a></h4>
+<p>Second, we want to allow our pydantic auto-documenters to accept directive
+options to overwrite globally set options. In this example, we need to modify
+<code class="docutils literal notranslate"><span class="pre">OPTION_SPEC_MODEL</span></code> and <code class="docutils literal notranslate"><span class="pre">OPTION_SPEC_SETTINGS</span></code>:</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">sphinxcontrib/autodoc_pydantic/directives/options/definition.py</span><a class="headerlink" href="#id6" title="Permalink to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">OPTION_SPEC_SETTINGS</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s2">&quot;settings-summary-list-order&quot;</span><span class="p">:</span> <span class="n">option_one_of_factory</span><span class="p">(</span>
+      <span class="n">OptionsSummaryListOrder</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+   <span class="p">),</span>
+<span class="p">}</span>
+
+<span class="n">OPTION_SPEC_MODEL</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s2">&quot;model-summary-list-order&quot;</span><span class="p">:</span> <span class="n">option_one_of_factory</span><span class="p">(</span>
+      <span class="n">OptionsSummaryListOrder</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+   <span class="p">),</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">OPTION_SPEC_X</span></code> dictionaries contain all available directive options and
+their corresponding option validator functions for all available auto-documenters</p>
+</div>
+</section>
+</section>
+<section id="implement-required-behavior">
+<h3>5. Implement required behavior<a class="headerlink" href="#implement-required-behavior" title="Permalink to this heading">#</a></h3>
+<p>The actual implementation is rather simple in contrast to the previous steps.
+A single method is required that is able to sort both fields and validators in
+alphabetical order or by source:</p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">sphinxcontrib/autodoc_pydantic/directives/autodocumenters.py</span><a class="headerlink" href="#id7" title="Permalink to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PydanticModelDocumenter</span><span class="p">(</span><span class="n">ClassDocumenter</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">_sort_summary_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">names</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sort member names according to given sort order</span>
+<span class="sd">        `OptionsSummaryListOrder`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">sort_order</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;summary-list-order&quot;</span><span class="p">,</span>
+                                                     <span class="n">prefix</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                                     <span class="n">force_availability</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">sort_order</span> <span class="o">==</span> <span class="n">OptionsSummaryListOrder</span><span class="o">.</span><span class="n">ALPHABETICAL</span><span class="p">:</span>
+            <span class="k">def</span> <span class="nf">sort_func</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">name</span>
+        <span class="k">elif</span> <span class="n">sort_order</span> <span class="o">==</span> <span class="n">OptionsSummaryListOrder</span><span class="o">.</span><span class="n">BYSOURCE</span><span class="p">:</span>
+            <span class="k">def</span> <span class="nf">sort_func</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+                <span class="n">name_with_class</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">object_name</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">analyzer</span><span class="o">.</span><span class="n">tagorder</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name_with_class</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Invalid value `</span><span class="si">{</span><span class="n">sort_order</span><span class="si">}</span><span class="s2">` provided for &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;`summary_list_order`. Valid options are: &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">OptionsSummaryListOrder</span><span class="o">.</span><span class="n">values</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">sort_func</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>This method is called within the <code class="docutils literal notranslate"><span class="pre">add_validators_summary</span></code> and
+<code class="docutils literal notranslate"><span class="pre">add_field_summary</span></code> methods to provide the correct summary list ordering, e.g.:</p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">sphinxcontrib/autodoc_pydantic/directives/autodocumenters.py</span><a class="headerlink" href="#id8" title="Permalink to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PydanticModelDocumenter</span><span class="p">(</span><span class="n">ClassDocumenter</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">add_validators_summary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds summary section describing all validators with corresponding</span>
+<span class="sd">        fields.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># ...</span>
+
+        <span class="c1"># get correct sort order</span>
+        <span class="n">validator_names</span> <span class="o">=</span> <span class="n">filtered_references</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+        <span class="n">sorted_validator_names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sort_summary_list</span><span class="p">(</span><span class="n">validator_names</span><span class="p">)</span>
+
+        <span class="c1"># ...</span>
+</pre></div>
+</div>
+</div>
+<p>The previously created tests determine the correctness of the newly added
+implementation while the existing tests ensure that no regressions occur.</p>
+</section>
+<section id="update-documentation">
+<h3>6. Update documentation<a class="headerlink" href="#update-documentation" title="Permalink to this heading">#</a></h3>
+<p>If you have made it thus far, congratulations! Let’s reward ourselves by updating
+the documentation to let others know about the new feature.</p>
+<p><strong>autodoc_pydantic</strong> provides a custom directive named <code class="docutils literal notranslate"><span class="pre">config_description</span></code> to
+simplify the process of adding documentation for new features:</p>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">docs/source/user_guide/configuration.rst</span><a class="headerlink" href="#id9" title="Permalink to this code">#</a></div>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">config_description</span><span class="p">::</span> autopydantic_model
+   <span class="nc">:title:</span> Summary List Order
+   <span class="nc">:path:</span> target.configuration.ModelSummaryListOrder
+   <span class="nc">:confpy:</span> autodoc_pydantic_model_summary_list_order
+   <span class="nc">:directive_option:</span> model-summary-list-order
+   <span class="nc">:enable:</span> model-show-validator-summary, model-show-field-summary
+   <span class="nc">:values:</span> alphabetical, bysource
+   <span class="nc">:version:</span> 1.5.0
+
+   Define the sort order within validator and field summaries (which can be
+   activated via <span class="na">:ref:</span><span class="nv">`model-show-validator-summary &lt;autodoc_pydantic_model_show_validator_summary&gt;`</span>
+   and <span class="na">:ref:</span><span class="nv">`model-show-field-summary &lt;autodoc_pydantic_model_show_field_summary&gt;`</span>,
+   respectively).
+</pre></div>
+</div>
+</div>
+<p>You can see how this renders in the corresponding configuration section
+<a class="reference internal" href="../users/configuration.html#autodoc-pydantic-model-summary-list-order"><span class="std std-ref">here</span></a>. Importantly, the <code class="docutils literal notranslate"><span class="pre">config_description</span></code>
+directive generates rendered output for all provided configuration values which
+greatly helps to understand how the feature changes the resulting documentation.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">config_description</span></code> directive takes the following parameters:</p>
+<dl class="field-list simple">
+<dt class="field-odd">directive header<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Represents the argument of the directive. Define the
+auto-documenter to be used and documented.</p>
+</dd>
+<dt class="field-even">title<span class="colon">:</span></dt>
+<dd class="field-even"><p>Set the title of resulting section.</p>
+</dd>
+<dt class="field-odd">path<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Provide a path to a pydantic object which is used to render
+exemplary output for provided configuration values.</p>
+</dd>
+<dt class="field-even">example_path<span class="colon">:</span></dt>
+<dd class="field-even"><p>Optionally provide explicit path to example code if <code class="docutils literal notranslate"><span class="pre">path</span></code> is
+not sufficient for example code.</p>
+</dd>
+<dt class="field-odd">confpy<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Represents the name of the global configuration setting that
+can be modified in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.</p>
+</dd>
+<dt class="field-even">directive_option<span class="colon">:</span></dt>
+<dd class="field-even"><p>Represents the name of the local configuration setting that
+is can be used as a directive option.</p>
+</dd>
+<dt class="field-odd">enable<span class="colon">:</span></dt>
+<dd class="field-odd"><p>You may need to enable additional configuration
+settings for the output to render properly. In this case, showing the
+summary list order requires to show summary lists in the first place. Hence,
+this is enabled via <code class="docutils literal notranslate"><span class="pre">model-show-validator-summary</span></code> and
+<code class="docutils literal notranslate"><span class="pre">model-show-field-summary</span></code>.</p>
+</dd>
+<dt class="field-even">values<span class="colon">:</span></dt>
+<dd class="field-even"><p>Contains a list of available configuration values for this
+feature which each will be used to render the output.</p>
+</dd>
+<dt class="field-odd">version<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set the version when this configuration was added.</p>
+</dd>
+<dt class="field-even">directive body<span class="colon">:</span></dt>
+<dd class="field-even"><p>Represents the content of the directive. Provide reST
+describing the feature.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You have may recognized that <code class="docutils literal notranslate"><span class="pre">:path:</span></code> points at the mocked model we have
+created earlier to test against. Essentially, we are using the same model
+not just for testing but also for showcasing the new feature.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="design.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Design</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../reference/api.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">API</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-auto-documenters">Understanding auto-documenters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-features">Adding new features</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#provide-rationale">1. Provide rationale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-the-feature">2. Specify the feature</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derive-tests">3. Derive tests</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-model">Example model</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#test-implementation">Test implementation</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-configuration-settings">4. Add configuration settings</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#global-configuration">1. Global configuration</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#local-configuration">2. Local configuration</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implement-required-behavior">5. Implement required behavior</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-documentation">6. Update documentation</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Franz Wöllert
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023, Franz Wöllert.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

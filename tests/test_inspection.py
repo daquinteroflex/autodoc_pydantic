@@ -180,6 +180,8 @@ def test_is_pydantic_model_edge_case():
 
     assert not StaticInspector.is_pydantic_model(EdgeCase)
 
+
+@pytest.fixture(scope="session")
 def serializable_beyond_pydantic():
     class BeyondPydanticSerializable(BaseModel):
         field_one: str
@@ -188,14 +190,23 @@ def serializable_beyond_pydantic():
         def some_non_pydantic_method(cls):
             return True
 
-    print("hey")
-    return ModelInspector(BeyondPydanticSerializable)
+    assert len(ModelInspector(BeyondPydanticSerializable).nonpydantic.methods) == 1
 
-some_class = serializable_beyond_pydantic()
+def serializable_inherited_class():
+    class ParentClass(BaseModel):
+        field_one: str
+
+    class ChildClass(ParentClass):
+        field_two: str
+
+    return ModelInspector(ChildClass)
+
+some_class = serializable_inherited_class()
 print(some_class)
-print(dir(some_class))
+# print(dir(some_class))
 print(dir(some_class.model))
-print(str(some_class.nonpydantic.class_methods))
+print(some_class.model.__pydantic_decorators__)
+# print(str(some_class.nonpydantic.class_methods))
 # print(dir(some_class.class_methods))
 # print(some_class.get_non_validator_methods())
 # print(some_class.fields.names)

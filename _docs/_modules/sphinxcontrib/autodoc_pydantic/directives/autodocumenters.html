@@ -1,0 +1,1258 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sphinxcontrib.autodoc_pydantic.directives.autodocumenters &#8212; autodoc_pydantic 2.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/autodoc_pydantic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/tabs.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/sphinxcontrib/autodoc_pydantic/directives/autodocumenters';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/logo_white.svg" class="logo__image only-light" alt="autodoc_pydantic 2.1.0 documentation - Home"/>
+    <script>document.write(`<img src="../../../../_static/logo_white.svg" class="logo__image only-dark" alt="autodoc_pydantic 2.1.0 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Users</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../users/installation.html">Installation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../users/usage.html">Usage</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../users/_autosummary/target.usage_autosummary.AutoSummaryModel.html">target.usage_autosummary.AutoSummaryModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../users/_autosummary/target.usage_autosummary.AutoSummarySettings.html">target.usage_autosummary.AutoSummarySettings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../users/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../users/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../users/faq.html">FAQ</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Developers</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../developers/setup.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developers/design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../developers/guides.html">Guides</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../reference/api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../reference/changelog.html">Changelog</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for sphinxcontrib.autodoc_pydantic.directives.autodocumenters</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;This module contains **autodoc_pydantic**&#39;s autodocumenters.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Set</span>
+
+<span class="kn">import</span> <span class="nn">sphinx</span>
+<span class="kn">from</span> <span class="nn">docutils.statemachine</span> <span class="kn">import</span> <span class="n">StringList</span>
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+<span class="kn">from</span> <span class="nn">pydantic_settings</span> <span class="kn">import</span> <span class="n">BaseSettings</span>
+<span class="kn">from</span> <span class="nn">sphinx.ext.autodoc</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">MethodDocumenter</span><span class="p">,</span>
+    <span class="n">ClassDocumenter</span><span class="p">,</span>
+    <span class="n">AttributeDocumenter</span><span class="p">,</span>
+    <span class="n">Documenter</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">sphinx.util.docstrings</span> <span class="kn">import</span> <span class="n">prepare_docstring</span>
+
+<span class="kn">from</span> <span class="nn">sphinx.util.inspect</span> <span class="kn">import</span> <span class="n">object_description</span>
+<span class="kn">from</span> <span class="nn">sphinx.util.typing</span> <span class="kn">import</span> <span class="n">get_type_hints</span><span class="p">,</span> <span class="n">stringify</span>
+
+<span class="kn">from</span> <span class="nn">sphinxcontrib.autodoc_pydantic.directives.options.enums</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">OptionsJsonErrorStrategy</span><span class="p">,</span>
+    <span class="n">OptionsFieldDocPolicy</span><span class="p">,</span>
+    <span class="n">OptionsSummaryListOrder</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">sphinxcontrib.autodoc_pydantic.directives.options.definition</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">OPTIONS_MODEL</span><span class="p">,</span>
+    <span class="n">OPTIONS_SETTINGS</span><span class="p">,</span>
+    <span class="n">OPTIONS_FIELD</span><span class="p">,</span>
+    <span class="n">OPTIONS_VALIDATOR</span><span class="p">,</span>
+    <span class="n">OPTIONS_MERGED</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">sphinxcontrib.autodoc_pydantic.directives.templates</span> <span class="kn">import</span> <span class="n">to_collapsable</span>
+<span class="kn">from</span> <span class="nn">sphinxcontrib.autodoc_pydantic.inspection</span> <span class="kn">import</span> <span class="n">ModelInspector</span><span class="p">,</span> \
+    <span class="n">ValidatorFieldMap</span>
+<span class="kn">from</span> <span class="nn">sphinxcontrib.autodoc_pydantic.directives.options.composites</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">AutoDocOptions</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">sphinxcontrib.autodoc_pydantic.directives.utility</span> <span class="kn">import</span> <span class="n">NONE</span><span class="p">,</span> \
+    <span class="n">intercept_type_annotations_py_gt_39</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">erdantic</span> <span class="k">as</span> <span class="nn">erd</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="n">erd</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<div class="viewcode-block" id="PydanticAutoDoc"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticAutoDoc">[docs]</a><span class="k">class</span> <span class="nc">PydanticAutoDoc</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Composite to provide single namespace to access all **autodoc_pydantic**</span>
+<span class="sd">    relevant documenter directive functionalities.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">documenter</span><span class="p">:</span> <span class="n">Documenter</span><span class="p">,</span> <span class="n">is_child</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_documenter</span> <span class="o">=</span> <span class="n">documenter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_is_child</span> <span class="o">=</span> <span class="n">is_child</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_inspect</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ModelInspector</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_options</span> <span class="o">=</span> <span class="n">AutoDocOptions</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_documenter</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BaseModel</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Lazily load pydantic model after initialization. For more, please</span>
+<span class="sd">        read `inspect` doc string.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_child</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_documenter</span><span class="o">.</span><span class="n">parent</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_documenter</span><span class="o">.</span><span class="n">object</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">options</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AutoDocOptions</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Provides access to :obj:`PydanticDocumenterOptions` to handle</span>
+<span class="sd">        global and local configuration settings.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_options</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">inspect</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ModelInspector</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Provides :obj:`ModelInspector` to access all inspection methods.</span>
+<span class="sd">        You may wonder why this ``inspect`` is a property instead of a simple</span>
+<span class="sd">        attribute being defined in the ``__init__`` method of this class. The</span>
+<span class="sd">        reason is the following: auto-documenters do not have their ``object``</span>
+<span class="sd">        attribute being correctly set after instantiation which typically holds</span>
+<span class="sd">        a reference to the corresponding pydantic model and objects to be</span>
+<span class="sd">        documented. Instead, ``object`` is ``None`` after plain instantiation</span>
+<span class="sd">        (executing ``__init__``). However, this composite class is added during</span>
+<span class="sd">        instantiation of the autodocumenter for consistency reasons. Therefore,</span>
+<span class="sd">        ``ModelInspector`` can&#39;t be created at instantiation time of this class</span>
+<span class="sd">        because the ``object`` is still ``None``. Hence, it is lazily created</span>
+<span class="sd">        once the inspection methods are first required. At this point in time,</span>
+<span class="sd">        it is guaranteed by the auto-documenter base class that ``object`` is</span>
+<span class="sd">        then already correctly provided and the ``ModelInspector`` works as</span>
+<span class="sd">        expected.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_child</span><span class="p">:</span>
+            <span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_documenter</span><span class="o">.</span><span class="n">parent</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_documenter</span><span class="o">.</span><span class="n">object</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_inspect</span> <span class="o">=</span> <span class="n">ModelInspector</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inspect</span>
+
+<div class="viewcode-block" id="PydanticAutoDoc.get_field_name_or_alias"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticAutoDoc.get_field_name_or_alias">[docs]</a>    <span class="k">def</span> <span class="nf">get_field_name_or_alias</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;If `field-swap-name-and-alias` is enabled, provide alias (if</span>
+<span class="sd">        present) for given field.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;field-swap-name-and-alias&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">fields</span><span class="o">.</span><span class="n">get_alias_or_name</span><span class="p">(</span><span class="n">field_name</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">field_name</span></div>
+
+<div class="viewcode-block" id="PydanticAutoDoc.get_filtered_member_names"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticAutoDoc.get_filtered_member_names">[docs]</a>    <span class="k">def</span> <span class="nf">get_filtered_member_names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return all member names of autodocumented object which are</span>
+<span class="sd">        prefiltered to exclude inherited members.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">object_members</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_documenter</span><span class="o">.</span><span class="n">get_object_members</span><span class="p">(</span><span class="kc">True</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">x</span><span class="o">.</span><span class="vm">__name__</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">object_members</span><span class="p">}</span></div>
+
+<div class="viewcode-block" id="PydanticAutoDoc.resolve_inherited_validator_reference"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticAutoDoc.resolve_inherited_validator_reference">[docs]</a>    <span class="k">def</span> <span class="nf">resolve_inherited_validator_reference</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Provide correct validator reference in case validator is inherited</span>
+<span class="sd">        and explicitly shown in docs via directive option</span>
+<span class="sd">        `inherited-members`.</span>
+
+<span class="sd">        More concretely, inherited validators are not shown from parent class</span>
+<span class="sd">        unless directive option `inherited-members` is used. The validator</span>
+<span class="sd">        references may either point to the parent class or the child class.</span>
+<span class="sd">        This logic is implemented here.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">ref_parts</span> <span class="o">=</span> <span class="n">ref</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+        <span class="n">class_name</span> <span class="o">=</span> <span class="n">ref_parts</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+
+        <span class="c1"># early exit if ref class name equals model name -&gt; no inheritance</span>
+        <span class="k">if</span> <span class="n">class_name</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="vm">__name__</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">ref</span>
+
+        <span class="n">validator_name</span> <span class="o">=</span> <span class="n">ref_parts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">base_class_names</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="vm">__name__</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="vm">__mro__</span><span class="p">)</span>
+
+        <span class="n">is_base_class</span> <span class="o">=</span> <span class="n">class_name</span> <span class="ow">in</span> <span class="n">base_class_names</span>
+        <span class="n">is_inherited_enabled</span> <span class="o">=</span> <span class="s2">&quot;inherited-members&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_documenter</span><span class="o">.</span><span class="n">options</span>
+        <span class="n">is_member</span> <span class="o">=</span> <span class="n">validator_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">validators</span><span class="o">.</span><span class="n">names</span>
+
+        <span class="k">if</span> <span class="n">is_member</span> <span class="ow">and</span> <span class="n">is_base_class</span> <span class="ow">and</span> <span class="n">is_inherited_enabled</span><span class="p">:</span>
+            <span class="n">ref_parts</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="vm">__name__</span>
+            <span class="k">return</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ref_parts</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">ref</span></div></div>
+
+
+<div class="viewcode-block" id="PydanticModelDocumenter"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticModelDocumenter">[docs]</a><span class="k">class</span> <span class="nc">PydanticModelDocumenter</span><span class="p">(</span><span class="n">ClassDocumenter</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents specialized Documenter subclass for pydantic models.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">objtype</span> <span class="o">=</span> <span class="s1">&#39;pydantic_model&#39;</span>
+    <span class="n">directivetype</span> <span class="o">=</span> <span class="s1">&#39;pydantic_model&#39;</span>
+    <span class="n">priority</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">ClassDocumenter</span><span class="o">.</span><span class="n">priority</span>
+    <span class="n">option_spec</span> <span class="o">=</span> <span class="n">ClassDocumenter</span><span class="o">.</span><span class="n">option_spec</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">option_spec</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="o">**</span><span class="n">OPTIONS_MODEL</span><span class="p">,</span> <span class="o">**</span><span class="n">OPTIONS_MERGED</span><span class="p">})</span>
+
+    <span class="n">pyautodoc_pass_to_directive</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;model-signature-prefix&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">pyautodoc_set_default_option</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;member-order&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;undoc-members&quot;</span>
+    <span class="p">)</span>
+
+    <span class="n">pyautodoc_prefix</span> <span class="o">=</span> <span class="s2">&quot;model&quot;</span>
+
+<div class="viewcode-block" id="PydanticModelDocumenter.can_document_member"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticModelDocumenter.can_document_member">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">can_document_member</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span>
+                            <span class="n">member</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+                            <span class="n">membername</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                            <span class="n">isattr</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+                            <span class="n">parent</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Filter only pydantic models.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">is_val</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">can_document_member</span><span class="p">(</span><span class="n">member</span><span class="p">,</span> <span class="n">membername</span><span class="p">,</span> <span class="n">isattr</span><span class="p">,</span>
+                                             <span class="n">parent</span><span class="p">)</span>
+        <span class="n">is_model</span> <span class="o">=</span> <span class="n">ModelInspector</span><span class="o">.</span><span class="n">static</span><span class="o">.</span><span class="n">is_pydantic_model</span><span class="p">(</span><span class="n">member</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">is_val</span> <span class="ow">and</span> <span class="n">is_model</span></div>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="n">exclude_members</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;exclude-members&quot;</span><span class="p">,</span> <span class="nb">set</span><span class="p">())</span>
+        <span class="n">exclude_members</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;model_fields&quot;</span><span class="p">)</span>
+        <span class="n">exclude_members</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;model_config&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span> <span class="o">=</span> <span class="n">PydanticAutoDoc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">is_child</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<div class="viewcode-block" id="PydanticModelDocumenter.document_members"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticModelDocumenter.document_members">[docs]</a>    <span class="k">def</span> <span class="nf">document_members</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Modify member options before starting to document members.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">set_members_all</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;undoc-members&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;undoc-members&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+            <span class="k">pass</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_false</span><span class="p">(</span><span class="s2">&quot;show-config-member&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">hide_config_member</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_false</span><span class="p">(</span><span class="s2">&quot;show-validator-members&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">hide_validator_members</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;hide-reused-validator&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">hide_reused_validators</span><span class="p">()</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">document_members</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PydanticModelDocumenter.hide_config_member"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticModelDocumenter.hide_config_member">[docs]</a>    <span class="k">def</span> <span class="nf">hide_config_member</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add `Config` to `exclude_members` option.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">exclude_members</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;exclude-members&quot;</span><span class="p">]</span>
+        <span class="n">exclude_members</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Config&quot;</span><span class="p">)</span>  <span class="c1"># deprecated since pydantic v2</span>
+        <span class="n">exclude_members</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;model_config&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PydanticModelDocumenter.hide_validator_members"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticModelDocumenter.hide_validator_members">[docs]</a>    <span class="k">def</span> <span class="nf">hide_validator_members</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add validator names to `exclude_members`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">validators</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">validators</span><span class="o">.</span><span class="n">names</span>
+        <span class="n">exclude_members</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;exclude-members&quot;</span><span class="p">]</span>
+        <span class="n">exclude_members</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">validators</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PydanticModelDocumenter.hide_reused_validators"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticModelDocumenter.hide_reused_validators">[docs]</a>    <span class="k">def</span> <span class="nf">hide_reused_validators</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add reused validators to `exclude_members` option.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">validators</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">validators</span>
+        <span class="n">reused_validators</span> <span class="o">=</span> <span class="n">validators</span><span class="o">.</span><span class="n">get_reused_validators_names</span><span class="p">()</span>
+        <span class="n">exclude_members</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;exclude-members&quot;</span><span class="p">]</span>
+        <span class="n">exclude_members</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">reused_validators</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PydanticModelDocumenter.format_signature"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticModelDocumenter.format_signature">[docs]</a>    <span class="k">def</span> <span class="nf">format_signature</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;If parameter list is to be hidden, return only empty signature.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;hide-paramlist&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
+            <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">format_signature</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PydanticModelDocumenter.add_content"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticModelDocumenter.add_content">[docs]</a>    <span class="k">def</span> <span class="nf">add_content</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                    <span class="n">more_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">StringList</span><span class="p">],</span>
+                    <span class="o">**</span><span class="n">kwargs</span>
+                    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delegate additional content creation.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">add_content</span><span class="p">(</span><span class="n">more_content</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="c1"># do not provide any additional info if documented as attribute</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">doc_as_attr</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;erdantic-figure&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_erdantic_figure</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;show-json&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_collapsable_schema</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;show-config-summary&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_config_summary</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;show-field-summary&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_field_summary</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;show-validator-summary&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_validators_summary</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="PydanticModelDocumenter.add_collapsable_schema"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticModelDocumenter.add_collapsable_schema">[docs]</a>    <span class="k">def</span> <span class="nf">add_collapsable_schema</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds collapse code block containing JSON schema.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">non_serializable</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">fields</span><span class="o">.</span><span class="n">non_json_serializable</span>
+
+        <span class="c1"># handle non serializable fields</span>
+        <span class="n">strategy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s2">&quot;show-json-error-strategy&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">non_serializable</span><span class="p">:</span>
+            <span class="n">error_msg</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;JSON schema can&#39;t be generated for &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">fullname</span><span class="si">}</span><span class="s2">&#39; &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;because the following pydantic fields can&#39;t be serialized &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;properly: </span><span class="si">{</span><span class="n">non_serializable</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">strategy</span> <span class="o">==</span> <span class="n">OptionsJsonErrorStrategy</span><span class="o">.</span><span class="n">WARN</span><span class="p">:</span>
+                <span class="n">logger</span> <span class="o">=</span> <span class="n">sphinx</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="n">error_msg</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;autodoc_pydantic&quot;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">strategy</span> <span class="o">==</span> <span class="n">OptionsJsonErrorStrategy</span><span class="o">.</span><span class="n">RAISE</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">sphinx</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">ExtensionError</span><span class="p">(</span><span class="n">error_msg</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">strategy</span> <span class="o">!=</span> <span class="n">OptionsJsonErrorStrategy</span><span class="o">.</span><span class="n">COERCE</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">sphinx</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">ExtensionError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Invalid option provided for &#39;show-json-error-strategy&#39;. &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;Allowed values are f</span><span class="si">{</span><span class="n">OptionsJsonErrorStrategy</span><span class="o">.</span><span class="n">values</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="p">)</span>
+
+        <span class="n">schema</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">schema</span><span class="o">.</span><span class="n">sanitized</span>
+        <span class="n">schema_rest</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert_json_schema_to_rest</span><span class="p">(</span><span class="n">schema</span><span class="p">)</span>
+        <span class="n">source_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_sourcename</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">schema_rest</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PydanticModelDocumenter.add_erdantic_figure"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticModelDocumenter.add_erdantic_figure">[docs]</a>    <span class="k">def</span> <span class="nf">add_erdantic_figure</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds an erdantic entity relation diagram to the doc of an</span>
+<span class="sd">        pydantic model.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">source_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_sourcename</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">erd</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">error_msg</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="s1">&#39;erdantic is not installed, you need to install it before &#39;</span>
+                <span class="s1">&#39;creating an Entity Relationship Diagram for &#39;</span>
+                <span class="s1">&#39;f</span><span class="si">{self.fullname}</span><span class="s1">. See &#39;</span>
+                <span class="s1">&#39;https://autodoc-pydantic.readthedocs.io/&#39;</span>
+                <span class="s1">&#39;en/stable/users/installation.html&#39;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">error_msg</span><span class="p">)</span>
+
+        <span class="c1"># Graphviz [DOT language](https://graphviz.org/doc/info/lang.html)</span>
+        <span class="n">figure_dot</span> <span class="o">=</span> <span class="n">erd</span><span class="o">.</span><span class="n">to_dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">object</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;   &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">lines_dot</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;   &#39;</span> <span class="o">+</span> <span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">figure_dot</span><span class="p">]</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;.. graphviz::&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">lines_dot</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;erdantic-figure-collapsed&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
+            <span class="n">lines</span> <span class="o">=</span> <span class="n">to_collapsable</span><span class="p">(</span>
+                <span class="n">lines</span><span class="p">,</span>
+                <span class="s2">&quot;Show Entity Relationship Diagram&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;autodoc_pydantic_collapsable_erd&quot;</span>
+            <span class="p">)</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PydanticModelDocumenter.add_config_summary"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticModelDocumenter.add_config_summary">[docs]</a>    <span class="k">def</span> <span class="nf">add_config_summary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds summary section describing the model configuration.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">is_configured</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">cfg_items</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">items</span>
+
+        <span class="n">source_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_sourcename</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="s2">&quot;:Config:&quot;</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">cfg_items</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;   - **</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">**: *</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">*&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_get_idx_mappings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">members</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get index positions for given members while respecting</span>
+<span class="sd">        `OptionsSummaryListOrder`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">sorted_members</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sort_summary_list</span><span class="p">(</span><span class="n">members</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">idx</span> <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sorted_members</span><span class="p">)}</span>
+
+    <span class="k">def</span> <span class="nf">_get_reference_sort_func</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Helper function to create sorting function for instances of</span>
+<span class="sd">        `ValidatorFieldMap` which first sorts by validator name and second by</span>
+<span class="sd">        field name while respecting `OptionsSummaryListOrder`.</span>
+
+<span class="sd">        This is used for validator summary section.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">all_validators</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">validators</span><span class="o">.</span><span class="n">names</span>
+        <span class="n">all_fields</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">fields</span><span class="o">.</span><span class="n">names</span>
+        <span class="n">idx_validators</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_idx_mappings</span><span class="p">(</span><span class="n">all_validators</span><span class="p">)</span>
+        <span class="n">idx_fields</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_idx_mappings</span><span class="p">(</span><span class="n">all_fields</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">sort_func</span><span class="p">(</span><span class="n">reference</span><span class="p">:</span> <span class="n">ValidatorFieldMap</span><span class="p">):</span>
+            <span class="k">return</span> <span class="p">(</span>
+                <span class="n">idx_validators</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">reference</span><span class="o">.</span><span class="n">validator_name</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+                <span class="n">idx_fields</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">reference</span><span class="o">.</span><span class="n">field_name</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">sort_func</span>
+
+    <span class="k">def</span> <span class="nf">_get_validator_summary_references</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">ValidatorFieldMap</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Filter and sort validator-field mappings for validator summary</span>
+<span class="sd">        section.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">references</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">references</span><span class="o">.</span><span class="n">mappings</span>
+        <span class="n">sort_func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_reference_sort_func</span><span class="p">()</span>
+        <span class="n">sorted_references</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">references</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">sort_func</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">sorted_references</span>
+
+    <span class="k">def</span> <span class="nf">_build_validator_summary_rest_line</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">reference</span><span class="p">:</span> <span class="n">ValidatorFieldMap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Generates reST line for validator-field mapping with references for</span>
+<span class="sd">        validator summary section.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">get_field_name_or_alias</span><span class="p">(</span><span class="n">reference</span><span class="o">.</span><span class="n">field_name</span><span class="p">)</span>
+        <span class="n">validator_ref</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">resolve_inherited_validator_reference</span><span class="p">(</span>
+            <span class="n">reference</span><span class="o">.</span><span class="n">validator_ref</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;   - &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;:py:obj:`</span><span class="si">{</span><span class="n">reference</span><span class="o">.</span><span class="n">validator_name</span><span class="si">}</span><span class="s2"> &lt;</span><span class="si">{</span><span class="n">validator_ref</span><span class="si">}</span><span class="s2">&gt;`&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot; » &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;:py:obj:`</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> &lt;</span><span class="si">{</span><span class="n">reference</span><span class="o">.</span><span class="n">field_ref</span><span class="si">}</span><span class="s2">&gt;`&quot;</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="PydanticModelDocumenter.add_validators_summary"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticModelDocumenter.add_validators_summary">[docs]</a>    <span class="k">def</span> <span class="nf">add_validators_summary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds summary section describing all validators with corresponding</span>
+<span class="sd">        fields.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">validators</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="n">sorted_references</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_validator_summary_references</span><span class="p">()</span>
+
+        <span class="n">source_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_sourcename</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="s2">&quot;:Validators:&quot;</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">ref</span> <span class="ow">in</span> <span class="n">sorted_references</span><span class="p">:</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_build_validator_summary_rest_line</span><span class="p">(</span><span class="n">ref</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PydanticModelDocumenter.add_field_summary"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticModelDocumenter.add_field_summary">[docs]</a>    <span class="k">def</span> <span class="nf">add_field_summary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds summary section describing all fields.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">fields</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">valid_fields</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_valid_fields</span><span class="p">()</span>
+        <span class="n">sorted_fields</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sort_summary_list</span><span class="p">(</span><span class="n">valid_fields</span><span class="p">)</span>
+
+        <span class="n">source_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_sourcename</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="s2">&quot;:Fields:&quot;</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">field_name</span> <span class="ow">in</span> <span class="n">sorted_fields</span><span class="p">:</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_field_summary_line</span><span class="p">(</span><span class="n">field_name</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_get_valid_fields</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns all field names that are valid members of pydantic model.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">fields</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">fields</span><span class="o">.</span><span class="n">names</span>
+        <span class="n">valid_members</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">get_filtered_member_names</span><span class="p">()</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">field</span> <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">fields</span> <span class="k">if</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">valid_members</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_sort_summary_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">names</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sort member names according to given sort order</span>
+<span class="sd">        `OptionsSummaryListOrder`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">sort_order</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;summary-list-order&quot;</span><span class="p">,</span>
+                                                     <span class="n">prefix</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                                     <span class="n">force_availability</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">sort_order</span> <span class="o">==</span> <span class="n">OptionsSummaryListOrder</span><span class="o">.</span><span class="n">ALPHABETICAL</span><span class="p">:</span>
+            <span class="k">def</span> <span class="nf">sort_func</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">name</span>
+        <span class="k">elif</span> <span class="n">sort_order</span> <span class="o">==</span> <span class="n">OptionsSummaryListOrder</span><span class="o">.</span><span class="n">BYSOURCE</span><span class="p">:</span>
+            <span class="k">def</span> <span class="nf">sort_func</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+                <span class="n">name_with_class</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">object_name</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">analyzer</span><span class="o">.</span><span class="n">tagorder</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name_with_class</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Invalid value `</span><span class="si">{</span><span class="n">sort_order</span><span class="si">}</span><span class="s2">` provided for &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;`summary_list_order`. Valid options are: &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">OptionsSummaryListOrder</span><span class="o">.</span><span class="n">values</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">sort_func</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_get_field_summary_line</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get reST for field summary for given `member_name`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">ref_func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">references</span><span class="o">.</span><span class="n">create_model_reference</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">get_field_name_or_alias</span><span class="p">(</span><span class="n">field_name</span><span class="p">)</span>
+        <span class="n">ref</span> <span class="o">=</span> <span class="n">ref_func</span><span class="p">(</span><span class="n">field_name</span><span class="p">)</span>
+        <span class="n">typ</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stringify_type</span><span class="p">(</span><span class="n">field_name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;   - :py:obj:`</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">typ</span><span class="si">}</span><span class="s2">) &lt;</span><span class="si">{</span><span class="n">ref</span><span class="si">}</span><span class="s2">&gt;`&quot;</span>
+
+    <span class="k">def</span> <span class="nf">_stringify_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get proper string representation of type for given `member_nane`</span>
+<span class="sd">        relying on sphinx functionality.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">type_aliases</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">autodoc_type_aliases</span>
+        <span class="n">annotations</span> <span class="o">=</span> <span class="n">get_type_hints</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">object</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">type_aliases</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">stringify</span><span class="p">(</span><span class="n">annotations</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">field_name</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_convert_json_schema_to_rest</span><span class="p">(</span><span class="n">schema</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Convert model&#39;s schema dict into reST.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">schema</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">schema</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;   </span><span class="si">{</span><span class="n">line</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">schema</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)]</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;.. code-block:: json&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">lines</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="n">to_collapsable</span><span class="p">(</span>
+            <span class="n">lines</span><span class="p">,</span>
+            <span class="s2">&quot;Show JSON schema&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;autodoc_pydantic_collapsable_json&quot;</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">lines</span></div>
+
+
+<div class="viewcode-block" id="PydanticSettingsDocumenter"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticSettingsDocumenter">[docs]</a><span class="k">class</span> <span class="nc">PydanticSettingsDocumenter</span><span class="p">(</span><span class="n">PydanticModelDocumenter</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents specialized Documenter subclass for pydantic settings.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">objtype</span> <span class="o">=</span> <span class="s1">&#39;pydantic_settings&#39;</span>
+    <span class="n">directivetype</span> <span class="o">=</span> <span class="s1">&#39;pydantic_settings&#39;</span>
+
+    <span class="n">priority</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">ClassDocumenter</span><span class="o">.</span><span class="n">priority</span>
+    <span class="n">option_spec</span> <span class="o">=</span> <span class="n">ClassDocumenter</span><span class="o">.</span><span class="n">option_spec</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">option_spec</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="o">**</span><span class="n">OPTIONS_SETTINGS</span><span class="p">,</span> <span class="o">**</span><span class="n">OPTIONS_MERGED</span><span class="p">})</span>
+
+    <span class="n">pyautodoc_pass_to_directive</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;settings-signature-prefix&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">pyautodoc_set_default_option</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;member-order&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;undoc-members&quot;</span>
+    <span class="p">)</span>
+
+    <span class="n">pyautodoc_prefix</span> <span class="o">=</span> <span class="s2">&quot;settings&quot;</span>
+
+<div class="viewcode-block" id="PydanticSettingsDocumenter.can_document_member"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticSettingsDocumenter.can_document_member">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">can_document_member</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span>
+                            <span class="n">member</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+                            <span class="n">membername</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                            <span class="n">isattr</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+                            <span class="n">parent</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Filter only pydantic models.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">is_val</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">can_document_member</span><span class="p">(</span><span class="n">member</span><span class="p">,</span>
+                                             <span class="n">membername</span><span class="p">,</span>
+                                             <span class="n">isattr</span><span class="p">,</span>
+                                             <span class="n">parent</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">is_val</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">member</span><span class="p">,</span> <span class="n">BaseSettings</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span></div></div>
+
+
+<div class="viewcode-block" id="PydanticFieldDocumenter"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticFieldDocumenter">[docs]</a><span class="k">class</span> <span class="nc">PydanticFieldDocumenter</span><span class="p">(</span><span class="n">AttributeDocumenter</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents specialized Documenter subclass for pydantic fields.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">objtype</span> <span class="o">=</span> <span class="s1">&#39;pydantic_field&#39;</span>
+    <span class="n">directivetype</span> <span class="o">=</span> <span class="s1">&#39;pydantic_field&#39;</span>
+    <span class="n">priority</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">AttributeDocumenter</span><span class="o">.</span><span class="n">priority</span>
+    <span class="n">option_spec</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">AttributeDocumenter</span><span class="o">.</span><span class="n">option_spec</span><span class="p">)</span>
+    <span class="n">option_spec</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">OPTIONS_FIELD</span><span class="p">)</span>
+    <span class="n">member_order</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">pyautodoc_pass_to_directive</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;field-signature-prefix&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;field-show-alias&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;field-swap-name-and-alias&quot;</span>
+    <span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span> <span class="o">=</span> <span class="n">PydanticAutoDoc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">is_child</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<div class="viewcode-block" id="PydanticFieldDocumenter.can_document_member"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticFieldDocumenter.can_document_member">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">can_document_member</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span>
+                            <span class="n">member</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+                            <span class="n">membername</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                            <span class="n">isattr</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+                            <span class="n">parent</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Filter only pydantic fields.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">is_valid</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">can_document_member</span><span class="p">(</span><span class="n">member</span><span class="p">,</span>
+                                               <span class="n">membername</span><span class="p">,</span>
+                                               <span class="n">isattr</span><span class="p">,</span>
+                                               <span class="n">parent</span><span class="p">)</span>
+
+        <span class="n">is_field</span> <span class="o">=</span> <span class="n">ModelInspector</span><span class="o">.</span><span class="n">static</span><span class="o">.</span><span class="n">is_pydantic_field</span><span class="p">(</span>
+            <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="o">.</span><span class="n">object</span><span class="p">,</span>
+            <span class="n">field_name</span><span class="o">=</span><span class="n">membername</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">is_valid</span> <span class="ow">and</span> <span class="n">is_field</span> <span class="ow">and</span> <span class="n">isattr</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">pydantic_field_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Provide the pydantic field name which refers to the member name of</span>
+<span class="sd">        the parent pydantic model.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">objpath</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<div class="viewcode-block" id="PydanticFieldDocumenter.add_directive_header"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticFieldDocumenter.add_directive_header">[docs]</a>    <span class="k">def</span> <span class="nf">add_directive_header</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sig</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delegate header options.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">add_directive_header</span><span class="p">(</span><span class="n">sig</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_default_value_or_marker</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_alias</span><span class="p">()</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">needs_required_marker</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Indicate if field should be marked as required.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">field_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic_field_name</span>
+        <span class="n">is_required</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">fields</span><span class="o">.</span><span class="n">is_required</span><span class="p">(</span><span class="n">field_name</span><span class="p">)</span>
+        <span class="n">show_required</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;field-show-required&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">is_required</span> <span class="ow">and</span> <span class="n">show_required</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">needs_optional_marker</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Indicate if field should be marked as optional.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">field_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic_field_name</span>
+        <span class="n">check_func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">fields</span><span class="o">.</span><span class="n">has_default_factory</span>
+        <span class="n">has_default_factory</span> <span class="o">=</span> <span class="n">check_func</span><span class="p">(</span><span class="n">field_name</span><span class="p">)</span>
+        <span class="n">show_optional</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;field-show-optional&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">has_default_factory</span> <span class="ow">and</span> <span class="n">show_optional</span>
+
+<div class="viewcode-block" id="PydanticFieldDocumenter.get_default_value"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticFieldDocumenter.get_default_value">[docs]</a>    <span class="k">def</span> <span class="nf">get_default_value</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the default value of pydantic field as reST.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">field_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic_field_name</span>
+        <span class="n">default</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">fields</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">field_name</span><span class="p">)</span><span class="o">.</span><span class="n">default</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">object_description</span><span class="p">(</span><span class="n">default</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;   :value: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1">&#39;</span></div>
+
+<div class="viewcode-block" id="PydanticFieldDocumenter.add_default_value_or_marker"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticFieldDocumenter.add_default_value_or_marker">[docs]</a>    <span class="k">def</span> <span class="nf">add_default_value_or_marker</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds default value or a marker for field being required or optional.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">sourcename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_sourcename</span><span class="p">()</span>
+
+        <span class="n">show_default</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;field-show-default&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">needs_required_marker</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="s1">&#39;   :required:&#39;</span><span class="p">,</span> <span class="n">sourcename</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">needs_optional_marker</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="s1">&#39;   :optional:&#39;</span><span class="p">,</span> <span class="n">sourcename</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">show_default</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_default_value</span><span class="p">(),</span> <span class="n">sourcename</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PydanticFieldDocumenter.add_alias"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticFieldDocumenter.add_alias">[docs]</a>    <span class="k">def</span> <span class="nf">add_alias</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds alias directive option.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">field_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic_field_name</span>
+        <span class="n">field</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">fields</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">field_name</span><span class="p">)</span>
+        <span class="n">alias_given</span> <span class="o">=</span> <span class="n">field</span><span class="o">.</span><span class="n">alias</span> <span class="ow">and</span> <span class="n">field</span><span class="o">.</span><span class="n">alias</span> <span class="o">!=</span> <span class="n">field_name</span>
+
+        <span class="n">show_alias</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;field-show-alias&quot;</span><span class="p">)</span>
+        <span class="n">swap</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;field-swap-name-and-alias&quot;</span><span class="p">)</span>
+        <span class="n">alias_required</span> <span class="o">=</span> <span class="n">show_alias</span> <span class="ow">or</span> <span class="n">swap</span>
+
+        <span class="k">if</span> <span class="n">alias_given</span> <span class="ow">and</span> <span class="n">alias_required</span><span class="p">:</span>
+            <span class="n">sourcename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_sourcename</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;   :alias: </span><span class="si">{</span><span class="n">field</span><span class="o">.</span><span class="n">alias</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">sourcename</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PydanticFieldDocumenter.add_content"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticFieldDocumenter.add_content">[docs]</a>    <span class="k">def</span> <span class="nf">add_content</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                    <span class="n">more_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">StringList</span><span class="p">],</span>
+                    <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+                    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delegate additional content creation.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">doc_policy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s2">&quot;field-doc-policy&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">doc_policy</span> <span class="ow">in</span> <span class="p">(</span><span class="n">OptionsFieldDocPolicy</span><span class="o">.</span><span class="n">DOCSTRING</span><span class="p">,</span>
+                          <span class="n">OptionsFieldDocPolicy</span><span class="o">.</span><span class="n">BOTH</span><span class="p">,</span>
+                          <span class="kc">None</span><span class="p">,</span> <span class="n">NONE</span><span class="p">):</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">add_content</span><span class="p">(</span><span class="n">more_content</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">doc_policy</span> <span class="ow">in</span> <span class="p">(</span><span class="n">OptionsFieldDocPolicy</span><span class="o">.</span><span class="n">BOTH</span><span class="p">,</span>
+                          <span class="n">OptionsFieldDocPolicy</span><span class="o">.</span><span class="n">DESCRIPTION</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_description</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;field-show-constraints&quot;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_constraints</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;field-list-validators&quot;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_validators</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="PydanticFieldDocumenter.add_constraints"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticFieldDocumenter.add_constraints">[docs]</a>    <span class="k">def</span> <span class="nf">add_constraints</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds section showing all defined constraints.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">field_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic_field_name</span>
+        <span class="n">constraints</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">fields</span><span class="o">.</span><span class="n">get_constraints</span><span class="p">(</span><span class="n">field_name</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">constraints</span><span class="p">:</span>
+            <span class="n">source_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_sourcename</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="s2">&quot;:Constraints:&quot;</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">constraints</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">line</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;   - **</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">** = </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PydanticFieldDocumenter.add_description"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticFieldDocumenter.add_description">[docs]</a>    <span class="k">def</span> <span class="nf">add_description</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds description from schema if present.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">field_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic_field_name</span>
+        <span class="n">func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">fields</span><span class="o">.</span><span class="n">get_property_from_field_info</span>
+        <span class="n">description</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">field_name</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">description</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">tabsize</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">directive</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">document</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">tab_width</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="n">prepare_docstring</span><span class="p">(</span><span class="n">description</span><span class="p">,</span> <span class="n">tabsize</span><span class="o">=</span><span class="n">tabsize</span><span class="p">)</span>
+        <span class="n">source_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_sourcename</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PydanticFieldDocumenter.add_validators"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticFieldDocumenter.add_validators">[docs]</a>    <span class="k">def</span> <span class="nf">add_validators</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add section with all validators that process this field.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">field_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic_field_name</span>
+        <span class="n">func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">references</span><span class="o">.</span><span class="n">filter_by_field_name</span>
+        <span class="n">references</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">field_name</span><span class="p">)</span>
+        <span class="n">sorted_references</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">references</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">validator_name</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">references</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">source_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_sourcename</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="s2">&quot;:Validated by:&quot;</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">reference</span> <span class="ow">in</span> <span class="n">sorted_references</span><span class="p">:</span>
+            <span class="n">resolver</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">resolve_inherited_validator_reference</span>
+            <span class="n">ref</span> <span class="o">=</span> <span class="n">resolver</span><span class="p">(</span><span class="n">reference</span><span class="o">.</span><span class="n">validator_ref</span><span class="p">)</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;   - :py:obj:`</span><span class="si">{</span><span class="n">reference</span><span class="o">.</span><span class="n">validator_name</span><span class="si">}</span><span class="s2"> &lt;</span><span class="si">{</span><span class="n">ref</span><span class="si">}</span><span class="s2">&gt;`&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PydanticFieldDocumenter.add_line"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticFieldDocumenter.add_line">[docs]</a>    <span class="k">def</span> <span class="nf">add_line</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">source</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">lineno</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Intercept added rst lines to handle edge cases such as correct</span>
+<span class="sd">        string representation for annotated types in python &lt; 3.9.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">line</span> <span class="o">=</span> <span class="n">intercept_type_annotations_py_gt_39</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="o">*</span><span class="n">lineno</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="PydanticValidatorDocumenter"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticValidatorDocumenter">[docs]</a><span class="k">class</span> <span class="nc">PydanticValidatorDocumenter</span><span class="p">(</span><span class="n">MethodDocumenter</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents specialized Documenter subclass for pydantic validators.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">objtype</span> <span class="o">=</span> <span class="s1">&#39;pydantic_validator&#39;</span>
+    <span class="n">directivetype</span> <span class="o">=</span> <span class="s1">&#39;pydantic_validator&#39;</span>
+    <span class="n">member_order</span> <span class="o">=</span> <span class="mi">50</span>
+    <span class="n">priority</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">MethodDocumenter</span><span class="o">.</span><span class="n">priority</span>
+    <span class="n">option_spec</span> <span class="o">=</span> <span class="n">MethodDocumenter</span><span class="o">.</span><span class="n">option_spec</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">option_spec</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">OPTIONS_VALIDATOR</span><span class="p">)</span>
+
+    <span class="n">pyautodoc_pass_to_directive</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;validator-signature-prefix&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;validator-replace-signature&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;field-swap-name-and-alias&quot;</span>
+    <span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span> <span class="o">=</span> <span class="n">PydanticAutoDoc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">is_child</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<div class="viewcode-block" id="PydanticValidatorDocumenter.can_document_member"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticValidatorDocumenter.can_document_member">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">can_document_member</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span>
+                            <span class="n">member</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+                            <span class="n">membername</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                            <span class="n">isattr</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+                            <span class="n">parent</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Filter only pydantic validators.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">is_val</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">can_document_member</span><span class="p">(</span><span class="n">member</span><span class="p">,</span> <span class="n">membername</span><span class="p">,</span> <span class="n">isattr</span><span class="p">,</span>
+                                             <span class="n">parent</span><span class="p">)</span>
+        <span class="n">is_validator</span> <span class="o">=</span> <span class="n">ModelInspector</span><span class="o">.</span><span class="n">static</span><span class="o">.</span><span class="n">is_validator_by_name</span><span class="p">(</span>
+            <span class="n">membername</span><span class="p">,</span>
+            <span class="n">parent</span><span class="o">.</span><span class="n">object</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">is_val</span> <span class="ow">and</span> <span class="n">is_validator</span></div>
+
+<div class="viewcode-block" id="PydanticValidatorDocumenter.format_args"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticValidatorDocumenter.format_args">[docs]</a>    <span class="k">def</span> <span class="nf">format_args</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return empty arguments if validator should be replaced.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;validator-replace-signature&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">format_args</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PydanticValidatorDocumenter.add_content"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticValidatorDocumenter.add_content">[docs]</a>    <span class="k">def</span> <span class="nf">add_content</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                    <span class="n">more_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">StringList</span><span class="p">],</span>
+                    <span class="o">**</span><span class="n">kwargs</span>
+                    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Optionally show validator content.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">add_content</span><span class="p">(</span><span class="n">more_content</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">is_true</span><span class="p">(</span><span class="s2">&quot;validator-list-fields&quot;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_field_list</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">_build_field_list_rest_line</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reference</span><span class="p">:</span> <span class="n">ValidatorFieldMap</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Generates reST line for field reference for field list section.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">get_field_name_or_alias</span><span class="p">(</span><span class="n">reference</span><span class="o">.</span><span class="n">field_name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;   - :py:obj:&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;`</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;&lt;</span><span class="si">{</span><span class="n">reference</span><span class="o">.</span><span class="n">field_ref</span><span class="si">}</span><span class="s2">&gt;`&quot;</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="PydanticValidatorDocumenter.add_field_list"><a class="viewcode-back" href="../../../../reference/api.html#sphinxcontrib.autodoc_pydantic.directives.autodocumenters.PydanticValidatorDocumenter.add_field_list">[docs]</a>    <span class="k">def</span> <span class="nf">add_field_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds a field list with all fields that are validated by this</span>
+<span class="sd">        validator.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pydantic</span><span class="o">.</span><span class="n">inspect</span><span class="o">.</span><span class="n">references</span><span class="o">.</span><span class="n">filter_by_validator_name</span>
+        <span class="n">references</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">object_name</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">references</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">source_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_sourcename</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="s2">&quot;:Validates:&quot;</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">reference</span> <span class="ow">in</span> <span class="n">references</span><span class="p">:</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_build_field_list_rest_line</span><span class="p">(</span><span class="n">reference</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">source_name</span><span class="p">)</span></div></div>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Franz Wöllert
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023, Franz Wöllert.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

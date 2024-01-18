@@ -487,7 +487,7 @@ class NonPydanticInspector(BaseInspectionComposite):
     def __init__(self, parent: 'ModelInspector'):
         super().__init__(parent)
         # json schema can reliably be created only at model level
-        self.class_methods = self.get_non_validator_methods(self.model)
+        self.methods = self.get_non_validator_methods(self.model)
 
     @staticmethod
     def get_non_validator_methods(model) -> List[Callable]:
@@ -550,6 +550,7 @@ class ModelInspector:
 
         mapping = defaultdict(list)
         decorators = self.model.__pydantic_decorators__
+
 
         # field validators
         for validator in decorators.field_validators.values():
